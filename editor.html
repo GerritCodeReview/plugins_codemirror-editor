@@ -1,0 +1,49 @@
+<dom-module id="editor-module">
+  <script>
+    Gerrit.install(plugin => {
+      plugin.registerCustomComponent(
+          'editor', 'codemirror-editor', {replace: true});
+    });
+  </script>
+</dom-module>
+<dom-module id="codemirror-editor">
+  <template>
+    <!-- Link codemirror deps -->
+    <link rel="stylesheet" href="./bower_components/codemirror-minified/lib/codemirror.css">
+    <div id="wrapper"></div>
+  </template>
+  <!-- Link codemirror script -->
+  <script src="./bower_components/codemirror-minified/lib/codemirror.js"></script>
+  <script>
+    Polymer({
+      is: 'codemirror-editor',
+      /**
+       * Fired when the content of the editor changes.
+       *
+       * @event content-change
+       */
+
+      properties: {
+        fileContent: String,
+        mirror: Object,
+        prefs: Object,
+      },
+
+      attached() {
+        this.mirror = CodeMirror(this.$.wrapper, {
+          value: this.fileContent,
+          prefs: this.prefs,
+        });
+        this.async(() => { this.mirror.refresh(); }, 1);
+        this.addEventListeners();
+      },
+
+      addEventListeners() {
+        this.mirror.on('change', e => {
+          this.dispatchEvent(new CustomEvent('content-change',
+              {detail: {value: e.getValue()}, bubbles: true}));
+        });
+      },
+    });
+  </script>
+</dom-module>
