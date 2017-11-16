@@ -22,6 +22,30 @@
       "revId": "32421ca5f3f1ed04a0c557681570f1bdf5a2dd8f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9b2137c_e3d855b0",
+        "filename": "codemirror-editor.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-11-16T22:21:16Z",
+      "side": 1,
+      "message": "Can you please stop drive-by reviewing?\n\nI\u0027m having a whole conversation with David O on that other change, and even though you\u0027ve also added yourself as a reviewer on that change, you don\u0027t seem to be keeping that context in mind. \n\nI\u0027m trying to build this plugin in pieces -- just like the rest of inline edit, I am fully aware that it may not exist in a shippable state on master at points. That\u0027s why it\u0027s not on 2.15, and why it\u0027s only accessible on gerrit-review in some cases.",
+      "parentUuid": "f48304b5_e2d6660a",
+      "range": {
+        "startLine": 12,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 108
+      },
+      "revId": "32421ca5f3f1ed04a0c557681570f1bdf5a2dd8f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
