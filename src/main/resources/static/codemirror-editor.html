@@ -1,0 +1,23 @@
+<!--<dom-module id="codemirror-editor">
+  <script>
+    Gerrit.install(plugin => {
+      plugin.registerCustomComponent(
+          'editor', 'codemirror-editor', {replace: true});
+    });
+  </script>
+</dom-module>-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/codemirror.css" crossorigin/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/codemirror.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/meta.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/clike/clike.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/css/css.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/htmlmixed/htmlmixed.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/javascript/javascript.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/php/php.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/xml/xml.js" crossorigin></script>
+<dom-module id="codemirror-editor">
+  <template>
+    <div id="wrapper"></div>
+  </template>
+  <script src="codemirror-editor.js"></script>
+</dom-module>
