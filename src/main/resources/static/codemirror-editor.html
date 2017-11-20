@@ -1,0 +1,16 @@
+<!--<dom-module id="codemirror-editor">
+  <script>
+    Gerrit.install(plugin => {
+      plugin.registerCustomComponent(
+          'editor', 'codemirror-editor', {replace: true});
+    });
+  </script>
+</dom-module>-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/codemirror.css" />
+<dom-module id="codemirror-editor">
+  <template>
+    <div id="wrapper"></div>
+  </template>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/codemirror.js"></script>
+  <script src="codemirror-editor.js"></script>
+</dom-module>
