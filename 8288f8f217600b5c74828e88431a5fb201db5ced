@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec402037_3b8bce2c",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-22T07:55:48Z",
+      "side": 1,
+      "message": "What supposed to be the plugin\u0027s final artifact? One HTML file? a combination of HTML and JS files? Or better one single zip file, that combined HTML and JS file in one single archive?\n\nIf I build this plugin in gerrit tree build mode, then two files are created[1]:\n\n* bazel-bin/plugins/codemirror-editor/codemirror-editor.html\n* bazel-bin/plugins/codemirror-editor/codemirror-editor.js\n\nThe codemirror-editor.html references codemirror-editor.js.\n\n  \u003chead\u003e\u003cscript src\u003d\"codemirror-editor.js\" defer\u003d\"\"\u003e\u003c/script\u003e\n\nHowever, the vulcanize rule produces intermediate single file:\n\n  $ ls -all bazel-out/k8-fastbuild/genfiles/plugins/codemirror-editor/codemirror-editor.html.vulcanized.html\n-r-xr-xr-x 1 davido users 170127 Nov 22 08:08 bazel-out/k8-fastbuild/genfiles/plugins/codemirror-editor/codemirror-editor.html.vulcanized.html\n\nthat is split by Crisper. Usually, with gerrit plugins, only one single artifact is provided and deployed (jar or html file):\n\nSo either we can build one single html file, or we shoud consider to make vulcanize rule as intermediate rule, and make final artifact for this plugin as codemirrow-editor.zip and ship both (or even more files) into zip file, something similar, what is done in gerrit core for PG UI: [2].\n\n* [1] http://paste.openstack.org/show/627034\n* [2] https://github.com/GerritCodeReview/gerrit/blob/master/polygerrit-ui/app/rules.bzl#L68-L92\n\nSo, something like that would produce one single artifact:\n\n  vulcanize(\n    name \u003d \"codemirror\",\n    srcs \u003d [\"editor.html\"],\n    app \u003d \"editor.html\",\n    visibility \u003d [\"//visibility:public\"],\n    deps \u003d [\"//lib/js:codemirror-minified\"],\n  )\n  genrule2(\n    name \u003d \"codemirror-editor\",\n    srcs \u003d [\":codemirror\"],\n    visibility \u003d [\"//visibility:public\"],\n    outs \u003d [\"codemirror-editor.zip\"],\n    cmd \u003d \" \u0026\u0026 \".join([\n        \"cp $(SRCS) $$TMP\",\n        \"cd $$TMP\",\n        \"zip -qr $$ROOT/$@ .\",\n    ]),\n  )\n\nSo that after building, we would get:\n\n  davido@wizball:~/projects/gerrit ((9cc3ced356...) %)$ bazel build plugins/codemirror-editor:codemirror-editor\nINFO: Analysed target //plugins/codemirror-editor:codemirror-editor (1 packages loaded).\nINFO: Found 1 target...\nTarget //plugins/codemirror-editor:codemirror-editor up-to-date:\n  bazel-genfiles/plugins/codemirror-editor/codemirror-editor.zip\nINFO: Elapsed time: 4.690s, Critical Path: 4.31s\nINFO: Build completed successfully, 4 total actions\ndavido@wizball:~/projects/gerrit ((9cc3ced356...) %)$ unzip -t bazel-genfiles/plugins/codemirror-editor/codemirror-editor.zip\nArchive:  bazel-genfiles/plugins/codemirror-editor/codemirror-editor.zip\n    testing: codemirror.html          OK\n    testing: codemirror.js            OK\n\nProbably, the gerrit core deployment machinery should be extended to handle zip file extension for plugin.",
+      "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
