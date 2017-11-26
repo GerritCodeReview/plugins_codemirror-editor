@@ -1,6 +1,6 @@
-load("//tools/bzl:js.bzl", "vulcanize")
+load("//tools/bzl:js.bzl", "polygerrit_plugin")
 
-vulcanize(
+polygerrit_plugin(
     name = "codemirror-editor",
     srcs = ["editor.html"],
     app = "editor.html",
