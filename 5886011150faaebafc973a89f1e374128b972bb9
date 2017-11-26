@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57e79077_e56a7aa3",
+        "filename": "WORKSPACE",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-26T11:44:08Z",
+      "side": 1,
+      "message": "Note to reviewers: To verify, bazlets repository should be cloned locally, and local_path line should ab adjusted and uncommented.",
+      "revId": "5886011150faaebafc973a89f1e374128b972bb9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "85e186e2_d18683c7",
+        "filename": "tools/bzl/maven_jar.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-26T11:44:08Z",
+      "side": 1,
+      "message": "Not used.",
+      "range": {
+        "startLine": 2,
+        "startChar": 5,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "5886011150faaebafc973a89f1e374128b972bb9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
