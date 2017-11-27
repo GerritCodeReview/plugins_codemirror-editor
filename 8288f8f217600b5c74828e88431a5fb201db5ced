@@ -34,6 +34,24 @@
       "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a742a96_e09c9321",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-27T21:57:20Z",
+      "side": 1,
+      "message": "Jepp, Viktar added support for single-file-html based plugins here:\n\n* https://gerrit-review.googlesource.com/#/c/gerrit/+/100331\n\nDavid fixed some issue, that approach had here:\n\n* https://gerrit-review.googlesource.com/#/c/gerrit/+/116870\n\nCurrently, vulcanize machinery per default apply Cripser to achieve Content Security Policy (SCP) compliance, and split one single html file in two: html and js:\n\n* https://www.polymer-project.org/1.0/docs/tools/advanced#crisper\n\nThis is currently not supported. My idea with zip wouldn\u0027t actually work. I think, to move forward right now, we have two options:\n\n* 1. Don\u0027t apply crisper, and not be CSP compliant by making cripser step optional and provide single vulcanized html file as plugin artifact.\n* 2. Build JAR as final plugin artifact, ship both generated html and JS file and provide html file as entry point. Such entry point, implemented as Java Module would be very similar to this polymer plugin entry point: [1], with the only exception, that codemirror-editor.html would be provided.\n\n* [1] https://chromium.googlesource.com/infra/gerrit-plugins/buildbucket/+/master/src/main/java/com/googlesource/chromium/plugins/buildbucket/BuildBucketModule.java#17",
+      "parentUuid": "a3fe2079_93b48adc",
+      "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
