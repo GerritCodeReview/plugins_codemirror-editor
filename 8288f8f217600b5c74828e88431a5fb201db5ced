@@ -16,6 +16,24 @@
       "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a3fe2079_93b48adc",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-11-27T21:35:59Z",
+      "side": 1,
+      "message": "I\u0027m actually not sure yet what the final artifact should be. I think one single HTML file should be fine, but also wouldn\u0027t be opposed to a zip. Separating the script from the HTML may also allow us to perform some nice optimizations, like only loading the script if the editor is ever actually needed.\n\nI\u0027ve seen that there are the two outputs -- what I\u0027m currently unsure of is how we go from a built plugin with the outputs in bazel-bin to something that ends up in a proper Gerrit testsite (I\u0027d assume by modifying the init script?)",
+      "parentUuid": "ec402037_3b8bce2c",
+      "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
