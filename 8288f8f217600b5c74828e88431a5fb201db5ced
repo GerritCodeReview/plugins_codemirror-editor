@@ -52,6 +52,24 @@
       "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a189407_94f8ad27",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-28T08:09:02Z",
+      "side": 1,
+      "message": "If I use intermediate artifact vulcanized.html and put it in \u003cgerrit_site\u003e/plugins directory, it works, the plugin is discover and loaded: [1].\n\n  [2017-11-28 08:37:33,234] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin codemirror-editor, version editor\n\nCurently it\u0027s not obvious, how that intermediate is created and where it\u0027s located. You would need to use -s bazel build options to actually see it, here in standalone build mode [2].\n\nSo that for me, on Linux, this vulcanized html is located here:\n\n  bazel-out/k8-fastbuild/genfiles/codemirror-editor.html.vulcanized.html\n\nI started this discussion on tis Bazel issue, how to optionally produce this artifact: [3].\n\n* [1] https://imgur.com/a/hihP3\n* [2] http://paste.openstack.org/show/627541\n* [3] https://github.com/bazelbuild/bazel/issues/2882",
+      "parentUuid": "2a742a96_e09c9321",
+      "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
