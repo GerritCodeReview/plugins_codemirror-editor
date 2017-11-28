@@ -63,6 +63,30 @@
       "revId": "5886011150faaebafc973a89f1e374128b972bb9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e029a4f0_a58d1333",
+        "filename": "tools/bzl/maven_jar.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-28T06:06:53Z",
+      "side": 1,
+      "message": "The next line, \"GERRIT\". This is defined as:\n\n  GERRIT \u003d \"GERRIT:\"\n\nand used in WORKSPACE:\n\n  npm_binary(\n    name \u003d \"vulcanize\",\n    repository \u003d GERRIT,\n  )",
+      "parentUuid": "2d0fe732_d4cc391c",
+      "range": {
+        "startLine": 2,
+        "startChar": 5,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "5886011150faaebafc973a89f1e374128b972bb9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
