@@ -87,6 +87,30 @@
       "revId": "5886011150faaebafc973a89f1e374128b972bb9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d33c053_bb2611d3",
+        "filename": "tools/bzl/maven_jar.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-11-28T23:31:34Z",
+      "side": 1,
+      "message": "Sorry, I meant \"Why do we need to import maven_jar at all?\"",
+      "parentUuid": "e029a4f0_a58d1333",
+      "range": {
+        "startLine": 2,
+        "startChar": 5,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "5886011150faaebafc973a89f1e374128b972bb9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
