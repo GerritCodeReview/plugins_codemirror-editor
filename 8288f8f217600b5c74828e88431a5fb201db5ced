@@ -70,6 +70,24 @@
       "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "00699f09_ba3c0622",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-28T13:55:49Z",
+      "side": 1,
+      "message": "If we pass split \u003d False to vulcanize method, using this diff: [1]:\n\n  vulcanize(\n      name \u003d \"codemirror-editor\",\n      srcs \u003d [\"editor.html\"],\n      app \u003d \"editor.html\",\n      split \u003d False,\n      visibility \u003d [\"//visibility:public\"],\n      deps \u003d [\"//lib/js:codemirror-minified\"],\n  )\n\nit should produce one single html file, that is our final plugin artefact. We copy that html file in \u003cgerrit_site\u003e/plugins directory, and the plugin should just work. I haven\u0027t tested the diff: [1], though.\n\n* [1] http://paste.openstack.org/show/627585/",
+      "parentUuid": "5a189407_94f8ad27",
+      "revId": "8288f8f217600b5c74828e88431a5fb201db5ced",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
