@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b6545870_306afec5",
+        "filename": "BUILD",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-11-29T19:17:03Z",
+      "side": 1,
+      "message": "Do we want to use polygerrit_plugin here?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 9
+      },
+      "revId": "fa0fa8b211d3040fa4e881d4968c77d9a1571ad1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
