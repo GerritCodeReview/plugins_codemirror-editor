@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b40c9097_16e76ce3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-29T00:37:16Z",
+      "side": 1,
+      "message": "Verified that the plugin can be built in gerrit tree and the content looks sane:\n\n  $ bazel build plugins/codemirror-editor\nINFO: Analysed target //plugins/codemirror-editor:codemirror-editor (0 packages loaded).\nINFO: Found 1 target...\nTarget //plugins/codemirror-editor:codemirror-editor up-to-date:\n  bazel-genfiles/plugins/codemirror-editor/codemirror-editor.jar\nINFO: Elapsed time: 0.424s, Critical Path: 0.22s\nINFO: Build completed successfully, 3 total actions\ndavido@wizball:~/projects/gerrit2 (master *%\u003e)$ unzip -t bazel-genfiles/plugins/codemirror-editor/codemirror-editor.jar\nArchive:  bazel-genfiles/plugins/codemirror-editor/codemirror-editor.jar\n    testing: build-data.properties    OK\n    testing: META-INF/MANIFEST.MF     OK\n    testing: com/googlesource/gerrit/plugins/codemirror/CodemirrorModule.class   OK\n    testing: static/cm.html           OK\n    testing: static/cm.js             OK\nNo errors detected in compressed data of bazel-genfiles/plugins/codemirror-editor/codemirror-editor.jar.",
+      "revId": "ca2dc101638fd68624e0788352d73f45a738c24b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
