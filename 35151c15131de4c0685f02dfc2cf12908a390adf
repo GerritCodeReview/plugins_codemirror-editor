@@ -16,6 +16,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01b710c9_16bc352f",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-30T07:41:33Z",
+      "side": 1,
+      "message": "Try putting this outside the Dom module and the same for the js link below too.",
+      "parentUuid": "ae6c80ef_5d280b2a",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
