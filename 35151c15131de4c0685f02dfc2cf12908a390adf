@@ -52,6 +52,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3748b47a_3f2d6343",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-01T18:54:41Z",
+      "side": 1,
+      "message": "I get the same issue when I change it to link rel\u003d\"import\" type\u003d\"css\", and also when I refactor the styles into a secondary \u003cdom-module\u003e like the last comment says.\n\nI have a hunch this is a plugin issue with style scoping, as opposed to a Polymer issue. The built cm.html _looks_ like it should work.\n\n  \u003chtml\u003e\n  \u003chead\u003e\n    \u003cscript src\u003d\"cm.js\" defer\u003d\"\"\u003e\u003c/script\u003e\n    \u003cmeta charset\u003d\"UTF-8\"\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e\n    \u003cdiv hidden\u003d\"\" by-vulcanize\u003d\"\"\u003e\n      \u003cdom-module id\u003d\"editor-styles\" assetpath\u003d\"/\"\u003e\n        \u003ctemplate\u003e\n          \u003cstyle\u003e\n            .CodeMirror {\n              font-family: monospace;\n              height: 300px;\n              color: #000\n            }\n            /* ...truncated for brevity. */\n          \u003c/style\u003e\n          \u003cstyle\u003e\u003c/style\u003e\n        \u003c/template\u003e\n      \u003c/dom-module\u003e\n    \u003c/div\u003e\n    \u003cdom-module id\u003d\"editor-module\"\u003e\n    \u003c/dom-module\u003e\n    \u003cdom-module id\u003d\"codemirror-editor\"\u003e\n      \u003ctemplate\u003e\n        \u003cstyle include\u003d\"editor-styles\"\u003e\u003c/style\u003e\n        \u003cdiv id\u003d\"wrapper\"\u003e\u003c/div\u003e\n      \u003c/template\u003e\n    \u003c/dom-module\u003e\n  \u003c/body\u003e\n  \u003c/html\u003e",
+      "parentUuid": "9512fcde_f69724a7",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
