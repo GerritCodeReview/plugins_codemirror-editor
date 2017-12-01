@@ -88,6 +88,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e995d87d_e90adc93",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-01T20:18:32Z",
+      "side": 1,
+      "message": "What makes you think that would behave differently?",
+      "parentUuid": "c4c5eaa7_27d92d97",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
