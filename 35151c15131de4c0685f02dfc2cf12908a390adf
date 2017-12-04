@@ -196,6 +196,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71437058_e14ba137",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-12-04T23:26:36Z",
+      "side": 1,
+      "message": "Oh i see, because of this https://github.com/TakayoshiKochi/deprecate-style-in-html-imports ?\n\nThe workaround is at that link.",
+      "parentUuid": "ef617466_d0f50e6c",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
