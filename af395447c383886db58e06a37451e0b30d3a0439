@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d86ba04e_8f242495",
+        "filename": "gr-editor/gr-editor-styles.html",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-04T23:13:38Z",
+      "side": 1,
+      "message": "Most of these styles are not applied properly, for now.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 109
+      },
+      "revId": "af395447c383886db58e06a37451e0b30d3a0439",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa508f26_b4eeadf5",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-04T23:13:38Z",
+      "side": 1,
+      "message": "Most of these dependencies remain unused for now.",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 94
+      },
+      "revId": "af395447c383886db58e06a37451e0b30d3a0439",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
