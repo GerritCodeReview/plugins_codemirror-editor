@@ -124,6 +124,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "188438fc_a8e48eb8",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-04T18:44:51Z",
+      "side": 1,
+      "message": "Right, but it looks like you\u0027re also linking in the source remotely, which is different than this use case.",
+      "parentUuid": "e3ec787c_3f9392a5",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
