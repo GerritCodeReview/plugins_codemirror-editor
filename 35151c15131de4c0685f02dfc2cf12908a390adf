@@ -142,6 +142,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc61b347_7b6c9261",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-12-04T22:00:10Z",
+      "side": 1,
+      "message": "Just tested with this change (your change) and it works for me if i follow by putting codemirrors js and css file outside dom.",
+      "parentUuid": "188438fc_a8e48eb8",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
