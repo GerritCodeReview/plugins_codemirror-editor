@@ -178,6 +178,24 @@
       "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ef617466_d0f50e6c",
+        "filename": "editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-04T22:15:59Z",
+      "side": 1,
+      "message": "I can also see that.\n\nI don\u0027t think you have the whole story. The issue here is _not_ that the styles will never apply, it\u0027s that \u003clink rel\u003d\"stylesheet\"\u003e is not a thing in Polymer.\n\nMy latest patchset has better code in it, but the styles are still not applying. You should read the GH link Becky posted earlier in this thread, as well as this: https://www.polymer-project.org/1.0/docs/devguide/styling.html#external-stylesheets",
+      "parentUuid": "5985d675_4728be4e",
+      "revId": "35151c15131de4c0685f02dfc2cf12908a390adf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
