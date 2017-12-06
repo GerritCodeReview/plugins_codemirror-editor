@@ -94,6 +94,30 @@
       "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e02e7e9c_8cc0b901",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-12-06T21:10:49Z",
+      "side": 1,
+      "message": "I think that: [1] link, that you referenced to, is providing third build mode: adding codemirror-editor to the list of core plugins. In addition the change you linke to, was added as this plugin was producing js-plugin, but then the build tool chain was changed to produce JAR artifact. Should then the [1] be adapted to from JS_PLUGIN to regular plugins? Another issue/confusion, is that for core plugins, we usually ship the dependency in gerrit core, yet you abandoned this change: [2].\n\nBotom line: Do we really need all this build mpode permuatations?\n\n* standalone build\n* in gerrit tree build support\n* make the codemirror-editor plugin as gerrit core plugin, like replication?\n\nNote, this is not bad to support all this, i just think that this is too much for one single plugin. So either we say:\n\n* This is not a core plugin, but supports standalone build mode and in gerrit tree build mode.\n* To build in gerrit tree mode, some files must be copied in gerrit tree prior to starting the build.\n* To build in standalone build, specific bazlets revision must be referenced, prior to start the build\n\nOr we say:\n\n* This is a core plugin, means, that all the above should not be needed, if we are talking about gerrit core plugin. All dependency must be provided by gerrit. IOW, if you still think that this plugin should be core plugin, then: [2] should be restored. (But i Think that [2] should be adapted to reflect the fact that codemirror-editor is just standard Jar plugin tha thappens to depend in some (external) JS library.\n\nAnd this is not something new (well in term dependency on JS library from the core plugin it is new), we have exactly the same situation: check replication plugin, that is gerrit core plugin, but has external dependency:\n\n  gerrit_plugin(\n    name \u003d \"replication\",\n    srcs \u003d glob([\"src/main/java/**/*.java\"]),\n    manifest_entries \u003d [\n        \"Implementation-Title: Replication plugin\",\n        \"Implementation-URL: https://gerrit-review.googlesource.com/#/admin/projects/plugins/replication\",\n        \"Gerrit-PluginName: replication\",\n        \"Gerrit-InitStep: com.googlesource.gerrit.plugins.replication.Init\",\n        \"Gerrit-Module: com.googlesource.gerrit.plugins.replication.ReplicationModule\",\n        \"Gerrit-SshModule: com.googlesource.gerrit.plugins.replication.SshModule\",\n    ],\n    resources \u003d glob([\"src/main/resources/**/*\"]),\n    deps \u003d [\n        \"//lib:commons-io\",\n    ],\n  )\n\nDue to Bazel limitation (external dependency must be defined in WORKSPACE file, and no recursive WORSPACE files are currently supported) lib:commons-io is defined in gerrit core, yet this dependency is not used by gerrit itself, but is only there to build replication plugin:\n\n  $ git grep commons-io\n  WORKSPACE:    artifact \u003d \"commons-io:commons-io:1.4\",\n  lib/BUILD:    name \u003d \"commons-io\",\n\nIOW, if a user build gerrit, she is fetching this external dependency. To produce release.war with replication plugin inside. But if she doesn\u0027t use this plugin, and doesn\u0027t install it in gerrit site, then fetching this external dependency (and builindng this plugin) was in vain.\n\n* [2] https://gerrit-review.googlesource.com/#/c/gerrit/+/141073/",
+      "parentUuid": "751a44c1_5e9a33e6",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
