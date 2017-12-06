@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "1b55e470_af36bff6",
+        "filename": "BUILD",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1024777
+      },
+      "writtenOn": "2017-12-06T23:23:59Z",
+      "side": 1,
+      "message": "I\u0027ve tried to checkout all the dependencies to make this compile and failed.\n\nAnd since you\u0027re not loading codemirror in JS and vulcanize it instead, I assume it\u0027s baked into the rule output.",
+      "parentUuid": "55986ac0_f23a03bb",
+      "revId": "af395447c383886db58e06a37451e0b30d3a0439",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d86ba04e_8f242495",
         "filename": "gr-editor/gr-editor-styles.html",
         "patchSetId": 8
