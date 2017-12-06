@@ -142,6 +142,30 @@
       "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2eb342fd_7f12f9aa",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-12-06T21:50:45Z",
+      "side": 1,
+      "message": "The two goals you are mentioned, that you would like to achieve here is a clear contradiction to me:\n\n* support standalone build\n* be a gerrit core plugin\n\n\u003e To me, a \"core plugin\" is just one that is included by default in a gerrit distribution.\n\nMore accurate: it\u0027s included in release.war. When a user run `java -jar release.war init -d \u003cgerrit_site\u003e` then the question are aksed, whether or not all gerrit core plugins should or should not be installed.\n\n\u003e Unless there\u0027s an engineering reason this has to be true that I\u0027m missing...?\n\nThis is the reason: [1]. Design document is there, but it is all not implemented yet, and Kristina Chodorow (kchodorow) quit Google recently ;-( So yes, there is Bazel limitation, why all external dependeniesy must be listed/fetched by gerrit core, for all their core plugins.\n\n* [1] https://bazel.build/designs/2016/09/19/recursive-ws-parsing.html",
+      "parentUuid": "95e26c74_681ccdf9",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
