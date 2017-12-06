@@ -214,6 +214,30 @@
       "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "42f832ee_5faa0c7a",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-12-06T22:40:36Z",
+      "side": 1,
+      "message": "The same way, how all other 100+ non core gerrit plugins are installed (e.g.: buildbucket plugin: [1]), gerrit users would have to build it on their own, or download pre-built distributions from Gerrit CI: say oauth-plugin: [2], or download from other locations, like for example my incarnation of the same plugin: as gerrit-oauth-provider plugin: [3].\n\n* [1] https://chromium.googlesource.com/infra/gerrit-plugins/buildbucket/\n* [2] https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.14/job/plugin-oauth-bazel-master-stable-2.14/\n* [3] https://github.com/davido/gerrit-oauth-provider/releases/tag/v2.14.3",
+      "parentUuid": "6a4c9c61_6cbb8f78",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
