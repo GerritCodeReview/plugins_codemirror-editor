@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ef837868_799f66dd",
+        "filename": "BUILD",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1024777
+      },
+      "writtenOn": "2017-12-06T00:10:30Z",
+      "side": 1,
+      "message": "Would be great to merge this and use it instead, to provide example for future plugin developers:\n\nhttps://gerrit-review.googlesource.com/c/gerrit/+/146530",
+      "parentUuid": "371fa790_933e3bea",
+      "revId": "af395447c383886db58e06a37451e0b30d3a0439",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a8fda2cf_84bcf550",
         "filename": "BUILD",
         "patchSetId": 8
