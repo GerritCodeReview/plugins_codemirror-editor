@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9dacb11f_29552d82",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-06T19:07:57Z",
+      "side": 1,
+      "message": "This should be ready to go.\n\nI only have one issue when building this using [1], and that is this line. When this build file is targeted by plugins:core, it seems like the //lib/js referenced is the one that exists in the root gerrit directory, as opposed to the plugins/codemirror-editor/lib/js/BUILD. Does anyone know how to fix that?",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
