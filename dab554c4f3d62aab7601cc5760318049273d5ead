@@ -118,6 +118,30 @@
       "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95e26c74_681ccdf9",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-06T21:31:35Z",
+      "side": 1,
+      "message": "I understand you.\n\nSo, the ultimate goal here is to get this plugin building as a standalone component. We\u0027d like to separate dependencies as much as possible, ideally by just letting plugins manage their own dependencies completely separately from gerrit\u0027s core code.\n\nWith this plugin, I want it to build completely on its own (i.e. declaring its dependencies discretely in its WORKSPACE file), but also to build and distribute it as a core plugin.\n\nThe JAR packaging step that you\u0027ve made is, in my opinion, not the proper long term fix. As GWT is deprecated and will eventually be removed, we definitely will need to upgrade the WAR init script to account for pure HTML plugins -- that task is just out-of-scope for this specific task, and the JAR packaging is just a workaround for now.\n\nSo, to address \"bottom line\", we want to (ideally) _only_ support standalone mode, but also make the codemirror-editor plugin a gerrit core plugin. \n\nAlso, I want to clear up this terminology, because I think it might be a confounding factor here. To me, a \"core plugin\" is just one that is included by default in a gerrit distribution. I don\u0027t think that a \"core plugin\" _must_ have its dependencies managed by gerrit itself. Unless there\u0027s an engineering reason this has to be true that I\u0027m missing...?",
+      "parentUuid": "e02e7e9c_8cc0b901",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
