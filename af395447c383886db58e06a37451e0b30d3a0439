@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "9f130257_5f1e7916",
+        "filename": "BUILD",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-12-06T23:34:14Z",
+      "side": 1,
+      "message": "Yes, I was incorrect. I had been building with the external deps.\n\nI thought the content was being taken from the /lib/js located in the root of the plugin module, but it comes from the /lib/js located in gerrit.",
+      "parentUuid": "1b55e470_af36bff6",
+      "revId": "af395447c383886db58e06a37451e0b30d3a0439",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d86ba04e_8f242495",
         "filename": "gr-editor/gr-editor-styles.html",
         "patchSetId": 8
