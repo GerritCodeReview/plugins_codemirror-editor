@@ -22,6 +22,30 @@
       "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03fecd64_62f8444d",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-12-06T19:35:48Z",
+      "side": 1,
+      "message": "What is [1]? Can you be more specific, what build mode are you using and what exactly the problem is? \n\nI also wonder, if we should add build.md file here? As example let me reference you to the build documentation for javamelody plugin:  https://gerrit.googlesource.com/plugins/javamelody/+/master/src/main/resources/Documentation/build.md",
+      "parentUuid": "9dacb11f_29552d82",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
