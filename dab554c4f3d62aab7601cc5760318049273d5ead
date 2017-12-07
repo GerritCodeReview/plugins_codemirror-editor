@@ -262,6 +262,30 @@
       "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a200243_c1616a81",
+        "filename": "BUILD",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-12-07T14:01:25Z",
+      "side": 1,
+      "message": "Check. Let\u0027s then merge this plugin as ferrite ore plugin for now, and abandon all efforts for JS plugins with external dependencies in term of in gerrit tree and standalone build mode. We can always revive these efforts later.",
+      "parentUuid": "287052f3_0985ded9",
+      "range": {
+        "startLine": 32,
+        "startChar": 13,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "dab554c4f3d62aab7601cc5760318049273d5ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
