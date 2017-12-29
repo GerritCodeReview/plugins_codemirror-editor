@@ -30,8 +30,9 @@
 
     attached() {
       this.scopeSubtree(this.$.wrapper, true);
+      const content = this.fileContent ? this.fileContent : '';
       this.mirror = CodeMirror(this.$.wrapper, Object.assign({} , {
-        value: this.fileContent,
+        value: content,
       }, this.prefs));
       this.async(() => { this.mirror.refresh(); }, 1);
       this.addEventListeners();
