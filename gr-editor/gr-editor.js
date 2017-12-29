@@ -24,14 +24,18 @@
 
     properties: {
       fileContent: String,
+      fileType: String,
       mirror: Object,
       prefs: Object,
     },
 
     attached() {
       this.scopeSubtree(this.$.wrapper, true);
+      const mode = CodeMirror.findModeByFileName(this.fileType) ?
+          CodeMirror.findModeByFileName(this.fileType).mode : '';
       this.mirror = CodeMirror(this.$.wrapper, Object.assign({} , {
         value: this.fileContent,
+        mode: mode,
       }, this.prefs));
       this.async(() => { this.mirror.refresh(); }, 1);
       this.addEventListeners();
