@@ -14,6 +14,12 @@
 (function() {
   'use strict';
 
+  // we need to be on codemirror 5.33.0+ to get the support for
+  // text/x-php in CodeMirror.findModeByMIME
+  const LANGUAGE_MAP = {
+    'text/x-php': 'php',
+  };
+
   Polymer({
     is: 'gr-editor',
     /**
@@ -24,15 +30,15 @@
 
     properties: {
       fileContent: String,
+      fileType: String,
       mirror: Object,
       prefs: Object,
     },
 
     attached() {
       this.scopeSubtree(this.$.wrapper, true);
-      this.mirror = CodeMirror(this.$.wrapper, Object.assign({} , {
-        value: this.fileContent,
-      }, this.prefs));
+      const prefs = this.getPreferences(this.prefs);
+      this.mirror = CodeMirror(this.$.wrapper, prefs);
       this.async(() => { this.mirror.refresh(); }, 1);
       this.addEventListeners();
     },
@@ -42,6 +48,61 @@
         this.dispatchEvent(new CustomEvent('content-change',
             {detail: {value: e.getValue()}, bubbles: true}));
       });
+    },
+
+    getPreferences(prefs) {
+      let pref = {
+        value: this.fileContent,
+      };
+
+      if (prefs) {
+        // TODO: Add gerrit's customizations from java codemirror to javascript
+        // gerrit-gwtui/src/main/java/net/codemirror/lib/Extras.java
+        pref.autoCloseBrackets = prefs.auto_close_brackets;
+        pref.cursorBlinkRate = prefs.cursor_blink_rate;
+        pref.cursorHeight = 0.85;
+        pref.hideTopMenu = prefs.hide_top_menu;
+        pref.indentUnit = prefs.indent_unit;
+        pref.indentWithTabs = prefs.indent_with_tabs;
+        pref.keyMap = prefs.key_map_type.toLowerCase();
+        pref.lineLength = prefs.line_length;
+        pref.lineNumbers = prefs.hide_line_numbers;
+        pref.lineWrapping = prefs.line_wrapping;
+        pref.indentWithTabs = prefs.indent_with_tabs;
+        pref.matchBrackets = prefs.match_brackets;
+        // TODO: Add support for a new commit msg MIME type
+        // Support for this is somewhere in gerrit's codebase
+        // needs backporting to javascript
+        if (prefs.syntax_highlighting) {
+          pref.mode = this.languageMap();
+        } else {
+          pref.mode = '';
+        }
+        pref.origLeft = this.fileContent;
+        pref.scrollbarStyle = 'overlay';
+        pref.showTabs = prefs.show_tabs;
+        pref.showTrailingSpace = prefs.show_whitespace_errors;
+        pref.styleSelectedText = true;
+        pref.tabSize = prefs.tab_size;
+        pref.theme = prefs.theme.toLowerCase();
+
+        if (this.fileContent && this.fileContent.includes('\r\n')) {
+          pref.lineSeparator = '\r\n';
+        }
+      }
+
+      return pref;
+    },
+
+    languageMap() {
+      if (this.fileType && CodeMirror.findModeByMIME(this.fileType)) {
+        return CodeMirror.findModeByMIME(this.fileType).mode;
+      } else if (this.fileType && LANGUAGE_MAP[this.fileType]) {
+        return LANGUAGE_MAP[this.fileType];
+      } else {
+        // Return empty string to prevent it from erroring out.
+        return '';
+      }
     },
   });
 })();
