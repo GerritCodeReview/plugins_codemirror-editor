@@ -22,6 +22,30 @@
       "revId": "027ab5997c2425af59d918f79fe661a3c0891ba1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8aa98970_47002d9d",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T22:49:17Z",
+      "side": 0,
+      "message": "What does that mean?",
+      "parentUuid": "96d35c6d_fe87ae14",
+      "range": {
+        "startLine": 66,
+        "startChar": 8,
+        "endLine": 66,
+        "endChar": 57
+      },
+      "revId": "027ab5997c2425af59d918f79fe661a3c0891ba1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
