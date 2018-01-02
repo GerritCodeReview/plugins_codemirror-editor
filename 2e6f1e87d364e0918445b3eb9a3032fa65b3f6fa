@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7221771_23cc13cf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:10:03Z",
+      "side": 1,
+      "message": "This is no longer a valid line.",
+      "revId": "2e6f1e87d364e0918445b3eb9a3032fa65b3f6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47e2efc3_a9aec43c",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 12
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:10:03Z",
+      "side": 1,
+      "message": "Why move all of these scripts? I\u0027d prefer them loaded with the editor, just for visual reasons.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 92
+      },
+      "revId": "2e6f1e87d364e0918445b3eb9a3032fa65b3f6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ecdd396_164c1feb",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:10:03Z",
+      "side": 1,
+      "message": "Let\u0027s change this to something like \"getCodeMirrorParams\" or something.",
+      "revId": "2e6f1e87d364e0918445b3eb9a3032fa65b3f6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "725395b8_4b52daea",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:10:03Z",
+      "side": 1,
+      "message": "const params \u003d",
+      "range": {
+        "startLine": 54,
+        "startChar": 10,
+        "endLine": 54,
+        "endChar": 14
+      },
+      "revId": "2e6f1e87d364e0918445b3eb9a3032fa65b3f6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d35efda8_8c10e81e",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:10:03Z",
+      "side": 1,
+      "message": "I think this line is causing some issues due to the addons being broken out.",
+      "revId": "2e6f1e87d364e0918445b3eb9a3032fa65b3f6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
