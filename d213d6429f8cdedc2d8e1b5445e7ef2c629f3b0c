@@ -88,6 +88,24 @@
       "revId": "d213d6429f8cdedc2d8e1b5445e7ef2c629f3b0c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9437f4de_95c7ad2b",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T21:44:35Z",
+      "side": 1,
+      "message": "Because we do\n\nparams.mode \u003d prefs.syntax_highlighting ? this._mapFileType(type) : \u0027\u0027;\n\nand in we do\n\n    _mapFileType(type) {\n      return LANGUAGE_MAP[type] || \u0027\u0027;\n    },\n\nNotice how we add \u0027\u0027 to params mode if this._mapFileType(type) fails.\n\nbecause we pre populate params.mode codemirror will use that so it wont do\n\n\"The mode to use. When not given, this will default to the first mode that was \n  loaded. It may be a string, which either simply names the mode or is a MIME \n  type associated with the mode.\"\n\nTested locally to confirm what im saying.\n\nWithout CodeMirror.findModeByMIME my file index.js does not get highlighted.",
+      "parentUuid": "7a9284d7_25bcd3d7",
+      "revId": "d213d6429f8cdedc2d8e1b5445e7ef2c629f3b0c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
