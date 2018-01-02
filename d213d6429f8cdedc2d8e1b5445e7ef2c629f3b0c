@@ -142,6 +142,24 @@
       "revId": "d213d6429f8cdedc2d8e1b5445e7ef2c629f3b0c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0d4e9d1_c2c2815a",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T21:58:26Z",
+      "side": 1,
+      "message": "Oh, i see what you mean.\n\nSorry about that.\n\nI presumed doing it like that with type in there would break it. But it works.",
+      "parentUuid": "3e0128d9_2076f4c6",
+      "revId": "d213d6429f8cdedc2d8e1b5445e7ef2c629f3b0c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
