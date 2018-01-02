@@ -80,7 +80,7 @@
         params.styleSelectedText = true;
         params.tabSize = prefs.tab_size;
         // TODO(kaspern): Add support for themes.
-        params.theme = prefs.theme.toLowerCase();
+        // params.theme = prefs.theme.toLowerCase();
 
         if (value && value.includes('\r\n')) {
           params.lineSeparator = '\r\n';
