@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b3f1b67b_69a8ca5f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T18:38:02Z",
+      "side": 1,
+      "message": "Yep i agree. I would like to keep the changes to the order i did with the modules as it seems alot cleaner to me and it works that way too :).",
+      "parentUuid": "1a066f73_efa6ab9a",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 52
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c8c3710c_a75facb4",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 11
