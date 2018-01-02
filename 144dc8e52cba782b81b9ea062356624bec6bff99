@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc71a727_89ea8834",
+        "filename": "gr-editor/gr-editor-styles.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:11:18Z",
+      "side": 1,
+      "message": "Capitalize.",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 9
+      },
+      "revId": "144dc8e52cba782b81b9ea062356624bec6bff99",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "333cdd53_be209e61",
+        "filename": "gr-editor/gr-editor-styles.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:11:18Z",
+      "side": 1,
+      "message": "Not your fault, but this list could be alphabetized.",
+      "revId": "144dc8e52cba782b81b9ea062356624bec6bff99",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
