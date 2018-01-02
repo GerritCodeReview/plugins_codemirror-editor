@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a066f73_efa6ab9a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T18:28:20Z",
+      "side": 1,
+      "message": "It would be a good idea to break this into separate changes.\n\nAt the very least, adding the missing themes and addons should definitely be broken out of this change, as it has nothing to do with syntax highlighting in CodeMirror.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 52
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c8c3710c_a75facb4",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 11
