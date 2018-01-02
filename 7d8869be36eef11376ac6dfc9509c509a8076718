@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "f42f09c8_76ec6d1f",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T18:48:43Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "c8c3710c_a75facb4",
+      "range": {
+        "startLine": 59,
+        "startChar": 30,
+        "endLine": 59,
+        "endChar": 44
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c2672721_3bfaca21",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 11
@@ -95,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "2941960a_f4575119",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T18:48:43Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "c2672721_3bfaca21",
+      "range": {
+        "startLine": 73,
+        "startChar": 50,
+        "endLine": 73,
+        "endChar": 54
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9ba0fb61_98ca5f70",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 11
@@ -106,6 +154,30 @@
       "writtenOn": "2018-01-02T18:26:50Z",
       "side": 1,
       "message": "I was reading the codemirror docs -- it seemed that you were able to pass the fileType directly to codemirror and it would map the MIME to the mode properly.\n\nAre you seeing anything different from that?",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 19
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe5d2c80_c86e3d4a",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T18:48:43Z",
+      "side": 1,
+      "message": "I saw that if the mimetype returned undefined then it would cause codemirror to fail. So we need to use a string to stop the error.\n\nBasically this means it will use no syntax highlighting on files that doin\u0027t return a valid MIME type.",
+      "parentUuid": "9ba0fb61_98ca5f70",
       "range": {
         "startLine": 97,
         "startChar": 0,
