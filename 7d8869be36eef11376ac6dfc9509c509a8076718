@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8c3710c_a75facb4",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T18:26:50Z",
+      "side": 1,
+      "message": "customizations",
+      "range": {
+        "startLine": 59,
+        "startChar": 30,
+        "endLine": 59,
+        "endChar": 44
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2672721_3bfaca21",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T18:26:50Z",
+      "side": 1,
+      "message": "MIME",
+      "range": {
+        "startLine": 73,
+        "startChar": 50,
+        "endLine": 73,
+        "endChar": 54
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ba0fb61_98ca5f70",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T18:26:50Z",
+      "side": 1,
+      "message": "I was reading the codemirror docs -- it seemed that you were able to pass the fileType directly to codemirror and it would map the MIME to the mode properly.\n\nAre you seeing anything different from that?",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 19
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
