@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e36dddc7_9443f96f",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T22:56:46Z",
+      "side": 1,
+      "message": "You forgot to comment this out :).",
+      "range": {
+        "startLine": 83,
+        "startChar": 8,
+        "endLine": 83,
+        "endChar": 49
+      },
+      "revId": "4a9992280bae1ae5537deb7efba7f956bd616a0e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
