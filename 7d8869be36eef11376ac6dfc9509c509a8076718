@@ -143,6 +143,29 @@
     },
     {
       "key": {
+        "uuid": "f88d7d95_c58dc28b",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:26:18Z",
+      "side": 1,
+      "message": "With the change on #97, do...\n\n        pref.mode \u003d prefs.syntax_highlighting ?\n            this._mapFileType(this.fileType) :\n            \u0027\u0027;",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 9
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9ba0fb61_98ca5f70",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 11
@@ -178,6 +201,30 @@
       "side": 1,
       "message": "I saw that if the mimetype returned undefined then it would cause codemirror to fail. So we need to use a string to stop the error.\n\nBasically this means it will use no syntax highlighting on files that doin\u0027t return a valid MIME type.",
       "parentUuid": "9ba0fb61_98ca5f70",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 19
+      },
+      "revId": "7d8869be36eef11376ac6dfc9509c509a8076718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a5264fa_271e3b6b",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-02T19:26:18Z",
+      "side": 1,
+      "message": "There\u0027s a much simpler way to do this, though.\n\n    _mapFileType(type) {\n      return LANGUAGE_MAP[type] || type || \u0027\u0027;\n    },",
+      "parentUuid": "fe5d2c80_c86e3d4a",
       "range": {
         "startLine": 97,
         "startChar": 0,
