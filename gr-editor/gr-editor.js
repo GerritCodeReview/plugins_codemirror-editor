@@ -63,7 +63,8 @@
         params.hideTopMenu = prefs.hide_top_menu;
         params.indentUnit = prefs.indent_unit;
         params.indentWithTabs = prefs.indent_with_tabs;
-        params.keyMap = prefs.key_map_type.toLowerCase();
+        // TODO(kaspern): Add support for keymaps.
+        // params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineLength = prefs.line_length;
         params.lineNumbers = prefs.hide_line_numbers;
         params.lineWrapping = prefs.line_wrapping;
@@ -78,7 +79,8 @@
         params.showTrailingSpace = prefs.show_whitespace_errors;
         params.styleSelectedText = true;
         params.tabSize = prefs.tab_size;
-        params.theme = prefs.theme.toLowerCase();
+        // TODO(kaspern): Add support for themes.
+        // params.theme = prefs.theme.toLowerCase();
 
         if (value && value.includes('\r\n')) {
           params.lineSeparator = '\r\n';
