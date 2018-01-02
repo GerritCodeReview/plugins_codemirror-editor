@@ -16,6 +16,24 @@
       "revId": "d213d6429f8cdedc2d8e1b5445e7ef2c629f3b0c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a0116b6d_df89e100",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-02T20:58:56Z",
+      "side": 1,
+      "message": "We need CodeMirror.findModeByMIME to mape for example text/javascript to it\u0027s mode.",
+      "parentUuid": "41b1e665_3e205f20",
+      "revId": "d213d6429f8cdedc2d8e1b5445e7ef2c629f3b0c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
