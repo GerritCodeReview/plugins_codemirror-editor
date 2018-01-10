@@ -39,21 +39,23 @@
       this.scopeSubtree(this.$.wrapper, true);
       const params =
           this.getCodeMirrorParams(this.fileType, this.fileContent, this.prefs);
-      this.mirror = CodeMirror(this.$.wrapper, params);
-      this.async(() => { this.mirror.refresh(); }, 1);
+      this.mirror = CodeMirror.MergeView(this.$.wrapper, params);
+      //this.async(() => { this.mirror.refresh(); }, 1);
       this.addEventListeners();
     },
 
     addEventListeners() {
-      this.mirror.on('change', e => {
+      /*this.mirror.on('change', e => {
         this.dispatchEvent(new CustomEvent('content-change',
             {detail: {value: e.getValue()}, bubbles: true}));
-      });
+      });*/
     },
 
     getCodeMirrorParams(type, value, prefs) {
       const params = {value};
 
+      params.origLeft = null;
+      params.orig = null;
       if (prefs) {
         // TODO: Add gerrit's customizations from java codemirror to javascript
         // gerrit-gwtui/src/main/java/net/codemirror/lib/Extras.java
@@ -74,7 +76,7 @@
         // Support for this is somewhere in gerrit's codebase
         // needs backporting to javascript
         params.mode = prefs.syntax_highlighting ? this._mapFileType(type) : '';
-        params.origLeft = value;
+        //params.origLeft = value;
         params.showTabs = prefs.show_tabs;
         params.showTrailingSpace = prefs.show_whitespace_errors;
         params.styleSelectedText = true;
