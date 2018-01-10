@@ -52,7 +52,7 @@
     },
 
     getCodeMirrorParams(type, value, prefs) {
-      const params = {value};
+      const params = {value, viewportMargin: Infinity};
 
       if (prefs) {
         // TODO: Add gerrit's customizations from java codemirror to javascript
@@ -66,7 +66,8 @@
         // TODO(kaspern): Add support for keymaps.
         // params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineLength = prefs.line_length;
-        params.lineNumbers = prefs.hide_line_numbers;
+        // Line numbers are currently broken. See Issue 8114.
+        params.lineNumbers = false;
         params.lineWrapping = prefs.line_wrapping;
         params.indentWithTabs = prefs.indent_with_tabs;
         params.matchBrackets = prefs.match_brackets;
@@ -74,10 +75,8 @@
         // Support for this is somewhere in gerrit's codebase
         // needs backporting to javascript
         params.mode = prefs.syntax_highlighting ? this._mapFileType(type) : '';
-        params.origLeft = value;
         params.showTabs = prefs.show_tabs;
         params.showTrailingSpace = prefs.show_whitespace_errors;
-        params.styleSelectedText = true;
         params.tabSize = prefs.tab_size;
         // TODO(kaspern): Add support for themes.
         // params.theme = prefs.theme.toLowerCase();
@@ -92,6 +91,10 @@
 
     _mapFileType(type) {
       return LANGUAGE_MAP[type] || type || '';
+    },
+
+    focus() {
+      this.mirror.focus();
     },
   });
 })();
