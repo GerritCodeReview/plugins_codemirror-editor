@@ -29,5 +29,8 @@ polygerrit_plugin(
     name = "cm",
     srcs = glob(["**/*.html", "**/*.js"]),
     app = "plugin.html",
-    deps = ["//lib/js:codemirror-minified"],
+    deps = [
+        "//lib/js:google-diff-match-patch",
+        "//lib/js:codemirror-minified",
+    ],
 )
