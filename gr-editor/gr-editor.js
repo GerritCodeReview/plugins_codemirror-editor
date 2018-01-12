@@ -67,7 +67,7 @@
         // params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineLength = prefs.line_length;
         // Line numbers are currently broken. See Issue 8114.
-        params.lineNumbers = false;
+        params.lineNumbers = true;
         params.lineWrapping = prefs.line_wrapping;
         params.indentWithTabs = prefs.indent_with_tabs;
         params.matchBrackets = prefs.match_brackets;
@@ -84,6 +84,8 @@
         if (value && value.includes('\r\n')) {
           params.lineSeparator = '\r\n';
         }
+
+        params.autoRefresh = true;
       }
 
       return params;
