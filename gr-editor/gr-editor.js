@@ -33,7 +33,13 @@
       fileType: String,
       mirror: Object,
       prefs: Object,
+      refresh: Object,
     },
+
+
+    observers: [
+      '_computeRefresh(refresh.*)',
+    ],
 
     attached() {
       this.scopeSubtree(this.$.wrapper, true);
@@ -91,6 +97,15 @@
 
     _mapFileType(type) {
       return LANGUAGE_MAP[type] || type || '';
+    },
+
+    _computeRefresh(prefs) {
+      console.log(prefs);
+      if (!prefs) { return false; }
+
+      this.prefs = prefs;
+
+      return this.attached();
     },
   });
 })();
