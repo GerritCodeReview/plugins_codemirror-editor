@@ -33,6 +33,10 @@
       fileType: String,
       mirror: Object,
       prefs: Object,
+      refresh: {
+        type: Boolean,
+        observer: '_refreshPrefs',
+      },
     },
 
     attached() {
@@ -91,6 +95,26 @@
 
     _mapFileType(type) {
       return LANGUAGE_MAP[type] || type || '';
+    },
+
+    _refreshPrefs(refresh) {
+      if (refresh) {
+        if (this.prefs) {
+          this.mirror.setOption('autoCloseBrackets', this.prefs.auto_close_brackets);
+          this.mirror.setOption('cursorHeight', 0.85);
+          this.mirror.setOption('indentUnit', this.prefs.indent_unit);
+          this.mirror.setOption('indentWithTabs', this.prefs.indent_with_tabs);
+          this.mirror.setOption('lineLength', this.prefs.line_length);
+          this.mirror.setOption('lineNumbers', !this.prefs.hide_line_numbers);
+          this.mirror.setOption('lineWrapping', this.prefs.line_wrapping);
+          this.mirror.setOption('matchBrackets', this.prefs.match_brackets);
+          this.mirror.setOption('showTabs', this.prefs.show_tabs);
+          this.mirror.setOption('showTrailingSpace', this.prefs.show_whitespace_errors);
+          this.mirror.setOption('tabSize', this.prefs.tab_size);
+        }
+
+        this.refresh = false;
+      }
     },
   });
 })();
