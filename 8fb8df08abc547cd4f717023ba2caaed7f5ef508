@@ -34,6 +34,24 @@
       "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ff93545_1644cede",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-29T00:32:37Z",
+      "side": 1,
+      "message": "https://github.com/GerritCodeReview/gerrit/blob/482e111afe42b57e2f14423cb645cf0460be3ae5/gerrit-gwtui/src/main/java/net/codemirror/lib/style.css",
+      "parentUuid": "2a8c9d5c_8cb39790",
+      "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
