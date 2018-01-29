@@ -178,6 +178,24 @@
       "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "551c30f9_3e9e9fd8",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-29T21:31:15Z",
+      "side": 1,
+      "message": "It seems that codemirror is calculating the initial height of each line before the line is styled. If you call this.codemirror.refresh() in the debugger, you can see that there\u0027s a brief point in time where the text has no styles applied. \n\nI\u0027m fairly certain this is the same conflict that\u0027s causing linenumbers to not work. Something having to do with the way Polymer applies styling to web components means that the calculations codemirror does to lay itself out are done incorrectly.",
+      "parentUuid": "5b34d14f_f22b227d",
+      "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
