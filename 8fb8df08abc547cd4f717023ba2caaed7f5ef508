@@ -124,6 +124,24 @@
       "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26e1b80e_733980e6",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-29T01:24:54Z",
+      "side": 1,
+      "message": "Hmm, fixed it for me on https://gerrit-new.wmflabs.org/r/ . But if you said it didnt fix it for you, could it be a bug in codemirror or do we need to ajust css some where?",
+      "parentUuid": "0aa40d9d_9e4fd473",
+      "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
