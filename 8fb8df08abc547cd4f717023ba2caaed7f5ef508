@@ -70,6 +70,24 @@
       "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bf1e130_039db2fb",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-29T00:38:58Z",
+      "side": 1,
+      "message": "Im not exactly sure which one fixes it and i picked them because i remeber i had copied some css in a private test change and then wanted to try it and see if that fixed the problem. It fixed the problem 99% of the time.",
+      "parentUuid": "2dff990e_4855fdc5",
+      "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
