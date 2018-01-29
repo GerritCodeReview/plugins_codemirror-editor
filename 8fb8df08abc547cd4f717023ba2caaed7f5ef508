@@ -88,6 +88,24 @@
       "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2aa7240_8ff44d87",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-29T00:48:50Z",
+      "side": 1,
+      "message": "Let\u0027s figure out which bits of CSS fix the issue, then. We don\u0027t want to add code we don\u0027t need.",
+      "parentUuid": "3bf1e130_039db2fb",
+      "revId": "8fb8df08abc547cd4f717023ba2caaed7f5ef508",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
