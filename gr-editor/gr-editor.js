@@ -58,15 +58,13 @@
         // TODO: Add gerrit's customizations from java codemirror to javascript
         // gerrit-gwtui/src/main/java/net/codemirror/lib/Extras.java
         params.autoCloseBrackets = prefs.auto_close_brackets;
-        params.cursorBlinkRate = prefs.cursor_blink_rate;
         params.cursorHeight = 0.85;
-        params.hideTopMenu = prefs.hide_top_menu;
         params.indentUnit = prefs.indent_unit;
         params.indentWithTabs = prefs.indent_with_tabs;
         // TODO(kaspern): Add support for keymaps.
         // params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineLength = prefs.line_length;
-        params.lineNumbers = prefs.hide_line_numbers;
+        params.lineNumbers = !prefs.hide_line_numbers;
         params.lineWrapping = prefs.line_wrapping;
         params.indentWithTabs = prefs.indent_with_tabs;
         params.matchBrackets = prefs.match_brackets;
