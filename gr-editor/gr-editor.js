@@ -64,7 +64,7 @@
         // TODO(kaspern): Add support for keymaps.
         // params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineLength = prefs.line_length;
-        params.lineNumbers = !prefs.hide_line_numbers;
+        params.lineNumbers = prefs.hide_line_numbers;
         params.lineWrapping = prefs.line_wrapping;
         params.indentWithTabs = prefs.indent_with_tabs;
         params.matchBrackets = prefs.match_brackets;
