@@ -22,6 +22,30 @@
       "revId": "790e86331b02169309ee6f9e5256c31ffe6bb82e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e62ac881_f4b45233",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-01-30T22:12:32Z",
+      "side": 1,
+      "message": "It appears there\u0027s a bug in GWT, then. As per the documentation, `hide_line_numbers: Whether line numbers should be hidden.`\n\nhttps://gerrit-review.googlesource.com/Documentation/rest-api-accounts.html#edit-preferences-info",
+      "parentUuid": "c174887b_e56cafbb",
+      "range": {
+        "startLine": 67,
+        "startChar": 29,
+        "endLine": 67,
+        "endChar": 54
+      },
+      "revId": "790e86331b02169309ee6f9e5256c31ffe6bb82e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
