@@ -33,6 +33,10 @@
       fileType: String,
       mirror: Object,
       prefs: Object,
+      refresh: {
+        type: Object,
+        observer: '_refresh',
+      },
     },
 
     attached() {
@@ -88,6 +92,12 @@
 
     _mapFileType(type) {
       return LANGUAGE_MAP[type] || type || '';
+    },
+
+    _refresh(value) {
+      this.prefs = value;
+
+      this.fire('change');
     },
   });
 })();
