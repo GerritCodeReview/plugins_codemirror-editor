@@ -63,6 +63,14 @@ limitations under the License.
         /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
         z-index: 0;
       }
+      .cm-tab:before {
+        position: absolute;
+        content: "\00bb";
+        color: #f00;
+      }
+      .cm-trailingspace {
+        background-color: red !important;
+      }
     </style>
     <div id="wrapper"></div>
   </template>
