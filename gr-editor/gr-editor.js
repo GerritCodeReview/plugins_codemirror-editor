@@ -93,8 +93,8 @@
         params.showTabs = prefs.show_tabs;
         params.showTrailingSpace = prefs.show_whitespace_errors;
         params.tabSize = prefs.tab_size;
-        // TODO(kaspern): Add support for themes.
-        // params.theme = prefs.theme.toLowerCase();
+
+        params.theme = prefs.theme.toLowerCase();
 
         params.rulers = [{column: prefs.line_length}];
         if (value && value.includes('\r\n')) {
