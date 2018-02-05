@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37bf595c_657ef62b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-05T19:15:47Z",
+      "side": 1,
+      "message": "Should be \"Add CSS for whitespace and tabs\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 48
+      },
+      "revId": "2250f6700aa377be6a8b887d96e28b416e252379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e6ceec5_13f70e2f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-05T19:15:47Z",
+      "side": 1,
+      "message": "Remove this line.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 47
+      },
+      "revId": "2250f6700aa377be6a8b887d96e28b416e252379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "474fb035_463e5da5",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-05T19:15:47Z",
+      "side": 1,
+      "message": "Change this to:\n\n  content: \"\\2192\";\n  color: #757575;\n\nAlso, make sure you sort CSS properties alphabetically.",
+      "range": {
+        "startLine": 68,
+        "startChar": 8,
+        "endLine": 69,
+        "endChar": 20
+      },
+      "revId": "2250f6700aa377be6a8b887d96e28b416e252379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80a91fbc_97a38c52",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-05T19:15:47Z",
+      "side": 1,
+      "message": "Change this CSS to:\n\n  background-color: #ef9a9a;\n  border: 1px solid #f44336;\n  border-radius: 3px;",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 41
+      },
+      "revId": "2250f6700aa377be6a8b887d96e28b416e252379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ecd8711_a1381c52",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-05T19:15:47Z",
+      "side": 1,
+      "message": "We do not use `!important` in PolyGerrit.",
+      "range": {
+        "startLine": 72,
+        "startChar": 29,
+        "endLine": 72,
+        "endChar": 40
+      },
+      "revId": "2250f6700aa377be6a8b887d96e28b416e252379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
