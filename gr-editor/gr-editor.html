@@ -17,6 +17,16 @@ limitations under the License.
 <link rel="import" href="gr-editor-styles.html">
 
 <script src="../bower_components/codemirror-minified/lib/codemirror.js"></script>
+<script src="../bower_components/codemirror-minified/addon/edit/closebrackets.js"></script>
+<script src="../bower_components/codemirror-minified/addon/edit/closetag.js"></script>
+<script src="../bower_components/codemirror-minified/addon/edit/matchtags.js"></script>
+<script src="../bower_components/codemirror-minified/addon/edit/trailingspace.js"></script>
+<script src="../bower_components/codemirror-minified/addon/fold/foldcode.js" ></script>
+<script src="../bower_components/codemirror-minified/addon/fold/foldgutter.js" ></script>
+<script src="../bower_components/codemirror-minified/addon/fold/brace-fold.js" ></script>
+<script src="../bower_components/codemirror-minified/addon/fold/xml-fold.js" ></script>
+<script src="../bower_components/codemirror-minified/addon/fold/markdown-fold.js" ></script>
+<script src="../bower_components/codemirror-minified/addon/mode/simple.js"></script>
 <script src="../bower_components/codemirror-minified/mode/meta.js"></script>
 <script src="../bower_components/codemirror-minified/mode/clike/clike.js" ></script>
 <script src="../bower_components/codemirror-minified/mode/clojure/clojure.js" ></script>
@@ -41,15 +51,6 @@ limitations under the License.
 <script src="../bower_components/codemirror-minified/mode/velocity/velocity.js" ></script>
 <script src="../bower_components/codemirror-minified/mode/xml/xml.js" ></script>
 <script src="../bower_components/codemirror-minified/mode/yaml/yaml.js" ></script>
-<script src="../bower_components/codemirror-minified/addon/edit/closebrackets.js"></script>
-<script src="../bower_components/codemirror-minified/addon/edit/closetag.js"></script>
-<script src="../bower_components/codemirror-minified/addon/edit/matchtags.js"></script>
-<script src="../bower_components/codemirror-minified/addon/edit/trailingspace.js"></script>
-<script src="../bower_components/codemirror-minified/addon/fold/foldcode.js" ></script>
-<script src="../bower_components/codemirror-minified/addon/fold/foldgutter.js" ></script>
-<script src="../bower_components/codemirror-minified/addon/fold/brace-fold.js" ></script>
-<script src="../bower_components/codemirror-minified/addon/fold/xml-fold.js" ></script>
-<script src="../bower_components/codemirror-minified/addon/fold/markdown-fold.js" ></script>
 
 <dom-module id="gr-editor">
   <template>
