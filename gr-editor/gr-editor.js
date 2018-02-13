@@ -40,7 +40,10 @@
       const params =
           this.getCodeMirrorParams(this.fileType, this.fileContent, this.prefs);
       this.mirror = CodeMirror(this.$.wrapper, params);
-      this.async(() => { this.mirror.refresh(); }, 1);
+      this.async(() => {
+        this.mirror.refresh();
+        this.mirror.focus();
+      }, 1);
       this.addEventListeners();
     },
 
