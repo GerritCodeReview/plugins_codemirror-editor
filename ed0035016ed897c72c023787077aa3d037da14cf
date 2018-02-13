@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "12a2eecd_6bebcccf",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-13T01:43:25Z",
+      "side": 1,
+      "message": "Yeah.\n\nhttps://codemirror.net/doc/manual.html#styling",
+      "parentUuid": "59ba8815_100ed558",
+      "range": {
+        "startLine": 68,
+        "startChar": 7,
+        "endLine": 68,
+        "endChar": 16
+      },
+      "revId": "ed0035016ed897c72c023787077aa3d037da14cf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d08088b8_95f21264",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 1
@@ -39,6 +63,24 @@
       "revId": "ed0035016ed897c72c023787077aa3d037da14cf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2423e685_e5b42293",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-13T01:43:25Z",
+      "side": 1,
+      "message": "...so there actually aren\u0027t tests for this plugin at all yet.\n\nIt\u0027s not possible (or at least, it\u0027s pretty darn hard AFAICT) to integrate these tests into our overall test suite. I haven\u0027t gotten around to adding any testing bespoke to this component yet, and have been getting by without them so far just because this is actually a pretty simple component overall.\n\nI\u0027ve filed an issue to implement this here: https://bugs.chromium.org/p/gerrit/issues/detail?id\u003d8366",
+      "parentUuid": "d08088b8_95f21264",
+      "revId": "ed0035016ed897c72c023787077aa3d037da14cf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
