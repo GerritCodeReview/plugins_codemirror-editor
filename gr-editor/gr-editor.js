@@ -69,7 +69,6 @@
         params.lineLength = prefs.line_length;
         params.lineNumbers = !prefs.hide_line_numbers;
         params.lineWrapping = prefs.line_wrapping;
-        params.indentWithTabs = prefs.indent_with_tabs;
         params.matchBrackets = prefs.match_brackets;
         // TODO: Add support for a new commit msg MIME type
         // Support for this is somewhere in gerrit's codebase
