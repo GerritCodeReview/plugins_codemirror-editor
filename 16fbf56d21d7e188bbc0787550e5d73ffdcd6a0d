@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "eb4ffb46_7b9a6076",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-20T21:25:25Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "f56651e7_89776d94",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 91
+      },
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d389ba84_2e5df253",
         "filename": "gr-editor/gr-editor.html",
         "patchSetId": 5
@@ -59,6 +83,24 @@
     },
     {
       "key": {
+        "uuid": "10be10b3_f809d21a",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-20T21:25:25Z",
+      "side": 1,
+      "message": "From CodeMirrors doc\n\n\"\n\nMode combinator that can be used to easily \u0027multiplex\u0027 between several modes. Defines CodeMirror.multiplexingMode which, when given as first argument a mode object, and as other arguments any number of {open, close, mode [, delimStyle, innerStyle, parseDelimiters]} objects, will return a mode object that starts parsing using the mode passed as first argument, but will switch to another mode as soon as it encounters a string that occurs in one of the open fields of the passed objects. When in a sub-mode, it will go back to the top mode again when the close string is encountered. Pass \"\\n\" for open or close if you want to switch on a blank line.\nWhen delimStyle is specified, it will be the token style returned for the delimiter tokens (as well as [delimStyle]-open on the opening token and [delimStyle]-close on the closing token).\nWhen innerStyle is specified, it will be the token style added for each inner mode token.\nWhen parseDelimiters is true, the content of the delimiters will also be passed to the inner mode. (And delimStyle is ignored.)\nThe outer mode will not see the content between the delimiters. See this demo for an example.\n\"",
+      "parentUuid": "d389ba84_2e5df253",
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "23374879_5a4661c7",
         "filename": "gr-editor/gr-editor.html",
         "patchSetId": 5
@@ -70,6 +112,30 @@
       "writtenOn": "2018-02-20T21:00:49Z",
       "side": 1,
       "message": "Remove this.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 97
+      },
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41901b01_ef7e2208",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-20T21:25:25Z",
+      "side": 1,
+      "message": "thanks, done.",
+      "parentUuid": "23374879_5a4661c7",
       "range": {
         "startLine": 32,
         "startChar": 0,
