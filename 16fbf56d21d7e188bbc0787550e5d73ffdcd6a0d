@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e4eb6bf9_e1000e8c",
+        "filename": "gr-editor/gr-editor-styles.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-20T21:00:49Z",
+      "side": 1,
+      "message": "Revert these changes.",
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f56651e7_89776d94",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-20T21:00:49Z",
+      "side": 1,
+      "message": "Remove this.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 91
+      },
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d389ba84_2e5df253",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-20T21:00:49Z",
+      "side": 1,
+      "message": "What is this for?",
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23374879_5a4661c7",
+        "filename": "gr-editor/gr-editor.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-02-20T21:00:49Z",
+      "side": 1,
+      "message": "Remove this.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 97
+      },
+      "revId": "16fbf56d21d7e188bbc0787550e5d73ffdcd6a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
