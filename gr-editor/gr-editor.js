@@ -67,7 +67,7 @@
         // TODO(kaspern): Add support for keymaps.
         // params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineLength = prefs.line_length;
-        params.lineNumbers = !prefs.hide_line_numbers;
+        params.lineNumbers = true;
         params.lineWrapping = prefs.line_wrapping;
         params.matchBrackets = prefs.match_brackets;
         // TODO: Add support for a new commit msg MIME type
