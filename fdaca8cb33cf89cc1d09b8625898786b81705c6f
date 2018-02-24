@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9eb48198_513bc9ae",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-02-24T18:07:32Z",
+      "side": 1,
+      "message": "But this is a core plugin. We don\u0027t have build documentation for core plugins, because it\u0027s covered in Documentation/dev-bazel.txt:\n\n  To build the Gerrit web application that includes\n  the GWT UI, the PolyGerrit UI, core plugins and documentation:\n  ----\n    bazel build release\n  ----\n\nand\n\n  To build the extension, plugin and GWT API JAR files:\n  ----\n    bazel build api\n  ----",
+      "revId": "fdaca8cb33cf89cc1d09b8625898786b81705c6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
