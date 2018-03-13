@@ -16,6 +16,24 @@
       "revId": "32753c4e226fe6297795c7d80166203719d6e48f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cbcb045b_e6fefd99",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-03-13T18:50:34Z",
+      "side": 0,
+      "message": "It actually doesn\u0027t appear to exist in any codemirror docs, no. I have no idea where Paladox got this.",
+      "parentUuid": "22993933_a93c33d5",
+      "revId": "32753c4e226fe6297795c7d80166203719d6e48f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
