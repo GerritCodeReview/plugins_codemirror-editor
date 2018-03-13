@@ -17,6 +17,7 @@ limitations under the License.
 <link rel="import" href="gr-editor-styles.html">
 
 <script src="../bower_components/codemirror-minified/lib/codemirror.js"></script>
+<script src="../bower_components/codemirror-minified/addon/display/rulers.js"></script>
 <script src="../bower_components/codemirror-minified/addon/edit/closebrackets.js"></script>
 <script src="../bower_components/codemirror-minified/addon/edit/closetag.js"></script>
 <script src="../bower_components/codemirror-minified/addon/edit/matchbrackets.js"></script>
@@ -67,6 +68,9 @@ limitations under the License.
       }
       .CodeMirror-linenumber {
         color: #757575;
+      }
+      .CodeMirror-ruler {
+        border-left: 1px solid #ddd;
       }
       .cm-tab:before {
         color: #757575;

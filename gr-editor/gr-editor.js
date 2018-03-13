@@ -66,7 +66,6 @@
         params.indentWithTabs = prefs.indent_with_tabs;
         // TODO(kaspern): Add support for keymaps.
         // params.keyMap = prefs.key_map_type.toLowerCase();
-        params.lineLength = prefs.line_length;
         params.lineNumbers = true;
         params.lineWrapping = prefs.line_wrapping;
         params.matchBrackets = prefs.match_brackets;
@@ -80,6 +79,7 @@
         // TODO(kaspern): Add support for themes.
         // params.theme = prefs.theme.toLowerCase();
 
+        params.rulers = [{column: prefs.line_length}];
         if (value && value.includes('\r\n')) {
           params.lineSeparator = '\r\n';
         }
