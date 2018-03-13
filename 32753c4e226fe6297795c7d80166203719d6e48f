@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22993933_a93c33d5",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1030207
+      },
+      "writtenOn": "2018-03-13T18:49:13Z",
+      "side": 0,
+      "message": "Is this still needed for the line wrapping preference?",
+      "revId": "32753c4e226fe6297795c7d80166203719d6e48f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
