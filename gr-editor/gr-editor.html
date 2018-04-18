@@ -58,28 +58,30 @@ limitations under the License.
         z-index: 0;
       }
       .CodeMirror {
+        background-color: var(--view-background-color);
+        color: var(--primary-text-color);
         font-family: 'Roboto Mono', Menlo, 'Lucida Console', Monaco, monospace;
         height: auto;
         /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
         z-index: 0;
       }
       .CodeMirror-linenumbers {
-        background-color: #fafafa;
+        background-color: var(--table-header-background-color);
       }
       .CodeMirror-linenumber {
-        color: #757575;
+        color: var(--deemphasized-text-color);
       }
       .CodeMirror-ruler {
-        border-left: 1px solid #ddd;
+        border-left: 1px solid var(--border-color);
       }
       .cm-tab:before {
-        color: #757575;
+        color: var(--deemphasized-text-color);
         content: "\2192";
         position: absolute;
       }
       .cm-trailingspace {
-        background-color: #ef9a9a;
-        border: 1px solid #f44336;
+        background-color: var(--diff-trailing-whitespace-indicator);
+        border: 1px solid var(--error-text-color);
         border-radius: 3px;
       }
     </style>
