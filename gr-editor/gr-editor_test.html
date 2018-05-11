@@ -19,6 +19,12 @@ limitations under the License.
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 <title>gr-editor</title>
 
+<!--
+Import polymer here, as the editor itself receives Polymer during Gerrit
+release build step.
+-->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
 <link rel="import" href="../bower_components/iron-test-helpers/iron-test-helpers.html">
 <link rel="import" href="gr-editor.html">
 <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
