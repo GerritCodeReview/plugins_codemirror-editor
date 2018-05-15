@@ -1,5 +1,5 @@
 load("//tools/bzl:genrule2.bzl", "genrule2")
-load("//tools/bzl:js.bzl", "polygerrit_plugin")
+load("//tools/bzl:js.bzl", "polygerrit_plugin", "vulcanize")
 load("//tools/bzl:plugin.bzl", "gerrit_plugin")
 
 gerrit_plugin(
@@ -15,11 +15,13 @@ gerrit_plugin(
 
 genrule2(
     name = "cm-static",
-    srcs = [":cm"],
+    srcs = [":cm", ":cm-dep"],
     outs = ["cm-static.jar"],
     cmd = " && ".join([
         "mkdir $$TMP/static",
         "cp -rp $(locations :cm) $$TMP/static",
+        "cp -rp $(locations :cm-dep) $$TMP/static",
+        "mv $$TMP/static/cm-dep.html $$TMP/static/codemirror-scripts.html",
         "cd $$TMP",
         "zip -Drq $$ROOT/$@ -g .",
     ]),
@@ -30,4 +32,12 @@ polygerrit_plugin(
     srcs = glob(["**/*.html", "**/*.js"]),
     app = "plugin.html",
     deps = ["//lib/js:codemirror-minified"],
+)
+
+vulcanize(
+    name = "cm-dep",
+    srcs = glob(['gr-editor/codemirror-scripts.html']),
+    app = "gr-editor/codemirror-scripts.html",
+    deps = ["//lib/js:codemirror-minified"],
+    split = False,
 )

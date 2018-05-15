@@ -37,14 +37,16 @@
 
     attached() {
       this.scopeSubtree(this.$.wrapper, true);
-      const params =
-          this.getCodeMirrorParams(this.fileType, this.fileContent, this.prefs);
-      this.mirror = CodeMirror(this.$.wrapper, params);
-      this.async(() => {
-        this.mirror.refresh();
-        this.mirror.focus();
-      }, 1);
-      this.addEventListeners();
+      this.importHref('./codemirror-scripts.html', () => {
+        const params =
+            this.getCodeMirrorParams(this.fileType, this.fileContent, this.prefs);
+        this.mirror = CodeMirror(this.$.wrapper, params);
+        this.async(() => {
+          this.mirror.refresh();
+          this.mirror.focus();
+        }, 1);
+        this.addEventListeners();
+      });
     },
 
     addEventListeners() {
