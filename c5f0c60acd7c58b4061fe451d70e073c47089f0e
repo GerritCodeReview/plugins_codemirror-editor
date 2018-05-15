@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a53e26f_43be096f",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-05-15T03:50:13Z",
+      "side": 1,
+      "message": "This path does not resolve to /plugins/static/codemirror-editor/codemirror-scripts.html when Gerrit is built. It instead resolves to /c/[project]/+/[change]/[patch]/codemirror-scripts.html.\n\nHow should a plugin specify paths? Is there some way I can resolve relative paths?",
+      "range": {
+        "startLine": 40,
+        "startChar": 22,
+        "endLine": 40,
+        "endChar": 49
+      },
+      "revId": "c5f0c60acd7c58b4061fe451d70e073c47089f0e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
