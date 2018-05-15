@@ -33,18 +33,35 @@
       fileType: String,
       mirror: Object,
       prefs: Object,
+      plugin: Object,
     },
 
     attached() {
+      this._initializeMirror();
+    },
+
+    _initializeMirror() {
       this.scopeSubtree(this.$.wrapper, true);
-      const params =
-          this.getCodeMirrorParams(this.fileType, this.fileContent, this.prefs);
-      this.mirror = CodeMirror(this.$.wrapper, params);
-      this.async(() => {
-        this.mirror.refresh();
-        this.mirror.focus();
-      }, 1);
-      this.addEventListeners();
+      return new Promise((resolve, reject) => {
+        this._importCodeMirror().then(() => {
+          const params = this.getCodeMirrorParams(this.fileType,
+              this.fileContent, this.prefs);
+          this.mirror = CodeMirror(this.$.wrapper, params);
+          this.async(() => {
+            this.mirror.refresh();
+            this.mirror.focus();
+          }, 1);
+          this.addEventListeners();
+          resolve();
+        });
+      });
+    },
+
+    _importCodeMirror() {
+      const url = `${this.plugin.url()}static/codemirror-assets.html`;
+      return new Promise((resolve, reject) => {
+        this.importHref(url, resolve, reject);
+      });
     },
 
     addEventListeners() {

@@ -47,27 +47,28 @@ suite('gr-editor tests', () => {
     sandbox = sinon.sandbox.create();
 
     stub('gr-editor', {
-      // Stub ready because it exists before attached in the Polymer lifecycle,
-      // and the editor plugin initializes in the attached callback.
-      ready() {
-        this.fileType = 'text/x-php';
-        this.fileContent = '<?php echo test; ?>';
-        this.prefs = {};
+      // Stub attached to allow for parameterization within tests.
+      attached() {},
+      _importCodeMirror() {
+        return new Promise((resolve, reject) => {
+          this.importHref('./codemirror-assets.html', resolve, reject);
+        });
       },
-    })
-
+    });
     element = fixture('basic');
   });
 
-  teardown(() => {
-    sandbox.restore();
-  });
+  teardown(() => { sandbox.restore(); });
 
   test('renders', () => {
-    flushAsynchronousOperations();
+    element.fileType = 'text/x-php';
+    element.fileContent = '<?php echo test; ?>';
+    element.prefs = {};
 
-    assert.ok(element.mirror);
-    assert.equal(element.mirror.getValue(), element.fileContent);
+    element._initializeMirror().then(() => {
+      assert.ok(element.mirror);
+      assert.equal(element.mirror.getValue(), element.fileContent);
+    });
   });
 });
 </script>
