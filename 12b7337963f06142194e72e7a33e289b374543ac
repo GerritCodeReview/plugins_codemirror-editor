@@ -16,6 +16,24 @@
       "revId": "12b7337963f06142194e72e7a33e289b374543ac",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ec16d3d_85ffe840",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1024777
+      },
+      "writtenOn": "2018-07-09T23:00:45Z",
+      "side": 1,
+      "message": "Basically, this is needed to bypass Closure compilation.\nAlternative is to declare an extern, which is a bit more laborious.",
+      "parentUuid": "8d206e5f_2e155b10",
+      "revId": "12b7337963f06142194e72e7a33e289b374543ac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
