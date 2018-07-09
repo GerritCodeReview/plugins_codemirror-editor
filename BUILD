@@ -28,14 +28,14 @@ genrule2(
 )
 
 polygerrit_plugin(
-    name = "cm",
-    srcs = glob(["**/*.html", "**/*.js"]),
+    name = "codemirror_editor",
+    srcs = glob(["gr-editor/*.html", "gr-editor/*.js"]),
     app = "plugin.html",
-    deps = ["//lib/js:codemirror-minified"],
+    assets = [":codemirror-assets"],
 )
 
 vulcanize(
-    name = "cm-dep",
+    name = "codemirror-assets",
     srcs = glob(['gr-editor/codemirror-assets.html']),
     app = "gr-editor/codemirror-assets.html",
     deps = ["//lib/js:codemirror-minified"],
