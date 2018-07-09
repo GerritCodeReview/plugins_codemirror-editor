@@ -15,29 +15,30 @@ gerrit_plugin(
 
 genrule2(
     name = "cm-static",
-    srcs = [":cm", ":cm-dep"],
+    srcs = [":codemirror_editor"],
     outs = ["cm-static.jar"],
     cmd = " && ".join([
         "mkdir $$TMP/static",
-        "cp -rp $(locations :cm) $$TMP/static",
-        "cp -rp $(locations :cm-dep) $$TMP/static",
-        "mv $$TMP/static/cm-dep.html $$TMP/static/codemirror-assets.html",
+        "cp -r $(locations :codemirror_editor) $$TMP/static",
         "cd $$TMP",
         "zip -Drq $$ROOT/$@ -g .",
     ]),
 )
 
-polygerrit_plugin(
-    name = "cm",
-    srcs = glob(["**/*.html", "**/*.js"]),
-    app = "plugin.html",
+vulcanize(
+    name = "codemirror-assets",
+    srcs = glob(["gr-editor/codemirror-assets.html"]),
+    app = "gr-editor/codemirror-assets.html",
+    split = False,
     deps = ["//lib/js:codemirror-minified"],
 )
 
-vulcanize(
-    name = "cm-dep",
-    srcs = glob(['gr-editor/codemirror-assets.html']),
-    app = "gr-editor/codemirror-assets.html",
-    deps = ["//lib/js:codemirror-minified"],
-    split = False,
+polygerrit_plugin(
+    name = "codemirror_editor",
+    srcs = glob([
+        "gr-editor/*.html",
+        "gr-editor/*.js",
+    ]),
+    app = "plugin.html",
+    assets = [":codemirror-assets"],
 )

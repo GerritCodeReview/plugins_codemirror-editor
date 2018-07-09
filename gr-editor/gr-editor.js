@@ -46,7 +46,7 @@
         this._importCodeMirror().then(() => {
           const params = this.getCodeMirrorParams(this.fileType,
               this.fileContent, this.prefs);
-          this.mirror = CodeMirror(this.$.wrapper, params);
+          this.mirror = window.CodeMirror(this.$.wrapper, params);
           this.async(() => {
             this.mirror.refresh();
             this.mirror.focus();
