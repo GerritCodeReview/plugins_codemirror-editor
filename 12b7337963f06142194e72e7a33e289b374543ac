@@ -52,6 +52,24 @@
       "revId": "12b7337963f06142194e72e7a33e289b374543ac",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "817513a5_182b8766",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1024777
+      },
+      "writtenOn": "2018-07-10T04:06:08Z",
+      "side": 1,
+      "message": "In case we ever find time to fix this in a proper way, we should add/import externs.\nCodeMirror doesn\u0027t have ones provided by author, this is the best I could find on the spot:\nhttps://github.com/urmuzov/closure-externs/blob/master/codemirror.js",
+      "parentUuid": "03390125_dcc9ebbb",
+      "revId": "12b7337963f06142194e72e7a33e289b374543ac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
