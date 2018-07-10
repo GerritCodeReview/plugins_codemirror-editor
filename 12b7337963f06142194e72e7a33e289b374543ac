@@ -34,6 +34,24 @@
       "revId": "12b7337963f06142194e72e7a33e289b374543ac",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03390125_dcc9ebbb",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1026519
+      },
+      "writtenOn": "2018-07-10T00:27:19Z",
+      "side": 1,
+      "message": "This is already how we deal with other JS libraries, so it LGTM.",
+      "parentUuid": "8ec16d3d_85ffe840",
+      "revId": "12b7337963f06142194e72e7a33e289b374543ac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
