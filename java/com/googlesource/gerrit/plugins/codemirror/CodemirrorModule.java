@@ -22,6 +22,6 @@ import com.google.gerrit.extensions.webui.WebUiPlugin;
 public class CodemirrorModule extends RestApiModule {
   @Override
   protected void configure() {
-    DynamicSet.bind(binder(), WebUiPlugin.class).toInstance(new JavaScriptPlugin("cm.html"));
+    DynamicSet.bind(binder(), WebUiPlugin.class).toInstance(new JavaScriptPlugin("codemirror_editor.html"));
   }
 }
