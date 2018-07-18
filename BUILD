@@ -1,5 +1,5 @@
 load("//tools/bzl:genrule2.bzl", "genrule2")
-load("//tools/bzl:js.bzl", "polygerrit_plugin", "vulcanize")
+load("//tools/bzl:js.bzl", "bundle_assets", "polygerrit_plugin")
 load("//tools/bzl:plugin.bzl", "gerrit_plugin")
 
 gerrit_plugin(
@@ -25,7 +25,7 @@ genrule2(
     ]),
 )
 
-vulcanize(
+bundle_assets(
     name = "codemirror-assets",
     srcs = glob(["gr-editor/codemirror-assets.html"]),
     app = "gr-editor/codemirror-assets.html",
