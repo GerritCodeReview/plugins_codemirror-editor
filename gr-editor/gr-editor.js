@@ -81,8 +81,7 @@
         params.cursorHeight = 0.85;
         params.indentUnit = prefs.indent_unit;
         params.indentWithTabs = prefs.indent_with_tabs;
-        // TODO(kaspern): Add support for keymaps.
-        // params.keyMap = prefs.key_map_type.toLowerCase();
+        params.keyMap = prefs.key_map_type.toLowerCase();
         params.lineNumbers = true;
         params.lineWrapping = prefs.line_wrapping;
         params.matchBrackets = prefs.match_brackets;
