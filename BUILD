@@ -27,7 +27,7 @@ genrule2(
 
 bundle_assets(
     name = "codemirror-assets",
-    srcs = glob(["gr-editor/codemirror-assets.html"]),
+    srcs = ["gr-editor/codemirror-assets.html"],
     app = "gr-editor/codemirror-assets.html",
     split = False,
     deps = ["//lib/js:codemirror-minified"],
