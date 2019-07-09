@@ -62,7 +62,7 @@
     _importCodeMirror() {
       const url = this.plugin.url('/static/codemirror-assets.html');
       return new Promise((resolve, reject) => {
-        this.importHref(url, resolve, reject);
+        (this.importHref || Polymer.importHref)(url, resolve, reject);
       });
     },
 
