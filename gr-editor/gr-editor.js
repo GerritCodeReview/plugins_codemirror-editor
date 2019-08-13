@@ -41,33 +41,29 @@
     },
 
     _initializeMirror() {
-      this.scopeSubtree(this.$.wrapper, true);
       return new Promise((resolve, reject) => {
         this._importCodeMirror().then(() => {
           const params = this.getCodeMirrorParams(this.fileType,
               this.fileContent, this.prefs);
-          this.mirror = window.CodeMirror(this.$.wrapper, params);
-          this.async(() => {
-            this.mirror.refresh();
-            this.mirror.focus();
-          }, 1);
-          this.addEventListeners();
+          this.mirror = this.$.codemirror;
+          this.mirror.initialize(params);
+          this._addEventListeners();
           resolve();
         });
       });
     },
 
     _importCodeMirror() {
-      const url = this.plugin.url('/static/codemirror-assets.html');
+      const url = this.plugin.url('/static/codemirror-element.html');
       return new Promise((resolve, reject) => {
         (this.importHref || Polymer.importHref)(url, resolve, reject);
       });
     },
 
-    addEventListeners() {
-      this.mirror.on('change', e => {
+    _addEventListeners() {
+      this.mirror.addEventListener('change', e => {
         this.dispatchEvent(new CustomEvent('content-change',
-            {detail: {value: e.getValue()}, bubbles: true}));
+            {detail: {value: e.detail.value}, bubbles: true, composed: true}));
       });
     },
 

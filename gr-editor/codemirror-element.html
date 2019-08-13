@@ -16,26 +16,64 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/lib/codemirror.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/ambiance.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/ambiance-mobile.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/blackboard.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/cobalt.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/eclipse.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/elegant.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/erlang-dark.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/lesser-dark.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/midnight.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/monokai.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/neat.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/night.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/rubyblue.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/solarized.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/twilight.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/vibrant-ink.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/xq-dark.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/xq-light.css">
-<link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/addon/fold/foldgutter.css">
+<dom-module id="codemirror-element">
+  <template>
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/lib/codemirror.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/ambiance.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/ambiance-mobile.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/blackboard.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/cobalt.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/eclipse.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/elegant.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/erlang-dark.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/lesser-dark.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/midnight.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/monokai.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/neat.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/night.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/rubyblue.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/solarized.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/twilight.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/vibrant-ink.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/xq-dark.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/xq-light.css">
+    <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/addon/fold/foldgutter.css">
+
+    <style>
+      #wrapper {
+        height: 100%;
+        z-index: 0;
+      }
+      .CodeMirror {
+        font-family: 'Roboto Mono', Menlo, 'Lucida Console', Monaco, monospace;
+        height: auto;
+        /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
+        z-index: 0;
+      }
+      .CodeMirror-linenumbers {
+        background-color: #fafafa;
+      }
+      .CodeMirror-linenumber {
+        color: #757575;
+      }
+      .CodeMirror-ruler {
+        border-left: 1px solid #ddd;
+      }
+      .cm-tab:before {
+        color: #757575;
+        content: "\2192";
+        position: absolute;
+      }
+      .cm-trailingspace {
+        background-color: #ef9a9a;
+        border: 1px solid #f44336;
+        border-radius: 3px;
+      }
+    </style>
+    <div id="wrapper"></div>
+  </template>
+  <script src="./codemirror-element.js"></script>
+</dom-module>
 
 <script src="../bower_components/codemirror-minified/lib/codemirror.js"></script>
 <script src="../bower_components/codemirror-minified/addon/display/rulers.js"></script>

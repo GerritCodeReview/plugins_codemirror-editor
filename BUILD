@@ -26,9 +26,12 @@ genrule2(
 )
 
 bundle_assets(
-    name = "codemirror-assets",
-    srcs = ["gr-editor/codemirror-assets.html"],
-    app = "gr-editor/codemirror-assets.html",
+    name = "codemirror-element",
+    srcs = [
+        "gr-editor/codemirror-element.html",
+        "gr-editor/codemirror-element.js",
+    ],
+    app = "gr-editor/codemirror-element.html",
     split = False,
     deps = ["//lib/js:codemirror-minified"],
 )
@@ -40,5 +43,5 @@ polygerrit_plugin(
         "gr-editor/*.js",
     ]),
     app = "plugin.html",
-    assets = [":codemirror-assets"],
+    assets = [":codemirror-element"],
 )
