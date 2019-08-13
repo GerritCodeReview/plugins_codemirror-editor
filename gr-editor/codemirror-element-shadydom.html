@@ -16,6 +16,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
+<!--
+Codemirror doesn't work correctly with shadydom. For shadydom all codemirror's styles
+must be at the document level.
+-->
+
 <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/lib/codemirror.css">
 <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/ambiance.css">
 <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/ambiance-mobile.css">
@@ -36,6 +41,14 @@ limitations under the License.
 <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/xq-dark.css">
 <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/theme/xq-light.css">
 <link rel="stylesheet" type="css" href="../bower_components/codemirror-minified/addon/fold/foldgutter.css">
+
+<dom-module id="codemirror-element">
+  <template>
+    <link rel="stylesheet" type="css" href="./codemirror-element.css" />
+    <div id="wrapper"></div>
+  </template>
+  <script src="./codemirror-element.js"></script>
+</dom-module>
 
 <script src="../bower_components/codemirror-minified/lib/codemirror.js"></script>
 <script src="../bower_components/codemirror-minified/addon/display/rulers.js"></script>
