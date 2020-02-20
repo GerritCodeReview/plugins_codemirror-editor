@@ -28,8 +28,9 @@
       this._initialize();
     },
 
-    setParams(params) {
+    setParams(params, lineNum) {
       this._params = params;
+      this._lineNum = lineNum;
       this._initialize();
     },
 
@@ -50,6 +51,8 @@
       this.async(() => {
         this._nativeMirror.refresh();
         this._nativeMirror.focus();
+        if (this.lineNum != 0)
+          this._nativeMirror.setCursor(this.lineNum - 1);
       }, 1);
       this._addEventListeners();
     },

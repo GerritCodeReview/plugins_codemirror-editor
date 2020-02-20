@@ -31,6 +31,7 @@
     properties: {
       fileContent: String,
       fileType: String,
+      lineNum: Number,
       mirror: Object,
       prefs: Object,
       plugin: Object,
@@ -46,7 +47,7 @@
           const params = this.getCodeMirrorParams(this.fileType,
               this.fileContent, this.prefs);
           this.mirror = this.$.codemirror;
-          this.mirror.setParams(params);
+          this.mirror.setParams(params, this.lineNum);
           this._addEventListeners();
           resolve();
         });
