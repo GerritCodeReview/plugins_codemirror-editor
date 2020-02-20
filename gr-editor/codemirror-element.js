@@ -20,6 +20,10 @@
      * @event content-change
      */
 
+    properties: {
+      lineNum: Number,
+    },
+
     ready() {
       this.scopeSubtree(this.$.wrapper, true);
     },
@@ -50,6 +54,11 @@
       this.async(() => {
         this._nativeMirror.refresh();
         this._nativeMirror.focus();
+        if (this.lineNum) {
+          // We have to take away one from the line number,
+          // ... because CodeMirror's line count is zero-based.
+          this._nativeMirror.setCursor(this.lineNum - 1);
+        }
       }, 1);
       this._addEventListeners();
     },
