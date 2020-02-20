@@ -28,8 +28,9 @@
       this._initialize();
     },
 
-    setParams(params) {
+    setParams(params, lineNum) {
       this._params = params;
+      this._lineNum = lineNum;
       this._initialize();
     },
 
@@ -50,6 +51,11 @@
       this.async(() => {
         this._nativeMirror.refresh();
         this._nativeMirror.focus();
+        if (this.lineNum)
+          // We have to take away one from the line number,
+          // this is because it always goes to the next line number
+          // from the one you want to go to.
+          this._nativeMirror.setCursor(this.lineNum - 1);
       }, 1);
       this._addEventListeners();
     },
