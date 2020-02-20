@@ -31,6 +31,7 @@
     properties: {
       fileContent: String,
       fileType: String,
+      lineNum: Number,
       mirror: Object,
       prefs: Object,
       plugin: Object,
