@@ -54,12 +54,10 @@
     },
 
     _importCodeMirror() {
-      const codemirrorElementFile = Polymer.Settings.useShadow
-          ? '/static/codemirror-element-shadowdom.html'
-          : '/static/codemirror-element-shadydom.html';
+      const codemirrorElementFile = '/static/codemirror-element-shadowdom.html';
       const url = this.plugin.url(codemirrorElementFile);
       return new Promise((resolve, reject) => {
-        (this.importHref || Polymer.importHref)(url, resolve, reject);
+        Polymer.importHref(url, resolve, reject);
       });
     },
 

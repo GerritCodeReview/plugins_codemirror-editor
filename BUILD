@@ -37,18 +37,6 @@ bundle_assets(
     deps = ["//lib/js:codemirror-minified"],
 )
 
-bundle_assets(
-    name = "codemirror-element-shadydom",
-    srcs = [
-        "gr-editor/codemirror-element.css",
-        "gr-editor/codemirror-element.js",
-        "gr-editor/codemirror-element-shadydom.html",
-    ],
-    app = "gr-editor/codemirror-element-shadydom.html",
-    split = False,
-    deps = ["//lib/js:codemirror-minified"],
-)
-
 polygerrit_plugin(
     name = "codemirror_editor",
     srcs = glob([
@@ -58,6 +46,5 @@ polygerrit_plugin(
     app = "plugin.html",
     assets = [
         ":codemirror-element-shadowdom",
-        ":codemirror-element-shadydom",
     ],
 )
