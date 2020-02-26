@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "87938eff_c594184e",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2020-02-26T10:56:39Z",
+      "side": 1,
+      "message": "Maybe replace by \"... because CodeMirror\u0027s line count is zero-based.\".",
+      "revId": "1078bfc802c6ab1360189ed59bbb96637c795628",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "abf19c0f_150ae0c3",
         "filename": "gr-editor/codemirror-element.js",
         "patchSetId": 5
