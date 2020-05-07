@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f577b99_caf44e21",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-05-07T10:36:24Z",
+      "side": 1,
+      "message": "maybe add more details about the removal of `ShadyDom` :) technically you still can use ShadyDom in polymer 2 (if I remember correctly), and polygerrit always set it to false to not use it",
+      "revId": "9e7251682b8e1e14e88680a03a6309a7dd4afb88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
