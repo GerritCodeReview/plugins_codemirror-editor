@@ -5,13 +5,17 @@
   ],
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
     "codemirror-minified": "^5.50.2"
   },
   "devDependencies": {
-    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
-    "iron-test-helpers": "^2.0.0"
+    "es6-promise": "^3.3.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "web-component-tester": "^6.5.1"
   },
-  "private": true
+  "private": true,
+  "resolutions": {
+    "chai": "^3.2.0",
+    "mocha": "^3.1.2"
+  }
 }

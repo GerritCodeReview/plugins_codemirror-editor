@@ -11,64 +11,72 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-(function() {
-  Polymer({
-    is: 'codemirror-element',
-    /**
-     * Fired when the content of the editor changes.
-     *
-     * @event content-change
-     */
+class CodeMirrorElement extends Polymer.GestureEventListeners(
+  Polymer.LegacyElementMixin(
+      Polymer.Element)) {
+  /**
+   * Fired when the content of the editor changes.
+   *
+   * @event content-change
+   */
 
-    properties: {
+  /** @returns {string} name of the component */
+  static get is() { return "codemirror-element"; }
+
+  static get properties() {
+    return {
       lineNum: Number,
-    },
+    }
+  }
 
-    ready() {
-      this.scopeSubtree(this.$.wrapper, true);
-    },
+  ready() {
+    super.ready();
+    this.scopeSubtree(this.$.wrapper, true);
+  }
 
-    attached() {
-      this._initialize();
-    },
+  attached() {
+    super.attached();
+    this._initialize();
+  }
 
-    setParams(params) {
-      this._params = params;
-      this._initialize();
-    },
+  setParams(params) {
+    this._params = params;
+    this._initialize();
+  }
 
-    _initialize() {
-      // setParams(params) can be called before or after attach().
-      // Codemirror must be initialized only after both functions were called
-      if(!this._params || !this.isAttached) {
-        return;
+  _initialize() {
+    // setParams(params) can be called before or after attached().
+    // Codemirror must be initialized only after both functions were called
+    if (!this._params || !this.isAttached) {
+      return;
+    }
+    // attached() can be called multiple times.
+    // Initialization must be done only once
+    if (this.initialized) {
+      return;
+    }
+    this.initialized = true;
+    this.scopeSubtree(this.$.wrapper, true);
+    this._nativeMirror = window.CodeMirror(this.$.wrapper, this._params);
+    this.async(() => {
+      this._nativeMirror.refresh();
+      this._nativeMirror.focus();
+      if (this.lineNum) {
+        // We have to take away one from the line number,
+        // ... because CodeMirror's line count is zero-based.
+        this._nativeMirror.setCursor(this.lineNum - 1);
       }
-      // attached() can be called multiple times.
-      // Initialization must be done only once
-      if(this.initialized) {
-        return;
-      }
-      this.initialized = true;
-      this.scopeSubtree(this.$.wrapper, true);
-      this._nativeMirror = window.CodeMirror(this.$.wrapper, this._params);
-      this.async(() => {
-        this._nativeMirror.refresh();
-        this._nativeMirror.focus();
-        if (this.lineNum) {
-          // We have to take away one from the line number,
-          // ... because CodeMirror's line count is zero-based.
-          this._nativeMirror.setCursor(this.lineNum - 1);
-        }
-      }, 1);
-      this._addEventListeners();
-    },
+    }, 1);
+    this._addEventListeners();
+  }
 
-    _addEventListeners() {
-      this._nativeMirror.on('change', e => {
-        this.dispatchEvent(new CustomEvent('content-change',
-            {detail: {value: e.getValue()}}));
-      });
-    },
+  _addEventListeners() {
+    this._nativeMirror.on("change", (e) => {
+      this.dispatchEvent(
+        new CustomEvent("content-change", { detail: { value: e.getValue() } })
+      );
+    });
+  }
+}
 
-  });
-})();
+customElements.define(CodeMirrorElement.is, CodeMirrorElement);
