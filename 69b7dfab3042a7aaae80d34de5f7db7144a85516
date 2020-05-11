@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8df9857_86d6d1db",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2020-05-11T11:12:47Z",
+      "side": 1,
+      "message": "I think we should just go for the all in one bundle, we made that decision for highlight.js a while ago.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 190
+      },
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba7dd7d2_4d3f6185",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2020-05-11T11:12:47Z",
+      "side": 1,
+      "message": "Should convert \"\" back to singular strings.",
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "692677da_702f2800",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2020-05-11T11:12:47Z",
+      "side": 1,
+      "message": "Should convert \"\" back to singular strings.",
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a2b4e00_d280441b",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2020-05-11T11:12:47Z",
+      "side": 1,
+      "message": "Is this needed?",
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
