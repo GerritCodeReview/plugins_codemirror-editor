@@ -26,25 +26,21 @@ genrule2(
 )
 
 bundle_assets(
-    name = "codemirror-element-shadowdom",
+    name = "codemirror-element",
     srcs = [
         "gr-editor/codemirror-element.css",
         "gr-editor/codemirror-element.js",
-        "gr-editor/codemirror-element-shadowdom.html",
+        "gr-editor/codemirror-element.html",
     ],
-    app = "gr-editor/codemirror-element-shadowdom.html",
+    app = "gr-editor/codemirror-element.html",
     split = False,
     deps = ["//lib/js:codemirror-minified"],
 )
 
 polygerrit_plugin(
     name = "codemirror_editor",
-    srcs = glob([
-        "gr-editor/*.html",
-        "gr-editor/*.js",
-    ]),
-    app = "plugin.html",
+    app = "gr-editor/gr-editor.js",
     assets = [
-        ":codemirror-element-shadowdom",
+        ":codemirror-element",
     ],
 )
