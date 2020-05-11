@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ffa1597_3af47cc4",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-05-11T11:21:50Z",
+      "side": 1,
+      "message": "Ya it can be done in a separate change :)",
+      "parentUuid": "e8df9857_86d6d1db",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 190
+      },
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba7dd7d2_4d3f6185",
         "filename": "gr-editor/codemirror-element.js",
         "patchSetId": 1
@@ -39,6 +63,24 @@
       "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5278add8_fa03317e",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-05-11T11:21:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba7dd7d2_4d3f6185",
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "914ac7f5_82e94c3d",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-05-11T11:21:50Z",
+      "side": 1,
+      "message": "hmm i think its my default linter, I will include the Gerrit lint and run it again, thx",
+      "parentUuid": "692677da_702f2800",
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4a2b4e00_d280441b",
         "filename": "gr-editor/gr-editor.js",
         "patchSetId": 1
@@ -73,6 +133,24 @@
       "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d8a82efd_2b5b20ab",
+        "filename": "gr-editor/gr-editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-05-11T11:21:50Z",
+      "side": 1,
+      "message": "required for testing, as `Gerrit` does not exist there",
+      "parentUuid": "4a2b4e00_d280441b",
+      "revId": "69b7dfab3042a7aaae80d34de5f7db7144a85516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
