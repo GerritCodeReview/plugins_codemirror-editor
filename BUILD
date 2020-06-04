@@ -29,8 +29,8 @@ bundle_assets(
     name = "codemirror-element",
     srcs = [
         "gr-editor/codemirror-element.css",
-        "gr-editor/codemirror-element.js",
         "gr-editor/codemirror-element.html",
+        "gr-editor/codemirror-element.js",
     ],
     app = "gr-editor/codemirror-element.html",
     split = False,
