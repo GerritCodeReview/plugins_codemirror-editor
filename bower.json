@@ -5,7 +5,7 @@
   ],
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "dependencies": {
-    "codemirror-minified": "^5.50.2"
+    "codemirror-minified": "^5.59.0"
   },
   "devDependencies": {
     "es6-promise": "^3.3.1",
