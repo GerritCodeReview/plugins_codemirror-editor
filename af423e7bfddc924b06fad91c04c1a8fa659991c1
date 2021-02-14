@@ -16,6 +16,23 @@
       "message": "please note I have not had any chance to test this change, as I am unable to understand hwo to build this locally. The spares instructions provided in README.md are not sufficient for somody like myself who is a system-level developer without any background in web frontend technology. \n\nIf somebody can provide me with an updated codemirror-editor.jar I\u0027m very happy to test it on gerrit.osmocom.org",
       "revId": "af423e7bfddc924b06fad91c04c1a8fa659991c1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0008d687_5fdc5c41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130401
+      },
+      "writtenOn": "2021-02-14T12:54:25Z",
+      "side": 1,
+      "message": "I cannot find any useful output like log files in the zool output? ",
+      "revId": "af423e7bfddc924b06fad91c04c1a8fa659991c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
