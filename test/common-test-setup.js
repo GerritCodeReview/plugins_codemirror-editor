@@ -57,6 +57,3 @@ import 'polymer-bridges/polymer/lib/legacy/mutable-data-behavior_bridge.js';
 import 'polymer-bridges/polymer/polymer-legacy_bridge.js';
 
 import '@polymer/iron-test-helpers/iron-test-helpers.js';
-import {importHref} from './import-href.js';
-
-window.Polymer.importHref = importHref;

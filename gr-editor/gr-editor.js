@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+import {importHref} from './import-href.js';
+
 // we need to be on codemirror 5.33.0+ to get the support for
 // text/x-php in CodeMirror.findModeByMIME
 const LANGUAGE_MAP = {
@@ -87,7 +89,7 @@ class GrEditor extends Polymer.Element {
     const codemirrorElementFile = '/static/codemirror-element.html';
     const url = this.plugin.url(codemirrorElementFile);
     return new Promise((resolve, reject) => {
-      Polymer.importHref(url, resolve, reject);
+      importHref(url, resolve, reject);
     });
   }
 
