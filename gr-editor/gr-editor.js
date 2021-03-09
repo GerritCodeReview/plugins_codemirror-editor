@@ -15,6 +15,86 @@
  * limitations under the License.
  */
 
+// Run a callback when HTMLImports are ready or immediately if
+// this api is not available.
+function whenImportsReady(cb) {
+  if (window.HTMLImports) {
+    HTMLImports.whenReady(cb);
+  } else {
+    cb();
+  }
+}
+
+/**
+ * Convenience method for importing an HTML document imperatively. Mostly copied
+ * from polymer/lib/utils/import-href.html.
+ *
+ * This method creates a new `<link rel="import">` element with
+ * the provided URL and appends it to the document to start loading.
+ * In the `onload` callback, the `import` property of the `link`
+ * element will contain the imported document contents.
+ *
+ * @param {string} href URL to document to load.
+ * @param {?function(!Event):void=} onload Callback to notify when an import successfully
+ *   loaded.
+ * @param {?function(!ErrorEvent):void=} onerror Callback to notify when an import
+ *   unsuccessfully loaded.
+ */
+function importHref(href, onload, onerror) {
+  let link =
+      /** @type {HTMLLinkElement} */
+      (document.head.querySelector('link[href="' + href + '"][import-href]'));
+  if (!link) {
+    link = /** @type {HTMLLinkElement} */ (document.createElement('link'));
+    link.rel = 'import';
+    link.href = href;
+    link.setAttribute('import-href', '');
+  }
+  // NOTE: the link may now be in 3 states: (1) pending insertion,
+  // (2) inflight, (3) already loaded. In each case, we need to add
+  // event listeners to process callbacks.
+  const cleanup = function() {
+    link.removeEventListener('load', loadListener);
+    link.removeEventListener('error', errorListener);
+  };
+  const loadListener = function(event) {
+    cleanup();
+    // In case of a successful load, cache the load event on the link so
+    // that it can be used to short-circuit this method in the future when
+    // it is called with the same href param.
+    link.__dynamicImportLoaded = true;
+    if (onload) {
+      whenImportsReady(() => {
+        onload(event);
+      });
+    }
+  };
+  const errorListener = function(event) {
+    cleanup();
+    // In case of an error, remove the link from the document so that it
+    // will be automatically created again the next time `importHref` is
+    // called.
+    if (link.parentNode) {
+      link.parentNode.removeChild(link);
+    }
+    if (onerror) {
+      whenImportsReady(() => {
+        onerror(event);
+      });
+    }
+  };
+  link.addEventListener('load', loadListener);
+  link.addEventListener('error', errorListener);
+  if (link.parentNode == null) {
+    document.head.appendChild(link);
+    // if the link already loaded, dispatch a fake load event
+    // so that listeners are called and get a proper event argument.
+  } else if (link.__dynamicImportLoaded) {
+    link.dispatchEvent(new Event('load'));
+  }
+  return link;
+}
+
 // we need to be on codemirror 5.33.0+ to get the support for
 // text/x-php in CodeMirror.findModeByMIME
 const LANGUAGE_MAP = {
@@ -87,7 +167,7 @@ class GrEditor extends Polymer.Element {
     const codemirrorElementFile = '/static/codemirror-element.html';
     const url = this.plugin.url(codemirrorElementFile);
     return new Promise((resolve, reject) => {
-      Polymer.importHref(url, resolve, reject);
+      importHref(url, resolve, reject);
     });
   }
 
@@ -159,7 +239,6 @@ class GrEditor extends Polymer.Element {
 
 customElements.define(GrEditor.is, GrEditor);
 
-// Install the plugin
 if (window.Gerrit) {
   Gerrit.install(plugin => {
     plugin.registerCustomComponent('editor', 'gr-editor', {replace: true});
