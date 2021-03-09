@@ -31,6 +31,7 @@ limitations under the License.
 <script type="module">
 import '../test/common-test-setup.js';
 import './gr-editor.js';
+import {importHref} from './gr-editor.js';
 suite('gr-editor tests', () => {
   let element;
   let sandbox;
@@ -41,7 +42,7 @@ suite('gr-editor tests', () => {
     stub('gr-editor', {
       _importCodeMirror() {
         return new Promise((resolve, reject) => {
-          Polymer.importHref('./codemirror-element.html', resolve, reject);
+          importHref('./codemirror-element.html', resolve, reject);
         });
       },
     });

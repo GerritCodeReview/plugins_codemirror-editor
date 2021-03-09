@@ -18,7 +18,7 @@ To run UI tests here will need install dependencies from both npm and bower.
 
 You will need `polymer-bridges` which is a submodule you can clone from: https://gerrit-review.googlesource.com/admin/repos/polymer-bridges
 
-As polymer 3 no longer support `Polymer.importHref` anymore, Gerrit still supports through a custom implementation, the implementation is copied here for testing purpose (`test/import-href.js`).
+As polymer 3 no longer support `Polymer.importHref` anymore, this plugin still supports it through a custom implementation in `gr-editor.js`.
 
 ## Test plugin on Gerrit
 
