@@ -46,8 +46,8 @@ function importHref(href, onload, onerror) {
       (document.head.querySelector('link[href="' + href + '"][import-href]'));
   if (!link) {
     link = /** @type {HTMLLinkElement} */ (document.createElement('link'));
-    link.rel = 'import';
-    link.href = href;
+    link.setAttribute('rel', 'import');
+    link.setAttribute('href', href);
     link.setAttribute('import-href', '');
   }
   // NOTE: the link may now be in 3 states: (1) pending insertion,
