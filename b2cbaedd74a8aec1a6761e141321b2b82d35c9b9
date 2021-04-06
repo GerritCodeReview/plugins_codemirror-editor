@@ -67,6 +67,24 @@
       "message": "Sorry, this plugins doesn\u0027t have stable-3.4 branch (and it\u0027s not needed).",
       "revId": "b2cbaedd74a8aec1a6761e141321b2b82d35c9b9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "882ef68e_9397d055",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-04-06T17:26:40Z",
+      "side": 1,
+      "message": "Branch does not exist.",
+      "parentUuid": "822622c4_fef11bd1",
+      "revId": "b2cbaedd74a8aec1a6761e141321b2b82d35c9b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
