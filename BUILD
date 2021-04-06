@@ -1,6 +1,7 @@
 load("//tools/bzl:genrule2.bzl", "genrule2")
 load("//tools/bzl:js.bzl", "bundle_assets", "polygerrit_plugin")
 load("//tools/bzl:plugin.bzl", "gerrit_plugin")
+load("@npm//@bazel/rollup:index.bzl", "rollup_bundle")
 
 gerrit_plugin(
     name = "codemirror-editor",
@@ -39,8 +40,23 @@ bundle_assets(
 
 polygerrit_plugin(
     name = "codemirror_editor",
-    app = "gr-editor/gr-editor.js",
+    app = "plugin-bundle.js",
     assets = [
         ":codemirror-element",
+    ],
+)
+
+rollup_bundle(
+    name = "plugin-bundle",
+    srcs = glob([
+        "**/*.js",
+    ]) + ["@plugins_npm//:node_modules"],
+    config_file = "rollup.config.js",
+    entry_point = "plugin.js",
+    format = "iife",
+    rollup_bin = "//tools/node_tools:rollup-bin",
+    sourcemap = "hidden",
+    deps = [
+        "@tools_npm//rollup-plugin-node-resolve",
     ],
 )

@@ -238,9 +238,3 @@ class GrEditor extends Polymer.Element {
 }
 
 customElements.define(GrEditor.is, GrEditor);
-
-if (window.Gerrit) {
-  Gerrit.install(plugin => {
-    plugin.registerCustomComponent('editor', 'gr-editor', {replace: true});
-  });
-}
