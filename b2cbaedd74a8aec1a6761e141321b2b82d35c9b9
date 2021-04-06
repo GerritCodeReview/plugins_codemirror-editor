@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "107302f5_af33a116",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-06T17:26:35Z",
+      "side": 1,
+      "message": "Mention issue 14335.",
+      "revId": "b2cbaedd74a8aec1a6761e141321b2b82d35c9b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "826dc557_f7f83a10",
@@ -31,6 +48,23 @@
       "writtenOn": "2021-04-06T17:23:51Z",
       "side": 1,
       "message": "This should be moved to stable-3.4 branch.",
+      "revId": "b2cbaedd74a8aec1a6761e141321b2b82d35c9b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf9da23f_a749d3a4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-06T17:26:35Z",
+      "side": 1,
+      "message": "Sorry, this plugins doesn\u0027t have stable-3.4 branch (and it\u0027s not needed).",
       "revId": "b2cbaedd74a8aec1a6761e141321b2b82d35c9b9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
