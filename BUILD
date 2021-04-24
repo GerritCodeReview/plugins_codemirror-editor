@@ -1,3 +1,4 @@
+load("@npm//@bazel/terser:index.bzl", "terser_minified")
 load("//tools/bzl:genrule2.bzl", "genrule2")
 load("//tools/bzl:js.bzl", "bundle_assets", "polygerrit_plugin")
 load("//tools/bzl:plugin.bzl", "gerrit_plugin")
@@ -17,7 +18,7 @@ genrule2(
     name = "cm-static",
     srcs = [
         ":codemirror-element",
-        ":codemirror_editor",
+        ":codemirror_editor.min",
     ],
     outs = ["cm-static.jar"],
     cmd = " && ".join([
@@ -40,7 +41,8 @@ bundle_assets(
     deps = ["//lib/js:codemirror-minified"],
 )
 
-polygerrit_plugin(
-    name = "codemirror_editor",
-    app = "gr-editor/gr-editor.js",
+terser_minified(
+    name = "codemirror_editor.min",
+    src = "gr-editor/gr-editor.js",
+    sourcemap = False,
 )
