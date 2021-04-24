@@ -15,11 +15,14 @@ gerrit_plugin(
 
 genrule2(
     name = "cm-static",
-    srcs = [":codemirror_editor"],
+    srcs = [
+        ":codemirror-element",
+        ":codemirror_editor",
+    ],
     outs = ["cm-static.jar"],
     cmd = " && ".join([
         "mkdir $$TMP/static",
-        "cp -r $(locations :codemirror_editor) $$TMP/static",
+        "cp $(SRCS) $$TMP/static",
         "cd $$TMP",
         "zip -Drq $$ROOT/$@ -g .",
     ]),
@@ -40,7 +43,4 @@ bundle_assets(
 polygerrit_plugin(
     name = "codemirror_editor",
     app = "gr-editor/gr-editor.js",
-    assets = [
-        ":codemirror-element",
-    ],
 )
