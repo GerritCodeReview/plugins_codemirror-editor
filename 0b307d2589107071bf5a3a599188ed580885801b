@@ -22,6 +22,30 @@
       },
       "revId": "0b307d2589107071bf5a3a599188ed580885801b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a59d8930_324cc292",
+        "filename": "java/com/googlesource/gerrit/plugins/codemirror/CodemirrorModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2021-04-26T07:58:52Z",
+      "side": 1,
+      "message": "+1\n\nNote that personally I am not a big fan of minifying. The plugin\u0027s js code is really small anyway. We don\u0027t gain much apart from making the BUILD rules more complicated and debugging harder. WDYT?",
+      "parentUuid": "65a132f3_43a3d179",
+      "range": {
+        "startLine": 26,
+        "startChar": 42,
+        "endLine": 26,
+        "endChar": 66
+      },
+      "revId": "0b307d2589107071bf5a3a599188ed580885801b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
