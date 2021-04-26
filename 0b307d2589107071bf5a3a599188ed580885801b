@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65a132f3_43a3d179",
+        "filename": "java/com/googlesource/gerrit/plugins/codemirror/CodemirrorModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1085901
+      },
+      "writtenOn": "2021-04-26T07:33:55Z",
+      "side": 1,
+      "message": "Is it possible to use the previous name? Google has its own build rule which should be updated to match this change. If possible, I would prefer to keep the previous name.",
+      "range": {
+        "startLine": 26,
+        "startChar": 42,
+        "endLine": 26,
+        "endChar": 66
+      },
+      "revId": "0b307d2589107071bf5a3a599188ed580885801b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
