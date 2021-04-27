@@ -1,5 +1,5 @@
 load("//tools/bzl:genrule2.bzl", "genrule2")
-load("//tools/bzl:js.bzl", "bundle_assets", "polygerrit_plugin")
+load("//tools/bzl:js.bzl", "polygerrit_plugin")
 load("//tools/bzl:plugin.bzl", "gerrit_plugin")
 
 gerrit_plugin(
@@ -28,16 +28,34 @@ genrule2(
     ]),
 )
 
-bundle_assets(
+#TODO(davido): Simplify this rule using npm_package_bin
+genrule(
     name = "codemirror-element",
     srcs = [
         "gr-editor/codemirror-element.css",
         "gr-editor/codemirror-element.html",
         "gr-editor/codemirror-element.js",
+        "@tools_npm//codemirror-minified",
     ],
-    app = "gr-editor/codemirror-element.html",
-    split = False,
-    deps = ["//lib/js:codemirror-minified"],
+    outs = ["codemirror-element.html"],
+    cmd = " ".join([
+        "p=$$PWD && ",
+        "cd $(@D)/codemirror-element.sh.runfiles/gerrit/plugins/codemirror-editor && ",
+        "ln -sf ../../external/tools_npm/node_modules/codemirror-minified . && ",
+        "cd ../.. && ",
+        "$$p/$(location @tools_npm//polymer-bundler/bin:polymer-bundler)",
+        "--inline-scripts",
+        "--inline-css",
+        "--sourcemaps",
+        "--strip-comments",
+        "--root",
+        "plugins/codemirror-editor",
+        "--out-file",
+        "$$p/$@",
+        "/gr-editor/codemirror-element.html",
+    ]),
+    local = True,
+    tools = ["@tools_npm//polymer-bundler/bin:polymer-bundler"],
 )
 
 polygerrit_plugin(
