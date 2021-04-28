@@ -16,6 +16,29 @@
       "message": "Looks good to me, but I would like a +2 from Dmitrii, because I don\u0027t fully understand the change.",
       "revId": "597ce313eed2a38d2c9cd4254998c27823405468",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fe1a788_d2708145",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1085901
+      },
+      "writtenOn": "2021-04-28T11:38:34Z",
+      "side": 1,
+      "message": "nit: From the https://docs.bazel.build/versions/master/be/make-variables.html:\nIf the genrule needs to generate temporary intermediate files..., it should attempt to write them to @D ... and remove them before finishing.\n\nMaybe move `rm -rf ...` to the end of cmd.",
+      "range": {
+        "startLine": 43,
+        "startChar": 8,
+        "endLine": 43,
+        "endChar": 35
+      },
+      "revId": "597ce313eed2a38d2c9cd4254998c27823405468",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
