@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3542e440_6d05e7a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2021-04-28T06:05:27Z",
+      "side": 1,
+      "message": "Looks good to me, but I would like a +2 from Dmitrii, because I don\u0027t fully understand the change.",
+      "revId": "597ce313eed2a38d2c9cd4254998c27823405468",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
