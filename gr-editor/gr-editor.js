@@ -95,12 +95,6 @@ function importHref(href, onload, onerror) {
   return link;
 }
 
-// we need to be on codemirror 5.33.0+ to get the support for
-// text/x-php in CodeMirror.findModeByMIME
-const LANGUAGE_MAP = {
-  'text/x-php': 'php',
-};
-
 class GrEditor extends Polymer.Element {
   /**
    * Fired when the content of the editor changes.
@@ -233,7 +227,7 @@ class GrEditor extends Polymer.Element {
    * @returns {string}
    */
   _mapFileType(type) {
-    return LANGUAGE_MAP[type] || type || '';
+    return type || '';
   }
 }
 
