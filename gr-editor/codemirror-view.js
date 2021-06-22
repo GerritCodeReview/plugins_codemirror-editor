@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,9 @@
  * limitations under the License.
  */
 
-class GrEditor extends Polymer.Element {
+import './codemirror-editor.js';
+
+class CodeMirrorView extends Polymer.Element {
   /**
    * Fired when the content of the editor changes.
    *
@@ -24,7 +26,7 @@ class GrEditor extends Polymer.Element {
 
   /** @returns {string} name of the component */
   static get is() {
-    return 'gr-editor';
+    return 'codemirror-view';
   }
 
   /**
@@ -46,10 +48,10 @@ class GrEditor extends Polymer.Element {
   /** @returns {?} template for this component */
   static get template() {
     return Polymer.html`
-      <codemirror-element
+      <codemirror-editor
         id="codemirror"
         line-num="[[lineNum]]">
-      </codemirror-element>
+      </codemirror-editor>
     `;
   }
 
@@ -124,10 +126,4 @@ class GrEditor extends Polymer.Element {
   }
 }
 
-customElements.define(GrEditor.is, GrEditor);
-
-if (window.Gerrit) {
-  Gerrit.install(plugin => {
-    plugin.registerCustomComponent('editor', 'gr-editor', {replace: true});
-  });
-}
+customElements.define(CodeMirrorView.is, CodeMirrorView);
