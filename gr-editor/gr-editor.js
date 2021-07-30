@@ -15,85 +15,66 @@
  * limitations under the License.
  */
 
-// Run a callback when HTMLImports are ready or immediately if
-// this api is not available.
-function whenImportsReady(cb) {
-  if (window.HTMLImports) {
-    HTMLImports.whenReady(cb);
-  } else {
-    cb();
-  }
-}
+import 'codemirror-minified/lib/codemirror.js';
+import 'codemirror-minified/addon/display/rulers.js';
+import 'codemirror-minified/addon/edit/closebrackets.js';
+import 'codemirror-minified/addon/edit/closetag.js';
+import 'codemirror-minified/addon/edit/matchbrackets.js';
+import 'codemirror-minified/addon/edit/matchtags.js';
+import 'codemirror-minified/addon/edit/trailingspace.js';
+import 'codemirror-minified/addon/mode/simple.js';
+import 'codemirror-minified/addon/mode/multiplex.js';
+import 'codemirror-minified/mode/meta.js';
+import 'codemirror-minified/mode/clike/clike.js';
+import 'codemirror-minified/mode/clojure/clojure.js';
+import 'codemirror-minified/mode/coffeescript/coffeescript.js';
+import 'codemirror-minified/mode/commonlisp/commonlisp.js';
+import 'codemirror-minified/mode/css/css.js';
+import 'codemirror-minified/mode/d/d.js';
+import 'codemirror-minified/mode/dart/dart.js';
+import 'codemirror-minified/mode/diff/diff.js';
+import 'codemirror-minified/mode/django/django.js';
+import 'codemirror-minified/mode/dockerfile/dockerfile.js';
+import 'codemirror-minified/mode/erlang/erlang.js';
+import 'codemirror-minified/mode/go/go.js';
+import 'codemirror-minified/mode/groovy/groovy.js';
+import 'codemirror-minified/mode/haml/haml.js';
+import 'codemirror-minified/mode/handlebars/handlebars.js';
+import 'codemirror-minified/mode/haskell/haskell.js';
+import 'codemirror-minified/mode/htmlembedded/htmlembedded.js';
+import 'codemirror-minified/mode/htmlmixed/htmlmixed.js';
+import 'codemirror-minified/mode/javascript/javascript.js';
+import 'codemirror-minified/mode/jinja2/jinja2.js';
+import 'codemirror-minified/mode/jsx/jsx.js';
+import 'codemirror-minified/mode/julia/julia.js';
+import 'codemirror-minified/mode/lua/lua.js';
+import 'codemirror-minified/mode/markdown/markdown.js';
+import 'codemirror-minified/mode/mllike/mllike.js';
+import 'codemirror-minified/mode/nginx/nginx.js';
+import 'codemirror-minified/mode/perl/perl.js';
+import 'codemirror-minified/mode/php/php.js';
+import 'codemirror-minified/mode/powershell/powershell.js';
+import 'codemirror-minified/mode/properties/properties.js';
+import 'codemirror-minified/mode/protobuf/protobuf.js';
+import 'codemirror-minified/mode/puppet/puppet.js';
+import 'codemirror-minified/mode/python/python.js';
+import 'codemirror-minified/mode/rpm/rpm.js';
+import 'codemirror-minified/mode/ruby/ruby.js';
+import 'codemirror-minified/mode/sass/sass.js';
+import 'codemirror-minified/mode/scheme/scheme.js';
+import 'codemirror-minified/mode/shell/shell.js';
+import 'codemirror-minified/mode/soy/soy.js';
+import 'codemirror-minified/mode/sparql/sparql.js';
+import 'codemirror-minified/mode/sql/sql.js';
+import 'codemirror-minified/mode/swift/swift.js';
+import 'codemirror-minified/mode/tcl/tcl.js';
+import 'codemirror-minified/mode/velocity/velocity.js';
+import 'codemirror-minified/mode/verilog/verilog.js';
+import 'codemirror-minified/mode/vb/vb.js';
+import 'codemirror-minified/mode/xml/xml.js';
+import 'codemirror-minified/mode/yaml/yaml.js';
 
-/**
- * Convenience method for importing an HTML document imperatively. Mostly copied
- * from polymer/lib/utils/import-href.html.
- *
- * This method creates a new `<link rel="import">` element with
- * the provided URL and appends it to the document to start loading.
- * In the `onload` callback, the `import` property of the `link`
- * element will contain the imported document contents.
- *
- * @param {string} href URL to document to load.
- * @param {?function(!Event):void=} onload Callback to notify when an import successfully
- *   loaded.
- * @param {?function(!ErrorEvent):void=} onerror Callback to notify when an import
- *   unsuccessfully loaded.
- */
-function importHref(href, onload, onerror) {
-  let link =
-      /** @type {HTMLLinkElement} */
-      (document.head.querySelector('link[href="' + href + '"][import-href]'));
-  if (!link) {
-    link = /** @type {HTMLLinkElement} */ (document.createElement('link'));
-    link.setAttribute('rel', 'import');
-    link.setAttribute('href', href);
-    link.setAttribute('import-href', '');
-  }
-  // NOTE: the link may now be in 3 states: (1) pending insertion,
-  // (2) inflight, (3) already loaded. In each case, we need to add
-  // event listeners to process callbacks.
-  const cleanup = function() {
-    link.removeEventListener('load', loadListener);
-    link.removeEventListener('error', errorListener);
-  };
-  const loadListener = function(event) {
-    cleanup();
-    // In case of a successful load, cache the load event on the link so
-    // that it can be used to short-circuit this method in the future when
-    // it is called with the same href param.
-    link.__dynamicImportLoaded = true;
-    if (onload) {
-      whenImportsReady(() => {
-        onload(event);
-      });
-    }
-  };
-  const errorListener = function(event) {
-    cleanup();
-    // In case of an error, remove the link from the document so that it
-    // will be automatically created again the next time `importHref` is
-    // called.
-    if (link.parentNode) {
-      link.parentNode.removeChild(link);
-    }
-    if (onerror) {
-      whenImportsReady(() => {
-        onerror(event);
-      });
-    }
-  };
-  link.addEventListener('load', loadListener);
-  link.addEventListener('error', errorListener);
-  if (link.parentNode == null) {
-    document.head.appendChild(link);
-    // if the link already loaded, dispatch a fake load event
-    // so that listeners are called and get a proper event argument.
-  } else if (link.__dynamicImportLoaded) {
-    link.dispatchEvent(new Event('load'));
-  }
-  return link;
-}
+import './codemirror-element.js';
 
 class GrEditor extends Polymer.Element {
   /**
@@ -141,28 +122,14 @@ class GrEditor extends Polymer.Element {
 
   /** @returns {!Promise} Initialize code mirror editor */
   _initializeMirror() {
-    return new Promise((resolve, reject) => {
-      this._importCodeMirror().then(() => {
-        const params = this.getCodeMirrorParams(
-            this.fileType,
-            this.fileContent,
-            this.prefs
-        );
-        this.mirror = this.$.codemirror;
-        this.mirror.setParams(params);
-        this._addEventListeners();
-        resolve();
-      });
-    });
-  }
-
-  /** @returns {!Promise} Lazy load the actual codemirror editor */
-  _importCodeMirror() {
-    const codemirrorElementFile = '/static/codemirror-element.html';
-    const url = this.plugin.url(codemirrorElementFile);
-    return new Promise((resolve, reject) => {
-      importHref(url, resolve, reject);
-    });
+    const params = this.getCodeMirrorParams(
+        this.fileType,
+        this.fileContent,
+        this.prefs
+    );
+    this.mirror = this.$.codemirror;
+    this.mirror.setParams(params);
+    this._addEventListeners();
   }
 
   /** Set up content listeners */
@@ -204,7 +171,7 @@ class GrEditor extends Polymer.Element {
       // TODO: Add support for a new commit msg MIME type
       // Support for this is somewhere in gerrit's codebase
       // needs backporting to javascript
-      params.mode = prefs.syntax_highlighting ? this._mapFileType(type) : '';
+      params.mode = prefs.syntax_highlighting ? type || '' : '';
       params.showTabs = prefs.show_tabs;
       params.showTrailingSpace = prefs.show_whitespace_errors;
       params.tabSize = prefs.tab_size;
@@ -218,16 +185,6 @@ class GrEditor extends Polymer.Element {
     }
 
     return params;
-  }
-
-  /**
-   * Determine file type with local overrides
-   *
-   * @param {string} type
-   * @returns {string}
-   */
-  _mapFileType(type) {
-    return type || '';
   }
 }
 
