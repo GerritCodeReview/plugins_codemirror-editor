@@ -26,3 +26,24 @@
   border: 1px solid #f44336;
   border-radius: 3px;
 }
+
+/* Adds line number and column number css */
+.statusLine {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 175px;
+  height: 19px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.statusLine div {
+  height: inherit;
+}
+
+.cursorPosition {
+  display: inline-block;
+  margin: 0 5px 0 35px;
+  white-space: nowrap;
+}

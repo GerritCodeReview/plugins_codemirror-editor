@@ -71,8 +71,15 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
         // ... because CodeMirror's line count is zero-based.
         this._nativeMirror.setCursor(this.lineNum - 1);
       }
+      this._getColumnAndLine();
     }, 1);
     this._addEventListeners();
+  }
+
+  _getColumnAndLine() {
+    const cursor = this._nativeMirror.getCursor('end');
+    if (!cursor) return;
+    this.$.result.innerHTML = `${cursor.line + 1} : ${cursor.ch +1}`;
   }
 
   _addEventListeners() {
@@ -81,12 +88,17 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
           new CustomEvent('content-change', {detail: {value: e.getValue()}})
       );
     });
+
     this._nativeMirror.getInputField().addEventListener('keydown', e => {
       // Exempt the ctrl/command+s key from preventing events from propagating
       // through the app. This is because we use it to save changes.
       if (!e.metaKey && !e.ctrlKey) {
         e.stopPropagation();
       }
+    });
+
+    this._nativeMirror.on('cursorActivity', () => {
+      this._getColumnAndLine();
     });
   }
 }
