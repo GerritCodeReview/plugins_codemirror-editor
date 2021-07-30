@@ -14,9 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class CodeMirrorElement extends Polymer.GestureEventListeners(
-    Polymer.LegacyElementMixin(
-        Polymer.Element)) {
+
+import { scopeSubtree } from '@polymer/polymer/lib/utils/scope-subtree.js';
+
+import {htmlTemplate} from './codemirror-element_html.js';
+
+class CodeMirrorElement extends Polymer.Element {
+
   /**
    * Fired when the content of the editor changes.
    *
@@ -26,19 +30,24 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
   /** @returns {string} name of the component */
   static get is() { return 'codemirror-element'; }
 
+  static get template() {
+    return htmlTemplate;
+  }
+
   static get properties() {
     return {
       lineNum: Number,
+      _initialized: Boolean,
     };
   }
 
   ready() {
     super.ready();
-    this.scopeSubtree(this.$.wrapper, true);
+    scopeSubtree(this.$.wrapper, true);
   }
 
-  attached() {
-    super.attached();
+  connectedCallback() {
+    super.connectedCallback();
     this._initialize();
   }
 
@@ -50,16 +59,16 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
   _initialize() {
     // setParams(params) can be called before or after attached().
     // Codemirror must be initialized only after both functions were called
-    if (!this._params || !this.isAttached) {
+    if (!this._params) {
       return;
     }
     // attached() can be called multiple times.
     // Initialization must be done only once
-    if (this.initialized) {
+    if (this._initialized) {
       return;
     }
-    this.initialized = true;
-    this.scopeSubtree(this.$.wrapper, true);
+    this._initialized = true;
+    scopeSubtree(this.$.wrapper, true);
     // eslint-disable-next-line new-cap
     this._nativeMirror = window.CodeMirror(this.$.wrapper, this._params);
     setTimeout(() => {
