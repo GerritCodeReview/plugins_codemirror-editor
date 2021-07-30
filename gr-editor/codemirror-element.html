@@ -43,7 +43,31 @@ limitations under the License.
     <link rel="stylesheet" type="css" href="../node_modules/codemirror-minified/addon/search/matchesonscrollbar.css">
 
     <link rel="stylesheet" type="css" href="./codemirror-element.css" />
+    <style>
+    .statusLine {
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 175px;
+       height: 19px;
+       background-color: #f7f7f7;
+       border-top: 1px solid #ddd;
+       border-right: 1px solid #ddd;
+     }
+     .statusLine div {
+       height: inherit;
+     }
+
+     .cursorPosition {
+       display: inline-block;
+       margin: 0 5px 0 35px;
+       white-space: nowrap;
+     }
+    </style>
     <div id="wrapper"></div>
+    <div class="statusLine">
+      <div class="cursorPosition"><span id="result" /></div>
+    </div>
   </template>
   <script src="./codemirror-element.js"></script>
 </dom-module>
