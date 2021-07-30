@@ -14,9 +14,70 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class CodeMirrorElement extends Polymer.GestureEventListeners(
-    Polymer.LegacyElementMixin(
-        Polymer.Element)) {
+
+import 'codemirror-minified/lib/codemirror.js';
+import 'codemirror-minified/addon/display/rulers.js';
+import 'codemirror-minified/addon/edit/closebrackets.js';
+import 'codemirror-minified/addon/edit/closetag.js';
+import 'codemirror-minified/addon/edit/matchbrackets.js';
+import 'codemirror-minified/addon/edit/matchtags.js';
+import 'codemirror-minified/addon/edit/trailingspace.js';
+import 'codemirror-minified/addon/mode/simple.js';
+import 'codemirror-minified/addon/mode/multiplex.js';
+import 'codemirror-minified/mode/meta.js';
+import 'codemirror-minified/mode/clike/clike.js';
+import 'codemirror-minified/mode/clojure/clojure.js';
+import 'codemirror-minified/mode/coffeescript/coffeescript.js';
+import 'codemirror-minified/mode/commonlisp/commonlisp.js';
+import 'codemirror-minified/mode/css/css.js';
+import 'codemirror-minified/mode/d/d.js';
+import 'codemirror-minified/mode/dart/dart.js';
+import 'codemirror-minified/mode/diff/diff.js';
+import 'codemirror-minified/mode/django/django.js';
+import 'codemirror-minified/mode/dockerfile/dockerfile.js';
+import 'codemirror-minified/mode/erlang/erlang.js';
+import 'codemirror-minified/mode/go/go.js';
+import 'codemirror-minified/mode/groovy/groovy.js';
+import 'codemirror-minified/mode/haml/haml.js';
+import 'codemirror-minified/mode/handlebars/handlebars.js';
+import 'codemirror-minified/mode/haskell/haskell.js';
+import 'codemirror-minified/mode/htmlembedded/htmlembedded.js';
+import 'codemirror-minified/mode/htmlmixed/htmlmixed.js';
+import 'codemirror-minified/mode/javascript/javascript.js';
+import 'codemirror-minified/mode/jinja2/jinja2.js';
+import 'codemirror-minified/mode/jsx/jsx.js';
+import 'codemirror-minified/mode/julia/julia.js';
+import 'codemirror-minified/mode/lua/lua.js';
+import 'codemirror-minified/mode/markdown/markdown.js';
+import 'codemirror-minified/mode/mllike/mllike.js';
+import 'codemirror-minified/mode/nginx/nginx.js';
+import 'codemirror-minified/mode/perl/perl.js';
+import 'codemirror-minified/mode/php/php.js';
+import 'codemirror-minified/mode/powershell/powershell.js';
+import 'codemirror-minified/mode/properties/properties.js';
+import 'codemirror-minified/mode/protobuf/protobuf.js';
+import 'codemirror-minified/mode/puppet/puppet.js';
+import 'codemirror-minified/mode/python/python.js';
+import 'codemirror-minified/mode/rpm/rpm.js';
+import 'codemirror-minified/mode/ruby/ruby.js';
+import 'codemirror-minified/mode/sass/sass.js';
+import 'codemirror-minified/mode/scheme/scheme.js';
+import 'codemirror-minified/mode/shell/shell.js';
+import 'codemirror-minified/mode/soy/soy.js';
+import 'codemirror-minified/mode/sparql/sparql.js';
+import 'codemirror-minified/mode/sql/sql.js';
+import 'codemirror-minified/mode/swift/swift.js';
+import 'codemirror-minified/mode/tcl/tcl.js';
+import 'codemirror-minified/mode/velocity/velocity.js';
+import 'codemirror-minified/mode/verilog/verilog.js';
+import 'codemirror-minified/mode/vb/vb.js';
+import 'codemirror-minified/mode/xml/xml.js';
+import 'codemirror-minified/mode/yaml/yaml.js';
+
+import {htmlTemplate} from './codemirror-element_html.js';
+
+class CodeMirrorElement extends Polymer.Element {
+
   /**
    * Fired when the content of the editor changes.
    *
@@ -25,6 +86,10 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
 
   /** @returns {string} name of the component */
   static get is() { return 'codemirror-element'; }
+
+  static get template() {
+    return htmlTemplate;
+  }
 
   static get properties() {
     return {
@@ -37,8 +102,8 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
     this.scopeSubtree(this.$.wrapper, true);
   }
 
-  attached() {
-    super.attached();
+  connectedCallback() {
+    super.connectedCallback();
     this._initialize();
   }
 
