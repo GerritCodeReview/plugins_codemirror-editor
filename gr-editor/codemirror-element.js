@@ -70,8 +70,15 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
         // ... because CodeMirror's line count is zero-based.
         this._nativeMirror.setCursor(this.lineNum - 1);
       }
+      this._getColumnAndLine();
     }, 1);
     this._addEventListeners();
+  }
+
+  _getColumnAndLine() {
+    const cursor = this._nativeMirror.getCursor('end');
+    if (!cursor) return;
+    this.$.result.innerHTML = `${cursor.line + 1} : ${cursor.ch +1}`;
   }
 
   _addEventListeners() {
@@ -79,6 +86,10 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
       this.dispatchEvent(
           new CustomEvent('content-change', {detail: {value: e.getValue()}})
       );
+    });
+
+    this._nativeMirror.on('cursorActivity', () => {
+      this._getColumnAndLine();
     });
   }
 }
