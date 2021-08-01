@@ -215,6 +215,8 @@ class GrEditor extends Polymer.Element {
       if (value && value.includes('\r\n')) {
         params.lineSeparator = '\r\n';
       }
+
+      params.inputStyle = 'contenteditable';
     }
 
     return params;
