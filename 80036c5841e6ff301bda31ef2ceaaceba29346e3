@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb2b4863_22b600b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-02T06:35:19Z",
+      "side": 1,
+      "message": "Ok, the latest patchset improves things further. I\u0027ve compared the old behaviour and the new behaviour. New one is slightly better. It\u0027s not perfect but i think it\u0027s ok to go.",
+      "revId": "80036c5841e6ff301bda31ef2ceaaceba29346e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
