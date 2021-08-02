@@ -4,7 +4,7 @@
 }
 .CodeMirror {
   font-family: 'Roboto Mono', 'SF Mono', 'Lucida Console', Monaco, monospace;
-  height: auto;
+  height: 55em;
   /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
   z-index: 0;
 }
