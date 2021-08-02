@@ -187,7 +187,9 @@ class GrEditor extends Polymer.Element {
    * @returns {Object}
    */
   getCodeMirrorParams(type, value, prefs) {
-    const params = {value, viewportMargin: Infinity};
+    const params = {value, inputStyle: 'contenteditable'};
+
+    params.scrollbarStyle = 'overlay';
 
     if (prefs) {
       // TODO: Add gerrit's customizations from java codemirror to javascript
@@ -215,8 +217,6 @@ class GrEditor extends Polymer.Element {
       if (value && value.includes('\r\n')) {
         params.lineSeparator = '\r\n';
       }
-
-      params.inputStyle = 'contenteditable';
     }
 
     return params;

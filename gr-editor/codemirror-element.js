@@ -65,6 +65,10 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
     this.async(() => {
       this._nativeMirror.refresh();
       this._nativeMirror.focus();
+      // We make sure the editing box is the size of the window.
+      // We cannot use height:auto as it has a performance penalty.
+      // We use the search addon so we don't lose the ablity to search the document.
+      this._nativeMirror.setSize(null, window.screen.height);
       if (this.lineNum) {
         // We have to take away one from the line number,
         // ... because CodeMirror's line count is zero-based.
