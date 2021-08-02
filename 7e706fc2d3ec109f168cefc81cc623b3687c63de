@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0633a717_471eac9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-02T04:24:36Z",
+      "side": 1,
+      "message": "@Ben WDYT? I\u0027ve tested this but i\u0027m a little uneasy on the height because on mobile it isn\u0027t too good. On desktop that height worked well on my 16inch mac but then i\u0027m not sure if it\u0027s good on larger screens (or even smaller ones).\n\nDo you know how i can get it to fit the screen? We can use setSize if necessary (codemirror function)",
+      "revId": "7e706fc2d3ec109f168cefc81cc623b3687c63de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
