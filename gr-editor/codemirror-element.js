@@ -65,6 +65,7 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
     this.async(() => {
       this._nativeMirror.refresh();
       this._nativeMirror.focus();
+      this._nativeMirror.setSize(null, document.documentElement.clientHeight - 200);
       if (this.lineNum) {
         // We have to take away one from the line number,
         // ... because CodeMirror's line count is zero-based.
