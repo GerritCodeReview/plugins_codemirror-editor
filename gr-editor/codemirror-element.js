@@ -61,7 +61,11 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
     this.initialized = true;
     this.scopeSubtree(this.$.wrapper, true);
     // eslint-disable-next-line new-cap
-    this._nativeMirror = window.CodeMirror(this.$.wrapper, this._params);
+    this._nativeMirror = window.CodeMirror.fromTextArea(this.$.wrapper, this._params);
+    // We have to use setValue because it seems that using textarea doesn't use
+    // the value we supplied within the paramaters.
+    // Changing the content still works including saving.
+    this._nativeMirror.getDoc().setValue(this._params.value);
     this.async(() => {
       this._nativeMirror.refresh();
       this._nativeMirror.focus();
