@@ -22,6 +22,30 @@
       },
       "revId": "d7a91e1fb0cad6f303a9b13b61a15408aa40ae78",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba7ad889_76ad9ab3",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-03T23:33:52Z",
+      "side": 1,
+      "message": "I did that so the footer wasn\u0027t pushed down... though it\u0027s already like that and also i\u0027ve switched to window.screen.height as my current method was way too inconsistent (e.g. if the developer tools were open then the height was smaller). This change makes things consistent.\n\n(Removed the - 200 too).",
+      "parentUuid": "3841487e_c7e9887e",
+      "range": {
+        "startLine": 68,
+        "startChar": 79,
+        "endLine": 68,
+        "endChar": 82
+      },
+      "revId": "d7a91e1fb0cad6f303a9b13b61a15408aa40ae78",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
