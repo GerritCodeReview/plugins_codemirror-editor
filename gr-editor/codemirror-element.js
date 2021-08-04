@@ -80,6 +80,13 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
           new CustomEvent('content-change', {detail: {value: e.getValue()}})
       );
     });
+    this._nativeMirror.getInputField().addEventListener('keydown', e => {
+      // Exempt the ctrl/command+s key from preventing events from propagating
+      // through the app. This is because we use it to save changes.
+      if (!e.metaKey && !e.ctrlKey) {
+        e.stopPropagation();
+      }
+    });
   }
 }
 
