@@ -81,6 +81,15 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
           new CustomEvent('content-change', {detail: {value: e.getValue()}})
       );
     });
+    this._nativeMirror.getInputField().addEventListener('keydown', e => {
+      // Prevent events from propagating through the app
+      // when typing "/".
+      // The app was intercepting the "/" and using it
+      // for the searchbar.
+      if (e.keyCode === 191) {
+        e.stopPropagation();
+      }
+    });
   }
 }
 
