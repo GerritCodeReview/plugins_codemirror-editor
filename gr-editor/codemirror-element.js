@@ -81,6 +81,11 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
           new CustomEvent('content-change', {detail: {value: e.getValue()}})
       );
     });
+    this._nativeMirror.getInputField().addEventListener('keydown', e => {
+      if (this._nativeMirror.getOption('inputStyle') === 'contenteditable') {
+        e.stopPropagation();
+      }
+    });
   }
 }
 
