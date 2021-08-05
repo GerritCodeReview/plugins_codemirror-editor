@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41cfbca4_248b0648",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2021-08-05T07:15:27Z",
+      "side": 1,
+      "message": "I would recommend testing this for a while on master before picking this into stable branches.",
+      "revId": "09de5f8eb291ffbc64edeb275682145f64034f71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
