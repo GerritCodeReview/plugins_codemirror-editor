@@ -170,6 +170,24 @@
       "parentUuid": "ad7e3b00_d05b0e64",
       "revId": "d8f9b8b93ddbb3f142e220bd7aecbc03f753fc19",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea2e624a_7bed2fb3",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-05T07:52:51Z",
+      "side": 1,
+      "message": "The returned html is:\n\n\u003cdiv class\u003d\"CodeMirror-code\" role\u003d\"presentation\" contenteditable\u003d\"true\" autocorrect\u003d\"off\" autocapitalize\u003d\"off\" spellcheck\u003d\"false\" tabindex\u003d\"0\" style\u003e…\u003c/div\u003e\n\nWe could do it within shouldSuppressKeyboardShortcut so if class \u003d\u003d\u003d CodeMirror-code \u0026 contenteditable attribute is set then disable shortcuts.",
+      "parentUuid": "26d2a855_21a74a4a",
+      "revId": "d8f9b8b93ddbb3f142e220bd7aecbc03f753fc19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
