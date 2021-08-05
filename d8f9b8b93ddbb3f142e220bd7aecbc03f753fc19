@@ -152,6 +152,24 @@
       "parentUuid": "0ffadbcd_187b5fa5",
       "revId": "d8f9b8b93ddbb3f142e220bd7aecbc03f753fc19",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26d2a855_21a74a4a",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2021-08-05T07:29:41Z",
+      "side": 1,
+      "message": "Sorry, this is too quick and dirty for my taste.\n\nI don\u0027t have the time to investigate this in detail myself at the moment, but what you can do is look at where in the DOM hierarchy the \u0027keydown\u0027 event is emitted and where the listener is that reacts to it.\n\nThere must be a better way for `shouldSuppressKeyboardShortcut` to detect that situation:\n\nhttps://cs.opensource.google/gerrit/gerrit/gerrit/+/master:polygerrit-ui/app/mixins/keyboard-shortcut-mixin/keyboard-shortcut-mixin.ts;l\u003d804;drc\u003db32cda528a5223bedbfcedf08e43c9c5ce00d8a2\n\nCan we somehow look into `target` and `tagName`? What is it in this case?\n\nOr iterate over the DOM hierarchy as we do for GR-OVERLAY?",
+      "parentUuid": "ad7e3b00_d05b0e64",
+      "revId": "d8f9b8b93ddbb3f142e220bd7aecbc03f753fc19",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
