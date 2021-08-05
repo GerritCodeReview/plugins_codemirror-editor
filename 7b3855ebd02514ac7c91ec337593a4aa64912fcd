@@ -16,6 +16,29 @@
       "message": "moving further review to Dhruv",
       "revId": "7b3855ebd02514ac7c91ec337593a4aa64912fcd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12fda75d_1a1b0838",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1083225
+      },
+      "writtenOn": "2021-08-05T10:49:38Z",
+      "side": 1,
+      "message": "silly question maybe but we also have the keyboard shortcut \"a\" for opening the reply dialog.\nHow is that keyboard event being intercepted(or is it not), so it should be an issue as well? If typing \"/\" takes focus to the searchbar then typing \"a\" should open the reply dialog?\nIs there something special about \"/\" or do we need to tackle this for all keyboard shortcuts?",
+      "range": {
+        "startLine": 87,
+        "startChar": 9,
+        "endLine": 88,
+        "endChar": 27
+      },
+      "revId": "7b3855ebd02514ac7c91ec337593a4aa64912fcd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
