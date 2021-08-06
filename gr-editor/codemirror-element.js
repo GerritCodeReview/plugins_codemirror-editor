@@ -62,7 +62,7 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
     this.scopeSubtree(this.$.wrapper, true);
     // eslint-disable-next-line new-cap
     this._nativeMirror = window.CodeMirror(this.$.wrapper, this._params);
-    this.async(() => {
+    setTimeout(() => {
       this._nativeMirror.refresh();
       this._nativeMirror.focus();
       this._nativeMirror.setSize(null, window.screen.height);
