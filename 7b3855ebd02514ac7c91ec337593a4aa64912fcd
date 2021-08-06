@@ -111,6 +111,30 @@
       },
       "revId": "7b3855ebd02514ac7c91ec337593a4aa64912fcd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07993bf7_ecc3a133",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-06T08:51:09Z",
+      "side": 1,
+      "message": "Done, thanks!",
+      "parentUuid": "08c7ab7e_2196fda7",
+      "range": {
+        "startLine": 87,
+        "startChar": 9,
+        "endLine": 88,
+        "endChar": 27
+      },
+      "revId": "7b3855ebd02514ac7c91ec337593a4aa64912fcd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
