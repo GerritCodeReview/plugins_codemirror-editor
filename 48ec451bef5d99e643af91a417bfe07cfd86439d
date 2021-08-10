@@ -16,6 +16,24 @@
       "message": "We don\u0027t capture \u0027s\u0027, we capture \u0027ctrl-s\u0027, right?\n\nSo what about \n\n  if (!e.metaKey \u0026\u0026 !e.ctrlKey) {",
       "revId": "48ec451bef5d99e643af91a417bfe07cfd86439d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5d15cfd_93f6d050",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-10T07:45:51Z",
+      "side": 1,
+      "message": "Yup, thanks, done.",
+      "parentUuid": "a4cac736_96594322",
+      "revId": "48ec451bef5d99e643af91a417bfe07cfd86439d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
