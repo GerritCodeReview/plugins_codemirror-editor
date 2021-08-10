@@ -34,6 +34,24 @@
       "parentUuid": "a4cac736_96594322",
       "revId": "48ec451bef5d99e643af91a417bfe07cfd86439d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57441d80_3ad1973b",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2021-08-10T07:46:03Z",
+      "side": 1,
+      "message": "Forgot to resolve.",
+      "parentUuid": "f5d15cfd_93f6d050",
+      "revId": "48ec451bef5d99e643af91a417bfe07cfd86439d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
