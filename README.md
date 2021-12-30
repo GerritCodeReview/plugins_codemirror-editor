@@ -4,11 +4,17 @@ A plugin that uses CodeMirror to provide a rich code editing experience in PolyG
 
 ## UI plugin
 
-This plugin is rewritten into Polymer 3 syntax. The `gr-editor.js` is the main entry for the plugin.
+This plugin defines a Lit web component `<gr-codemirror-editor>` which embedds one CodeMirror 6 instance.
+This element replaces the default editor and can be used to edit files in Gerrit.
 
-But to support the lazy load on the `codemirror` with supported languages, we still have the `codemirror-element.html` as an asset which still built separately as an html.
+All available language support packages are bundled with the editor.
 
-We may consider drop the selectively language support and in favor of all-in-one bundle in the future or change build rule to support bundle `css` in `js` to move off of the html completely.
+
+For checking or fixing eslint formatter problems run:
+
+    bazel test //plugins/codemirror-editor/gr-codemirror-editor:lint_test
+    bazel run //plugins/codemirror-editor/gr-codemirror-editor:lint_bin -- --fix "$(pwd)/plugins/codemirror-editor/gr-codemirror-editor"
+
 
 ## UI tests
 

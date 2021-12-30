@@ -23,6 +23,6 @@ public class CodemirrorModule extends RestApiModule {
   @Override
   protected void configure() {
     DynamicSet.bind(binder(), WebUiPlugin.class)
-        .toInstance(new JavaScriptPlugin("codemirror_editor.js"));
+        .toInstance(new JavaScriptPlugin("gr-codemirror-editor.js"));
   }
 }
