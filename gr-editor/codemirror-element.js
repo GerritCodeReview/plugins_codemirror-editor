@@ -63,9 +63,16 @@ class CodeMirrorElement extends Polymer.GestureEventListeners(
     // eslint-disable-next-line new-cap
     this._nativeMirror = window.CodeMirror(this.$.wrapper, this._params);
     setTimeout(() => {
+      const offsetTop =
+          this._nativeMirror.display.wrapper.getBoundingClientRect().top;
+      const clientHeight =
+          window.innerHeight || document.clientHeight || document.getElementByTagName('body').clientHeight;
+      // We take 100 from height to ensure that the height of the
+      // textarea doesn't push out of screen.
+      const height = clientHeight - offsetTop - 100;
       this._nativeMirror.refresh();
       this._nativeMirror.focus();
-      this._nativeMirror.setSize(null, window.screen.height);
+      this._nativeMirror.setSize(null, height < 600 ? 600 : height;
       if (this.lineNum) {
         // We have to take away one from the line number,
         // ... because CodeMirror's line count is zero-based.
