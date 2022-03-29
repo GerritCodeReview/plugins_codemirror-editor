@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3aa278aa_e0ffd047",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-03-29T07:32:06Z",
+      "side": 0,
+      "message": "Why was a size added at all? On gerrit-review we just rely on the outer Gerrit window to do the scrolling, (because we are behind with plugin imports).",
+      "revId": "c5bda5b6b5fe91a2f7cd40c5a917dd2280b04814",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
