@@ -16,6 +16,24 @@
       "message": "Why was a size added at all? On gerrit-review we just rely on the outer Gerrit window to do the scrolling, (because we are behind with plugin imports).",
       "revId": "c5bda5b6b5fe91a2f7cd40c5a917dd2280b04814",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acd388bd_bb45c534",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-03-29T13:07:45Z",
+      "side": 0,
+      "message": "This was done in https://github.com/GerritCodeReview/plugins_codemirror-editor/commit/de723fb887100a0da85673ba9fcd7b02ae1364e3. We removed setting viewPort to infinity because it was causing massive performance issues with large files. (We did this under GWTUI as well so it was just bringing that change forward to PolyGerrit). This meant that we had to set a height which i found a way doing window.screen.height and recently came across a better way to set the height (hence this change).\n\nI\u0027ve tested using the iOS simulator, desktop safari, chrome (mac) and safaris responsive mode.",
+      "parentUuid": "3aa278aa_e0ffd047",
+      "revId": "c5bda5b6b5fe91a2f7cd40c5a917dd2280b04814",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

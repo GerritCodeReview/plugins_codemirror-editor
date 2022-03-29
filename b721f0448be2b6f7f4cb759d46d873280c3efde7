@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "492407a3_9cf4fb2b",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-03-29T13:07:45Z",
+      "side": 1,
+      "message": "It was a number i tested with the, the footer was going out of screen and doing - 100 fixed it (including in iOS so i think it\u0027ll work for windows and other browsers as well)",
+      "parentUuid": "f9cce650_99f37864",
+      "range": {
+        "startLine": 73,
+        "startChar": 17,
+        "endLine": 73,
+        "endChar": 20
+      },
+      "revId": "b721f0448be2b6f7f4cb759d46d873280c3efde7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a3a2207a_0ad04679",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-03-29T07:32:06Z",
       "side": 1,
       "message": "Maybe use a minimum height such as 600px?",
+      "revId": "b721f0448be2b6f7f4cb759d46d873280c3efde7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cf31c15_056a51de",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-03-29T13:07:45Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "a3a2207a_0ad04679",
       "revId": "b721f0448be2b6f7f4cb759d46d873280c3efde7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
