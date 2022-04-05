@@ -34,6 +34,24 @@
       "parentUuid": "3aa278aa_e0ffd047",
       "revId": "c5bda5b6b5fe91a2f7cd40c5a917dd2280b04814",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5607011f_0ad3b113",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-04-05T06:46:25Z",
+      "side": 0,
+      "message": "Add a comment to the code like \"we are setting a fixed height, because for large files we want to benefit from CodeMirror\u0027s virtual scrolling\".",
+      "parentUuid": "acd388bd_bb45c534",
+      "revId": "c5bda5b6b5fe91a2f7cd40c5a917dd2280b04814",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
