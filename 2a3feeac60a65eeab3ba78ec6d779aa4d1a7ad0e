@@ -1,13 +1,9 @@
 {
   "checks": {
     "zuul-check:plugins_codemirror-editor": {
-      "state": "FAILED",
-      "message": "Change failed",
-      "url": "https://ci.gerritcodereview.com/t/gerrit/buildset/b8fb538a7c584a969c02535d50e20fb2",
-      "started": "2022-02-02T19:32:57Z",
-      "finished": "2022-02-02T19:37:18Z",
+      "state": "NOT_STARTED",
       "created": "2022-02-02T19:32:57Z",
-      "updated": "2022-02-02T19:37:19Z"
+      "updated": "2022-06-16T17:35:19Z"
     }
   }
 }
