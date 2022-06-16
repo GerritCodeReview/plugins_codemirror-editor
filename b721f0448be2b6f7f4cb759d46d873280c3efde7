@@ -72,6 +72,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02a2e4f5_5840fc46",
+        "filename": "gr-editor/codemirror-element.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-06-16T17:34:21Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "9d5a3313_9c6ad6c9",
+      "range": {
+        "startLine": 73,
+        "startChar": 17,
+        "endLine": 73,
+        "endChar": 20
+      },
+      "revId": "b721f0448be2b6f7f4cb759d46d873280c3efde7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a3a2207a_0ad04679",
