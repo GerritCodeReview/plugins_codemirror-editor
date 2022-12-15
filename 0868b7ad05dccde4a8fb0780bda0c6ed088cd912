@@ -52,6 +52,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36588cfe_a83ccfcd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-15T23:06:15Z",
+      "side": 1,
+      "message": "Seems syntax highlighting is broken:\n\nhttps://imgur.com/a/QgmDsiK",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "46d0eefb_d4cfc11c",
