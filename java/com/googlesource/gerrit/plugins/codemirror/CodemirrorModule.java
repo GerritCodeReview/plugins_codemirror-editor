@@ -11,7 +11,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
 package com.googlesource.gerrit.plugins.codemirror;
 
 import com.google.gerrit.extensions.registration.DynamicSet;
@@ -19,6 +18,11 @@ import com.google.gerrit.extensions.restapi.RestApiModule;
 import com.google.gerrit.extensions.webui.JavaScriptPlugin;
 import com.google.gerrit.extensions.webui.WebUiPlugin;
 
+/**
+ * The only reason for having this module is that this plugin consists of
+ * multiple js bundles, so we have to create a proper JAR file to serve them.
+ * And thus we also need this entry point module for the `gerrit_plugin` target.
+ */
 public class CodemirrorModule extends RestApiModule {
   @Override
   protected void configure() {
