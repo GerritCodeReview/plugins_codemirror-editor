@@ -2,30 +2,14 @@
 
 A plugin that uses CodeMirror to provide a rich code editing experience in PolyGerrit.
 
-## UI plugin
+The plugins hooks into the `editor` endpoint and registers `gr-editor` for it.
 
-This plugin is rewritten into Polymer 3 syntax. The `gr-editor.js` is the main entry for the plugin.
+The `codemirror-element` using CodeMirror is loaded lazily from another js bundle, because it is
+fairly large, and we don't want to load the large bundle, if the user is not editing anything.
 
-But to support the lazy load on the `codemirror` with supported languages, we still have the `codemirror-element.html` as an asset which still built separately as an html.
+We are using the generic test target in the `plugins/` folder. See `plugins/BUILD` for how to
+enable the tests and then run `bazel run plugins:web-test-runner`.
 
-We may consider drop the selectively language support and in favor of all-in-one bundle in the future or change build rule to support bundle `css` in `js` to move off of the html completely.
-
-## UI tests
-
-To run UI tests here will need install dependencies from both npm and bower.
-
-`npm run wct-test` should take care both for you, read more in `package.json`.
-
-You will need `polymer-bridges` which is a submodule you can clone from: https://gerrit-review.googlesource.com/admin/repos/polymer-bridges
-
-As polymer 3 no longer support `Polymer.importHref` anymore, this plugin still supports it through a custom implementation in `gr-editor.js`.
-
-## Test plugin on Gerrit
-
-1. Build the bundle locally with: `bazel build :codemirror_editor`
-2. Serve your generated 'codemirror_editor.js' somewhere, you can put it under `gerrit/plugins/codemirror-editor/` folder and it will automatically served at `http://localhost:8081/plugins_/codemirror-editor/`
-3. Use FE dev helper, https://gerrit.googlesource.com/gerrit-fe-dev-helper/, inject the local served 'codemirror_editor.js' to the page
-
-If your plugin is already enabled, then you can block it and then inject the compiled local verison.
-
-See more about how to use dev helper extension to help you test here: https://gerrit.googlesource.com/gerrit-fe-dev-helper/+/master
+For testing you can use FE dev helper (https://gerrit.googlesource.com/gerrit-fe-dev-helper/). It
+allows you to redirect to (symlinks to) your locally built files. You can use `npm run start` to
+serve files and put the locally built files (or symlinks) in the `polygerrit-ui/app/` folder.
