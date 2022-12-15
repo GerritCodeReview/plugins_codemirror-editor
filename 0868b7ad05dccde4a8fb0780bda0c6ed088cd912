@@ -71,6 +71,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a087002c_2b10f949",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-15T23:29:13Z",
+      "side": 1,
+      "message": "Replace this and below with:\n\n```\n import \u0027codemirror\u0027;\n import \u0027codemirror/addon/dialog/dialog\u0027;\n import \u0027codemirror/addon/display/rulers\u0027;\n import \u0027codemirror/addon/edit/closebrackets\u0027;\n import \u0027codemirror/addon/edit/closetag\u0027;\n import \u0027codemirror/addon/edit/matchbrackets\u0027;\n import \u0027codemirror/addon/edit/matchtags\u0027;\n import \u0027codemirror/addon/edit/trailingspace\u0027;\n import \u0027codemirror/addon/scroll/annotatescrollbar\u0027;\n import \u0027codemirror/addon/scroll/simplescrollbars\u0027;\n import \u0027codemirror/addon/search/matchesonscrollbar\u0027;\n import \u0027codemirror/addon/search/jump-to-line\u0027;\n import \u0027codemirror/addon/search/matchesonscrollbar\u0027;\n import \u0027codemirror/addon/search/searchcursor\u0027;\n import \u0027codemirror/addon/search/search\u0027;\n import \u0027codemirror/addon/mode/simple\u0027;\n import \u0027codemirror/addon/mode/multiplex\u0027;\n import \u0027codemirror/mode/meta\u0027;\n import \u0027codemirror/mode/clike/clike\u0027;\n import \u0027codemirror/mode/clojure/clojure\u0027;\n import \u0027codemirror/mode/coffeescript/coffeescript\u0027;\n import \u0027codemirror/mode/commonlisp/commonlisp\u0027;\n import \u0027codemirror/mode/css/css\u0027;\n import \u0027codemirror/mode/d/d\u0027;\n import \u0027codemirror/mode/dart/dart\u0027;\n import \u0027codemirror/mode/diff/diff\u0027;\n import \u0027codemirror/mode/django/django\u0027;\n import \u0027codemirror/mode/dockerfile/dockerfile\u0027;\n import \u0027codemirror/mode/erlang/erlang\u0027;\n import \u0027codemirror/mode/go/go\u0027;\n import \u0027codemirror/mode/groovy/groovy\u0027;\n import \u0027codemirror/mode/haml/haml\u0027;\n import \u0027codemirror/mode/handlebars/handlebars\u0027;\n import \u0027codemirror/mode/haskell/haskell\u0027;\n import \u0027codemirror/mode/htmlembedded/htmlembedded\u0027;\n import \u0027codemirror/mode/htmlmixed/htmlmixed\u0027;\n import \u0027codemirror/mode/javascript/javascript\u0027;\n import \u0027codemirror/mode/jinja2/jinja2\u0027;\n import \u0027codemirror/mode/jsx/jsx\u0027;\n import \u0027codemirror/mode/julia/julia\u0027;\n import \u0027codemirror/mode/lua/lua\u0027;\n import \u0027codemirror/mode/markdown/markdown\u0027;\n import \u0027codemirror/mode/mllike/mllike\u0027;\n import \u0027codemirror/mode/nginx/nginx\u0027;\n import \u0027codemirror/mode/perl/perl\u0027;\n import \u0027codemirror/mode/php/php\u0027;\n import \u0027codemirror/mode/powershell/powershell\u0027;\n import \u0027codemirror/mode/properties/properties\u0027;\n import \u0027codemirror/mode/protobuf/protobuf\u0027;\n import \u0027codemirror/mode/puppet/puppet\u0027;\n import \u0027codemirror/mode/python/python\u0027;\n import \u0027codemirror/mode/rpm/rpm\u0027;\n import \u0027codemirror/mode/ruby/ruby\u0027;\n import \u0027codemirror/mode/sass/sass\u0027;\n import \u0027codemirror/mode/scheme/scheme\u0027;\n import \u0027codemirror/mode/shell/shell\u0027;\n import \u0027codemirror/mode/soy/soy\u0027;\n import \u0027codemirror/mode/sparql/sparql\u0027;\n import \u0027codemirror/mode/sql/sql\u0027;\n import \u0027codemirror/mode/swift/swift\u0027;\n import \u0027codemirror/mode/tcl/tcl\u0027;\n import \u0027codemirror/mode/velocity/velocity\u0027;\n import \u0027codemirror/mode/verilog/verilog\u0027;\n import \u0027codemirror/mode/vb/vb\u0027;\n import \u0027codemirror/mode/xml/xml\u0027;\n import \u0027codemirror/mode/yaml/yaml\u0027;\n ```\n \n I\u0027ve tested this and works.",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69087cbc_198e5f94",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-15T23:29:13Z",
+      "side": 1,
+      "message": "Remove this, some how adding the above brakes this const? But it builds after removing this.",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "46d0eefb_d4cfc11c",
         "filename": "web/element/codemirror-element.ts",
         "patchSetId": 4
