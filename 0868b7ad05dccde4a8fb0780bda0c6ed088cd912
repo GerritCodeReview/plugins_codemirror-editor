@@ -33,6 +33,23 @@
       "message": "consider adding updated test instead of only deleting the old ones",
       "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46d0eefb_d4cfc11c",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-15T23:01:51Z",
+      "side": 1,
+      "message": "Looks like you forgot to copy https://gerrit.googlesource.com/plugins/codemirror-editor/+/3af12c5a5e65861830b42bd07933e275c33b9159/gr-editor/codemirror-element.js#77?",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
