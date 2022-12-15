@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5503099b_220b6b54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-15T15:32:07Z",
+      "side": 1,
+      "message": "@thomasmulhall410@yahoo.com\n\nHey Paladox, can review and test this new version of the Code Mirror plugin? That would be very much appreciated! ❤️\n\nI have tested this already using Dev Helper, but it would be good to know, if this also works in an open source installation such as WikiMedia.\n\nInternally at Google we have already switched to this TS/Lit based version of the plugin, but the BUILD of this plugin is the tricky part, so that still needs to be tested and vetted.",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
