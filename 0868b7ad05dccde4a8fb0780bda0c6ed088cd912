@@ -71,6 +71,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fab550bf_85fe2437",
+        "filename": "web/element/codemirror-css.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-15T23:31:20Z",
+      "side": 1,
+      "message": "Maybe add all the rules from https://gerrit-review.googlesource.com/c/plugins/codemirror-editor/+/354934/4/gr-editor/codemirror-element.css ?\n\nNeeds the tabs one and trailing space specifically.",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a087002c_2b10f949",
         "filename": "web/element/codemirror-element.ts",
         "patchSetId": 4
