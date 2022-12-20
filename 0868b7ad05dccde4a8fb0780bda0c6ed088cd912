@@ -69,6 +69,42 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "044be09a_441a1332",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-20T09:25:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c3abbea7_7c2a8c83",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9731475_50b4fa45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-20T09:25:22Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5503099b_220b6b54",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fab550bf_85fe2437",
@@ -82,6 +118,24 @@
       "writtenOn": "2022-12-15T23:31:20Z",
       "side": 1,
       "message": "Maybe add all the rules from https://gerrit-review.googlesource.com/c/plugins/codemirror-editor/+/354934/4/gr-editor/codemirror-element.css ?\n\nNeeds the tabs one and trailing space specifically.",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e25a7970_de215625",
+        "filename": "web/element/codemirror-css.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-20T09:25:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fab550bf_85fe2437",
       "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -103,6 +157,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1698ae9a_28cb2f75",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-20T09:25:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a087002c_2b10f949",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "69087cbc_198e5f94",
@@ -120,6 +192,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "302ae4c9_08318266",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-20T09:25:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69087cbc_198e5f94",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "46d0eefb_d4cfc11c",
@@ -133,6 +223,24 @@
       "writtenOn": "2022-12-15T23:01:51Z",
       "side": 1,
       "message": "Looks like you forgot to copy https://gerrit.googlesource.com/plugins/codemirror-editor/+/3af12c5a5e65861830b42bd07933e275c33b9159/gr-editor/codemirror-element.js#77?",
+      "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12eb2f49_4b07ea9f",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-20T09:25:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46d0eefb_d4cfc11c",
       "revId": "0868b7ad05dccde4a8fb0780bda0c6ed088cd912",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
