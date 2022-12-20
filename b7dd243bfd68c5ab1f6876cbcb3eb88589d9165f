@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67a76fa6_f29bd169",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-20T14:21:01Z",
+      "side": 1,
+      "message": "Othen then the below, this works perfectly for me, thanks! (I\u0027ve tested it locally).",
+      "revId": "b7dd243bfd68c5ab1f6876cbcb3eb88589d9165f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f46bf135_ab2fa608",
+        "filename": "web/element/codemirror-css.ts",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-20T14:21:01Z",
+      "side": 1,
+      "message": "Ah i hadn\u0027t realised we have to manually add the css.\n\nWe need to add:\n\n```\ndialog.css\nfoldgutter.css\nsimplescrollbars.css\nmatchesonscrollbar.css\n```\n\nhere.\n\nWhich is:\n\n```\n/** Addon: dialog **/\n\n.CodeMirror-dialog {\n  position: absolute;\n  left: 0; right: 0;\n  background: inherit;\n  z-index: 15;\n  padding: .1em .8em;\n  overflow: hidden;\n  color: inherit;\n}\n\n.CodeMirror-dialog-top {\n  border-bottom: 1px solid #eee;\n  top: 0;\n}\n\n.CodeMirror-dialog-bottom {\n  border-top: 1px solid #eee;\n  bottom: 0;\n}\n\n.CodeMirror-dialog input {\n  border: none;\n  outline: none;\n  background: transparent;\n  width: 20em;\n  color: inherit;\n  font-family: monospace;\n}\n\n.CodeMirror-dialog button {\n  font-size: 70%;\n}\n\n/** Addon: foldgutter **/\n\n.CodeMirror-foldmarker {\n  color: blue;\n  text-shadow: #b9f 1px 1px 2px, #b9f -1px -1px 2px, #b9f 1px -1px 2px, #b9f -1px 1px 2px;\n  font-family: arial;\n  line-height: .3;\n  cursor: pointer;\n}\n.CodeMirror-foldgutter {\n  width: .7em;\n}\n.CodeMirror-foldgutter-open,\n.CodeMirror-foldgutter-folded {\n  cursor: pointer;\n}\n.CodeMirror-foldgutter-open:after {\n  content: \u0027\\\\25BE\u0027;\n}\n.CodeMirror-foldgutter-folded:after {\n  content: \u0027\\\\25B8\u0027;\n}\n\n/** Addon: simplescrollbars **/\n\n.CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {\n  position: absolute;\n  background: #ccc;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  border: 1px solid #bbb;\n  border-radius: 2px;\n}\n\n.CodeMirror-simplescroll-horizontal, .CodeMirror-simplescroll-vertical {\n  position: absolute;\n  z-index: 6;\n  background: #eee;\n}\n\n.CodeMirror-simplescroll-horizontal {\n  bottom: 0; left: 0;\n  height: 8px;\n}\n.CodeMirror-simplescroll-horizontal div {\n  bottom: 0;\n  height: 100%;\n}\n\n.CodeMirror-simplescroll-vertical {\n  right: 0; top: 0;\n  width: 8px;\n}\n.CodeMirror-simplescroll-vertical div {\n  right: 0;\n  width: 100%;\n}\n\n\n.CodeMirror-overlayscroll .CodeMirror-scrollbar-filler, .CodeMirror-overlayscroll .CodeMirror-gutter-filler {\n  display: none;\n}\n\n.CodeMirror-overlayscroll-horizontal div, .CodeMirror-overlayscroll-vertical div {\n  position: absolute;\n  background: #bcd;\n  border-radius: 3px;\n}\n\n.CodeMirror-overlayscroll-horizontal, .CodeMirror-overlayscroll-vertical {\n  position: absolute;\n  z-index: 6;\n}\n\n.CodeMirror-overlayscroll-horizontal {\n  bottom: 0; left: 0;\n  height: 6px;\n}\n.CodeMirror-overlayscroll-horizontal div {\n  bottom: 0;\n  height: 100%;\n}\n\n.CodeMirror-overlayscroll-vertical {\n  right: 0; top: 0;\n  width: 6px;\n}\n.CodeMirror-overlayscroll-vertical div {\n  right: 0;\n  width: 100%;\n}\n\n/** Addon: matchesonscrollbar **/\n.CodeMirror-search-match {\n  background: gold;\n  border-top: 1px solid orange;\n  border-bottom: 1px solid orange;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  opacity: .5;\n}\n```",
+      "revId": "b7dd243bfd68c5ab1f6876cbcb3eb88589d9165f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
