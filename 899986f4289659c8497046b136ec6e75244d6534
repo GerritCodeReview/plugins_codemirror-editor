@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c399738b_8479c8f8",
+        "filename": "web/element/foldgutter-css.ts",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2022-12-21T14:26:10Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be `content: \u0027\\\\25BE\u0027;` and same for below but 25B8.",
+      "revId": "899986f4289659c8497046b136ec6e75244d6534",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
