@@ -69,6 +69,24 @@
       "parentUuid": "f46bf135_ab2fa608",
       "revId": "b7dd243bfd68c5ab1f6876cbcb3eb88589d9165f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97a937c4_a54c95a8",
+        "filename": "web/element/codemirror-css.ts",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2022-12-21T09:10:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5e5a56f_6dc1f54c",
+      "revId": "b7dd243bfd68c5ab1f6876cbcb3eb88589d9165f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
