@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import './codemirror-imports';
-import {EditorConfiguration} from 'codemirror';
+import {CodeMirror, EditorConfiguration} from 'codemirror';
 import {css, html, LitElement} from 'lit';
 import {customElement, property, query} from 'lit/decorators.js';
 import {codemirrorStyles} from './codemirror-css';

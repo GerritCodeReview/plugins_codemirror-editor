@@ -3,8 +3,7 @@
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-import 'codemirror';
-import 'codemirror/addon/display/rulers';
+import './codemirror-imports';
 import '@gerritcodereview/typescript-api/gerrit';
 import {EditorConfiguration} from 'codemirror';
 import {PluginApi} from '@gerritcodereview/typescript-api/plugin';
