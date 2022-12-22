@@ -3,14 +3,13 @@
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-import 'codemirror';
-import 'codemirror/addon/display/rulers';
+import './codemirror-imports';
 import '@gerritcodereview/typescript-api/gerrit';
-import {EditorConfiguration} from 'codemirror';
 import {PluginApi} from '@gerritcodereview/typescript-api/plugin';
 import {html, LitElement} from 'lit';
 import {customElement, property, query} from 'lit/decorators.js';
 
+import {CodeMirrorConfig} from './codemirror-imports';
 import {setScriptSrc} from './safe-script';
 
 declare global {
@@ -36,18 +35,6 @@ interface EditPreferencesInfo {
   line_wrapping?: boolean;
   indent_with_tabs?: boolean;
   auto_close_brackets?: boolean;
-}
-
-/**
- * The type `codemirror.EditorConfiguration` is just outdated, so we have to add
- * some props manually here.
- */
-interface CodeMirrorConfig extends EditorConfiguration {
-  autoCloseBrackets?: boolean;
-  matchBrackets?: boolean;
-  showTabs?: boolean;
-  showTrailingSpace?: boolean;
-  lineSeparator?: string;
 }
 
 /**
