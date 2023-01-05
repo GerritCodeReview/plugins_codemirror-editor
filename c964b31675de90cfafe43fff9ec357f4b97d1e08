@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fc19242_8cc82f19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-01-05T16:59:15Z",
+      "side": 1,
+      "message": "I have verified this change by building all targets locally, then running eslint, then running tests, then using Dev Helper to test the newly built plugin.",
+      "revId": "c964b31675de90cfafe43fff9ec357f4b97d1e08",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
