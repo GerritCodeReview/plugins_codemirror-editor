@@ -89,6 +89,7 @@ export class GrEditor extends LitElement {
   private codeMirrorParams(): CodeMirrorConfig {
     const params: CodeMirrorConfig = {
       value: this.fileContent ?? '',
+      inputStyle: 'textarea',
     };
 
     if (this.prefs) {
