@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff20cf94_5b49abb7",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1139951
+      },
+      "writtenOn": "2023-02-27T10:22:39Z",
+      "side": 1,
+      "message": "Please rely on \u0027basicSetup\u0027",
+      "revId": "8ae02f732334a83aa4970b49f5ab74866fb79df0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
