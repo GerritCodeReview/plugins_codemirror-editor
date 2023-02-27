@@ -3,17 +3,14 @@
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-import './codemirror-imports';
 
-import {EditorConfiguration} from 'codemirror';
-import {css, html, LitElement} from 'lit';
-import {customElement, property, query} from 'lit/decorators.js';
+import {LitElement, css, html} from 'lit';
+import {customElement, property, query} from 'lit/decorators';
 
-import {codemirrorStyles} from './codemirror-css';
-import {dialogStyles} from './dialog-css';
-import {foldgutterStyles} from './foldgutter-css';
-import {searchMatchStyles} from './matchesonscrollbar-css';
-import {simpleScrollStyles} from './simplescrollbars-css';
+import {EditorView} from '@codemirror/view';
+import {EditorState} from '@codemirror/state';
+import {updateRulerWidth} from './ruler';
+import {extensions} from './extensions';
 
 type ValueChangedEvent<T = string> = CustomEvent<{value: T}>;
 
@@ -26,52 +23,66 @@ declare global {
   }
 }
 
+/**
+ * This is a standard REST API object:
+ * https://gerrit-review.googlesource.com/Documentation/rest-api-accounts.html#edit-preferences-info
+ *
+ * TODO: Add this object to the plugin API.
+ */
+interface EditPreferencesInfo {
+  tab_size?: number;
+  line_length?: number;
+  indent_unit?: number;
+  show_tabs?: boolean;
+  show_whitespace_errors?: boolean;
+  syntax_highlighting?: boolean;
+  match_brackets?: boolean;
+  line_wrapping?: boolean;
+  indent_with_tabs?: boolean;
+  auto_close_brackets?: boolean;
+}
+
 @customElement('codemirror-element')
 export class CodeMirrorElement extends LitElement {
   @property({type: Number}) lineNum?: number;
 
-  @property({type: Object}) params?: EditorConfiguration;
+  @property({type: String}) fileContent?: string;
 
-  @query('#wrapper') wrapper?: HTMLElement;
+  @property({type: String}) fileType?: string;
+
+  @property({type: Object}) prefs?: EditPreferencesInfo;
+
+  editor!: EditorView;
+
+  @query('#editor')
+  _editorEl!: HTMLElement;
 
   private initialized = false;
 
   static override get styles() {
     return [
-      codemirrorStyles,
-      dialogStyles,
-      foldgutterStyles,
-      searchMatchStyles,
-      simpleScrollStyles,
       css`
-        .CodeMirror {
-          font-family: var(--monospace-font-family);
+        .cm-editor {
+          font-family: 'Roboto Mono', 'SF Mono', 'Lucida Console', Monaco, monospace;
+          /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
+          z-index: 0;
+          background: white;
         }
-        .CodeMirror-linenumbers {
-          background-color: var(--background-color-tertiary);
-        }
-        .CodeMirror-linenumber {
-          color: var(--deemphasized-text-color);
+        .cm-lineNumbers {
+          background-color: #fafafa;
         }
         .CodeMirror-ruler {
-          border-left: 1px solid var(--border-color);
+          border-left: 1px solid #ddd;
         }
-        .cm-trailingspace {
-          background-color: var(--error-background);
-          border: 1px solid var(--error-foreground);
-          border-radius: 2px;
-        }
-        .cm-tab:before {
-          color: var(--deemphasized-text-color);
-          content: '\\2192';
-          position: absolute;
+        .cm-editor .cm-content {
+          font-family: 'Roboto Mono', 'SF Mono', 'Lucida Console', Monaco, monospace;
         }
       `,
     ];
   }
 
   override render() {
-    return html`<div id="wrapper"></div>`;
+    return html`<div id="editor"></div>`;
   }
 
   override updated() {
@@ -79,45 +90,63 @@ export class CodeMirrorElement extends LitElement {
   }
 
   private initialize() {
-    if (!this.params || !this.isConnected || !this.wrapper) return;
+    if (!this.prefs || !this.isConnected || !this._editorEl) return;
 
     if (this.initialized) return;
     this.initialized = true;
 
-    // eslint-disable-next-line new-cap
-    const cm = CodeMirror(this.wrapper, this.params);
+    const offsetTop = this.getBoundingClientRect().top;
+    const clientHeight = window.innerHeight ?? document.body.clientHeight;
+    // We are setting a fixed height, because for large files we want to
+    // benefit from CodeMirror's virtual scrolling.
+    // 80px is roughly the size of the bottom margins plus the footer height.
+    // This ensures the height of the textarea doesn't push out of screen.
+    const height = clientHeight - offsetTop - 80;
+
+    this.editor = new EditorView({
+      state: EditorState.create({
+        doc: this.fileContent,
+        extensions: [
+          ...extensions(height, this.prefs, this.fileType, this.fileContent),
+          EditorView.updateListener.of((update) => {
+            if (update.docChanged) {
+              this.dispatchEvent(
+                new CustomEvent('content-change', {
+                  detail: {value: update.state.doc.toString()},
+                  bubbles: true,
+                  composed: true,
+                })
+              );
+            }
+          })
+        ],
+      }),
+      parent: this._editorEl as Element,
+    });
+
+    if (this.prefs?.line_length) {
+      updateRulerWidth(this.prefs.line_length);
+    }
+
     setTimeout(() => {
-      const offsetTop = this.getBoundingClientRect().top;
-      const clientHeight = window.innerHeight ?? document.body.clientHeight;
-      // We are setting a fixed height, because for large files we want to
-      // benefit from CodeMirror's virtual scrolling.
-      // 80px is roughly the size of the bottom margins plus the footer height.
-      // This ensures the height of the textarea doesn't push out of screen.
-      const height = clientHeight - offsetTop - 80;
-      cm.refresh();
-      cm.focus();
-      cm.setSize(null, height < 600 ? 600 : height);
+      this.editor.focus();
+
       if (this.lineNum) {
         // We have to take away one from the line number,
-        // because CodeMirror's line count is zero-based.
-        cm.setCursor(this.lineNum - 1);
+        // ... because CodeMirror's line count is zero-based.
+        this.editor.dispatch({selection: {anchor: this.lineNum - 1}})
       }
+      //this.editor.requestMeasure()
     }, 1);
-    cm.on('change', e => {
-      this.dispatchEvent(
-        new CustomEvent('content-change', {
-          detail: {value: e.getValue()},
-          bubbles: true,
-          composed: true,
-        })
-      );
-    });
-    cm.getInputField().addEventListener('keydown', e => {
+
+    this.editor.contentDOM.addEventListener('keydown', e => {
       // Exempt the ctrl/command+s key from preventing events from propagating
       // through the app. This is because we use it to save changes.
       if (!e.metaKey && !e.ctrlKey) {
         e.stopPropagation();
       }
     });
+
+    this.requestUpdate();
   }
 }
