@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fa1a360_5c3592a4",
+        "filename": "web/BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this have all the requirements as well?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dcaeaa6_f9136c3c",
+        "filename": "web/element/mode.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Maybe call this function and file `language`?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3ea67ff_a945ad92",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "indentation is off.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8559a8b_c81e081a",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Trailing whitespace",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b9855e6_ae95faaa",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Trailing whitespace",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9143456b_276d1a1f",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Trailing whitespace",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdcf3e4e_9c574b39",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Trailing whitespace",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5610dde5_5f101876",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "Remove console.log",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "060b8970_31ef863f",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-02-28T08:10:28Z",
+      "side": 1,
+      "message": "indentation is off.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
