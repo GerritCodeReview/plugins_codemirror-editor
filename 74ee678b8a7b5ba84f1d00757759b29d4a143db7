@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2c464824_308e9d76",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Maybe mentions that you depend on another change that updates the plugins/package.json file.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c112788_7a6cc08b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Nice! ❤️",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7fa1a360_5c3592a4",
         "filename": "web/BUILD",
         "patchSetId": 3
@@ -14,6 +48,149 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "Shouldn\u0027t this have all the requirements as well?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b6b6432_a5cb9ae7",
+        "filename": "web/BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "No. `codemirror-editor` is just the element that loads the js bundle. It does not have to know anything about CodeMirror itself. We were only depending on the type, because we were constructing the CodeMirror prefs in the editor. But that was moved (great!), so no deps needed here.",
+      "parentUuid": "7fa1a360_5c3592a4",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5eb03d2_f888f481",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "remove empty line",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a24295d_f4273f05",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Why the rename?\n\nDon\u0027t use underscores.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08eace0d_78ffd347",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Why the rename?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a54f848_03f171ff",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "I think `this.editor` can just be a local variable (similar to `cm` before).",
+      "range": {
+        "startLine": 106,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 15
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c2076d6_eb512a98",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7b92f63_4eb44352",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "remove two empty lines",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b248de1_67e9669d",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "This is copy and pasted from web/element/codemirror-element.ts. Maybe add `export` to one of them and reference it from the other file instead of declaring the same interface twice.",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -31,6 +208,69 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "Maybe call this function and file `language`?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92ebea18_fb4f2eb1",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Remove empty line before imports.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bc14b55_d2b38805",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Maybe rename to `rulerElement`?",
+      "range": {
+        "startLine": 16,
+        "startChar": 6,
+        "endLine": 16,
+        "endChar": 9
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "facdd88a_383713a2",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Maybe rename to `containerElement`?",
+      "range": {
+        "startLine": 20,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 18
+      },
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -105,6 +345,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c0ab15b3_2b664cbf",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "TODO?",
+      "range": {
+        "startLine": 39,
+        "startChar": 13,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cdcf3e4e_9c574b39",
         "filename": "web/element/ruler.ts",
         "patchSetId": 3
@@ -150,6 +413,29 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "indentation is off.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fe3200f_bc93ddc9",
+        "filename": "web/gr-editor.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-02-28T08:38:00Z",
+      "side": 1,
+      "message": "Maybe you can remove this type here and just use `unknown` for the property type. You are just passing it along ...",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 1
+      },
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
