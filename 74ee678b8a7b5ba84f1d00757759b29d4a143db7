@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "6393949a_a0a5f4b7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "2c464824_308e9d76",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "3c112788_7a6cc08b",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3
@@ -87,6 +105,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddf3bc76_ec5d599e",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "a5eb03d2_f888f481",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4a24295d_f4273f05",
@@ -104,6 +140,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "88390bcc_cba68105",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Reverted back to `wrapper`, thanks, done.",
+      "parentUuid": "4a24295d_f4273f05",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08eace0d_78ffd347",
@@ -117,6 +171,24 @@
       "writtenOn": "2023-02-28T08:38:00Z",
       "side": 1,
       "message": "Why the rename?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "006808ff_199fad47",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Reverted back, thanks, done.",
+      "parentUuid": "08eace0d_78ffd347",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -144,6 +216,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6173de5e_f7e59ab6",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "9a54f848_03f171ff",
+      "range": {
+        "startLine": 106,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 15
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c2076d6_eb512a98",
@@ -157,6 +253,24 @@
       "writtenOn": "2023-02-28T08:38:00Z",
       "side": 1,
       "message": "Why is this needed?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c724577_f486a07e",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Removed, thanks, done.",
+      "parentUuid": "2c2076d6_eb512a98",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -178,6 +292,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fef2d9e_b0b39622",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "f7b92f63_4eb44352",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b248de1_67e9669d",
@@ -191,6 +323,24 @@
       "writtenOn": "2023-02-28T08:38:00Z",
       "side": 1,
       "message": "This is copy and pasted from web/element/codemirror-element.ts. Maybe add `export` to one of them and reference it from the other file instead of declaring the same interface twice.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb98b75b_e5058a7c",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "0b248de1_67e9669d",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -212,6 +362,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "387fbed5_84d0b113",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Fixed, thanks, done.",
+      "parentUuid": "80b4750d_9b0afd28",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3dcaeaa6_f9136c3c",
@@ -225,6 +393,24 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "Maybe call this function and file `language`?",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fb7ebb7_f8f3df9b",
+        "filename": "web/element/mode.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "3dcaeaa6_f9136c3c",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -246,6 +432,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "66c43010_453f92b7",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "92ebea18_fb4f2eb1",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bc14b55_d2b38805",
@@ -259,6 +463,30 @@
       "writtenOn": "2023-02-28T08:38:00Z",
       "side": 1,
       "message": "Maybe rename to `rulerElement`?",
+      "range": {
+        "startLine": 16,
+        "startChar": 6,
+        "endLine": 16,
+        "endChar": 9
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a61ff936_c508ef98",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "3bc14b55_d2b38805",
       "range": {
         "startLine": 16,
         "startChar": 6,
@@ -292,6 +520,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb9b5dd9_4df4d1d6",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "facdd88a_383713a2",
+      "range": {
+        "startLine": 20,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 18
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a3ea67ff_a945ad92",
@@ -305,6 +557,24 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "indentation is off.",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da736636_839e0d8c",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "a3ea67ff_a945ad92",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -326,6 +596,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf3590a1_9314464e",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "f8559a8b_c81e081a",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b9855e6_ae95faaa",
@@ -343,6 +631,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbc67ec1_363cf0fd",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "4b9855e6_ae95faaa",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9143456b_276d1a1f",
@@ -356,6 +662,24 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "Trailing whitespace",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80d01810_7537a352",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "9143456b_276d1a1f",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -383,6 +707,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33ea3abc_ef796884",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "c0ab15b3_2b664cbf",
+      "range": {
+        "startLine": 39,
+        "startChar": 13,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cdcf3e4e_9c574b39",
@@ -396,6 +744,24 @@
       "writtenOn": "2023-02-28T08:10:28Z",
       "side": 1,
       "message": "Trailing whitespace",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2081e5d_77f8aa06",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "cdcf3e4e_9c574b39",
       "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -417,6 +783,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f931d01e_0488694a",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "5610dde5_5f101876",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "060b8970_31ef863f",
@@ -434,6 +818,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1b4608f_34d012f9",
+        "filename": "web/element/ruler.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "060b8970_31ef863f",
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7fe3200f_bc93ddc9",
@@ -447,6 +849,30 @@
       "writtenOn": "2023-02-28T08:38:00Z",
       "side": 1,
       "message": "Maybe you can remove this type here and just use `unknown` for the property type. You are just passing it along ...",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 1
+      },
+      "revId": "74ee678b8a7b5ba84f1d00757759b29d4a143db7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd8467b2_330a8857",
+        "filename": "web/gr-editor.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-28T20:39:00Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "7fe3200f_bc93ddc9",
       "range": {
         "startLine": 20,
         "startChar": 0,
