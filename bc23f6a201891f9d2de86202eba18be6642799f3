@@ -34,6 +34,24 @@
       "parentUuid": "e1e189f0_9b725bd9",
       "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de6181d5_baead0f5",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 9
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-03-01T16:46:39Z",
+      "side": 1,
+      "message": "Could this be done as part of updateListener?",
+      "parentUuid": "9ea0d33d_cc82c3e6",
+      "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
