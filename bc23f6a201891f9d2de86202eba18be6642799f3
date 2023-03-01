@@ -70,6 +70,24 @@
       "parentUuid": "de6181d5_baead0f5",
       "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "605c1f9c_01769825",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 9
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-01T16:52:30Z",
+      "side": 1,
+      "message": "It still has the same issue when i do it in the updateListener. Only works if i put it in the setTimeout",
+      "parentUuid": "7859a143_dd966a8d",
+      "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
