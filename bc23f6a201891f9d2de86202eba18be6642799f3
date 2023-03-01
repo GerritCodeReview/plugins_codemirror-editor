@@ -52,6 +52,24 @@
       "parentUuid": "9ea0d33d_cc82c3e6",
       "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7859a143_dd966a8d",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 9
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-01T16:47:15Z",
+      "side": 1,
+      "message": "You mean the ruler?",
+      "parentUuid": "de6181d5_baead0f5",
+      "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
