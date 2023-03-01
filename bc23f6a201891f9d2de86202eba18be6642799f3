@@ -88,6 +88,24 @@
       "parentUuid": "7859a143_dd966a8d",
       "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a67c8ac_edbe211b",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 9
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-01T16:56:33Z",
+      "side": 1,
+      "message": "Oh nvm. I did it in the wrong file.\n\nAlthough i have the same issue but it seems to happen in setTimeout as well (i refreshed lots of times).",
+      "parentUuid": "605c1f9c_01769825",
+      "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
