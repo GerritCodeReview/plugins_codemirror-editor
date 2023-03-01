@@ -16,6 +16,24 @@
       "message": "Why are you using setTimeout, is there no more reliable signal?",
       "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ea0d33d_cc82c3e6",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 9
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-01T16:40:38Z",
+      "side": 1,
+      "message": "I just kept it as is but it seems we no longer need it for focus and setting the default line number to go to so i\u0027ve moved them outside. It seems we need this for the ruler (otherwise the line goes way out of the way we want it to be at).",
+      "parentUuid": "e1e189f0_9b725bd9",
+      "revId": "bc23f6a201891f9d2de86202eba18be6642799f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
