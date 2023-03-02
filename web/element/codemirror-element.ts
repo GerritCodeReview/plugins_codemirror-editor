@@ -50,6 +50,8 @@ export class CodeMirrorElement extends LitElement {
 
   @property({type: Object}) prefs?: EditPreferencesInfo;
 
+  @property({type: Object}) userPrefs?: unknown;
+
   @query('#wrapper')
   wrapper!: HTMLElement;
 
@@ -63,10 +65,6 @@ export class CodeMirrorElement extends LitElement {
             monospace;
           /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
           z-index: 0;
-          background: white;
-        }
-        .cm-lineNumbers {
-          background-color: #f1f3f4;
         }
         .CodeMirror-ruler {
           border-left: 1px solid #ddd;
@@ -81,6 +79,10 @@ export class CodeMirrorElement extends LitElement {
 
   override render() {
     return html`<div id="wrapper"></div>`;
+  }
+
+  override connectedCallback() {
+    super.connectedCallback();
   }
 
   override updated() {
@@ -109,7 +111,8 @@ export class CodeMirrorElement extends LitElement {
             height,
             this.prefs,
             this.fileType,
-            this.fileContent ?? ''
+            this.fileContent ?? '',
+            this.userPrefs
           ),
           EditorView.updateListener.of(update => {
             if (this.prefs?.line_length) {

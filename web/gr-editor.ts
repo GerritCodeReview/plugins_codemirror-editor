@@ -7,7 +7,7 @@
 import '@gerritcodereview/typescript-api/gerrit';
 import {PluginApi} from '@gerritcodereview/typescript-api/plugin';
 import {html, LitElement} from 'lit';
-import {customElement, property, query} from 'lit/decorators.js';
+import {customElement, property, query, state} from 'lit/decorators.js';
 
 import {setScriptSrc} from './safe-script';
 
@@ -33,6 +33,9 @@ export class GrEditor extends LitElement {
 
   @property({type: Object}) plugin?: PluginApi;
 
+  @state()
+  userPrefs?: unknown;
+
   @query('#codemirror') mirror?: HTMLScriptElement;
 
   override render() {
@@ -45,13 +48,17 @@ export class GrEditor extends LitElement {
         .prefs=${this.prefs}
         .fileContent=${this.fileContent}
         .fileType=${this.fileType}
+        .userPrefs=${this.userPrefs}
       >
       </codemirror-element>
     `;
   }
 
-  override connectedCallback() {
+  override async connectedCallback() {
     super.connectedCallback();
+    await this.plugin?.restApi().get('/accounts/self/preferences').then(prefs => {
+      this.userPrefs = prefs;
+    })
     this.loadCodeMirrorElement();
     window.customElements.whenDefined('codemirror-element').then(() => {
       this.requestUpdate();
