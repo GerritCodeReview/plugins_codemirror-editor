@@ -15,12 +15,10 @@ import {
 } from '@codemirror/view';
 import {EditorState, Extension} from '@codemirror/state';
 import {
-  defaultHighlightStyle,
   indentOnInput,
   foldGutter,
   foldKeymap,
   bracketMatching,
-  syntaxHighlighting,
   indentUnit,
 } from '@codemirror/language';
 import {
@@ -33,7 +31,6 @@ import {
 import {searchKeymap, highlightSelectionMatches} from '@codemirror/search';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {rulerPlugin} from './ruler';
-import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
 
 const trailingspace = () =>
@@ -79,20 +76,21 @@ const fixedHeightEditor = (height: number) =>
   });
 
 export const extensions = (
-    height: number,
-    prefs?: EditPreferencesInfo,
-    fileType?: string,
-    fileContent?: string
+  height: number,
+  prefs?: EditPreferencesInfo,
+  _fileType?: string,
+  fileContent?: string
 ) => {
   // This uses the preference to detect whether
   // to use 'tabs' when you use the tab button
   // or to use 'spaces' when using the tab button.
-  const tab = prefs?.indent_with_tabs ?
-    {
-      key: 'Tab',
-      preventDefault: true,
-      run: insertTab,
-    } : indentWithTab;
+  const tab = prefs?.indent_with_tabs
+    ? {
+        key: 'Tab',
+        preventDefault: true,
+        run: insertTab,
+      }
+    : indentWithTab;
 
   const codeExtensions: Array<Extension> = [
     lineNumbers(),
@@ -110,7 +108,7 @@ export const extensions = (
       ...searchKeymap,
       ...historyKeymap,
       ...foldKeymap,
-      tab
+      tab,
     ]),
     trailingspace(),
     tabsOrSpaces(),
@@ -137,13 +135,6 @@ export const extensions = (
 
   if (prefs.match_brackets) {
     codeExtensions.push(bracketMatching());
-  }
-
-  if (prefs.syntax_highlighting && language(fileType)) {
-    codeExtensions.push(
-      language(fileType) as Extension,
-      syntaxHighlighting(defaultHighlightStyle, {fallback: true})
-    );
   }
 
   if (prefs.show_tabs) {
