@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d12e7ee2_7e9fedf6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-02T15:57:11Z",
+      "side": 1,
+      "message": "Uh this is removing the ability to syntax highlight?",
+      "revId": "08a530f2b2d4a170a0d0ed5db7694abdc06555d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
