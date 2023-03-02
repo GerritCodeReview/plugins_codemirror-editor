@@ -8,7 +8,6 @@ import '@gerritcodereview/typescript-api/gerrit';
 import {PluginApi} from '@gerritcodereview/typescript-api/plugin';
 import {html, LitElement} from 'lit';
 import {customElement, property, query} from 'lit/decorators.js';
-
 import {setScriptSrc} from './safe-script';
 
 declare global {
@@ -33,6 +32,8 @@ export class GrEditor extends LitElement {
 
   @property({type: Object}) plugin?: PluginApi;
 
+  @property({type: Boolean}) darkMode = false;
+
   @query('#codemirror') mirror?: HTMLScriptElement;
 
   override render() {
@@ -45,6 +46,7 @@ export class GrEditor extends LitElement {
         .prefs=${this.prefs}
         .fileContent=${this.fileContent}
         .fileType=${this.fileType}
+        ?darkMode=${this.darkMode}
       >
       </codemirror-element>
     `;

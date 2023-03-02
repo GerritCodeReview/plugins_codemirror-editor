@@ -74,6 +74,7 @@ ts_project(
         "@plugins_npm//@codemirror/lint",
         "@plugins_npm//@codemirror/search",
         "@plugins_npm//@codemirror/state",
+        "@plugins_npm//@codemirror/theme-one-dark",
         "@plugins_npm//@codemirror/view",
     ],
 )
