@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e80cd03_438b5906",
+        "filename": "web/gr-editor.ts",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-03-02T12:39:44Z",
+      "side": 1,
+      "message": "Add another endpoint param here:\nhttps://cs.opensource.google/gerrit/gerrit/gerrit/+/master:polygerrit-ui/app/elements/edit/gr-editor-view/gr-editor-view.ts;l\u003d270;drc\u003d22540fd3dac0c4f897dea18d8c8c606361b36b67\n\nAnd just pass in a `darkMode` boolean.",
+      "revId": "42b415865559e1b50fd6c8d637be994eb38f796d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
