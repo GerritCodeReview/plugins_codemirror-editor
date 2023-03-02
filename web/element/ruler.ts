@@ -45,7 +45,11 @@ function generateRulerPlugin() {
     }
   }
 
-  function updateRulerWidth(newWidth: number, defaultWidth: number, force = false) {
+  function updateRulerWidth(
+      newWidth: number,
+      defaultWidth: number,
+      force = false
+  ) {
     if ((newWidth !== width || force) && rulerElement) {
       width = newWidth;
       rulerElement.style.left = `${width * defaultWidth}px`;

@@ -339,8 +339,6 @@ export const language = (fileType?: string) => {
       return StreamLanguage.define(tiki);
     case 'text/x-toml':
       return StreamLanguage.define(toml);
-    case 'text/x-toml':
-      return StreamLanguage.define(toml);
     case 'application/typescript':
       return javascript({typescript: true});
     case 'text/x-ttcn':
