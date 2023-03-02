@@ -33,7 +33,6 @@ import {
 import {searchKeymap, highlightSelectionMatches} from '@codemirror/search';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {rulerPlugin} from './ruler';
-import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
 
 const trailingspace = () =>
@@ -137,13 +136,6 @@ export const extensions = (
 
   if (prefs.match_brackets) {
     codeExtensions.push(bracketMatching());
-  }
-
-  if (prefs.syntax_highlighting && language(fileType)) {
-    codeExtensions.push(
-      language(fileType) as Extension,
-      syntaxHighlighting(defaultHighlightStyle, {fallback: true})
-    );
   }
 
   if (prefs.show_tabs) {
