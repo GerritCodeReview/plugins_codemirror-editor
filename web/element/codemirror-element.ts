@@ -40,6 +40,28 @@ export interface EditPreferencesInfo {
   auto_close_brackets?: boolean;
 }
 
+/**
+ * Allowed app themes
+ * https://gerrit-review.googlesource.com/Documentation/rest-api-accounts.html#preferences-input
+ *
+ * TODO: Add this object to the plugin API.
+ */
+enum AppTheme {
+  AUTO = 'AUTO',
+  DARK = 'DARK',
+  LIGHT = 'LIGHT',
+}
+
+/**
+ * This is a standard REST API object:
+ * https://gerrit-review.googlesource.com/Documentation/rest-api-accounts.html#preferences-input
+ *
+ * TODO: Add this object to the plugin API.
+ */
+export interface PreferencesInfo {
+  theme: AppTheme;
+}
+
 @customElement('codemirror-element')
 export class CodeMirrorElement extends LitElement {
   @property({type: Number}) lineNum?: number;
@@ -49,6 +71,8 @@ export class CodeMirrorElement extends LitElement {
   @property({type: String}) fileType?: string;
 
   @property({type: Object}) prefs?: EditPreferencesInfo;
+
+  @property({type: Object}) userPrefs?: PreferencesInfo;
 
   @query('#wrapper')
   wrapper!: HTMLElement;
@@ -63,10 +87,6 @@ export class CodeMirrorElement extends LitElement {
             monospace;
           /* CodeMirror has a default z-index of 4. Set to 0 to avoid collisions with fixed header. */
           z-index: 0;
-          background: white;
-        }
-        .cm-lineNumbers {
-          background-color: #f1f3f4;
         }
         .CodeMirror-ruler {
           border-left: 1px solid #ddd;
@@ -81,6 +101,10 @@ export class CodeMirrorElement extends LitElement {
 
   override render() {
     return html`<div id="wrapper"></div>`;
+  }
+
+  override connectedCallback() {
+    super.connectedCallback();
   }
 
   override updated() {
@@ -109,13 +133,18 @@ export class CodeMirrorElement extends LitElement {
             height,
             this.prefs,
             this.fileType,
-            this.fileContent ?? ''
+            this.fileContent ?? '',
+            this.userPrefs
           ),
           EditorView.updateListener.of(update => {
             if (this.prefs?.line_length) {
               // This is required to be in the setTimeout() to ensure the
               // line is set as correctly as possible.
-              updateRulerWidth(this.prefs.line_length, update.view.defaultCharacterWidth, true);
+              updateRulerWidth(
+                  this.prefs.line_length,
+                  update.view.defaultCharacterWidth,
+                  true
+              );
             }
 
             if (update.docChanged) {
@@ -136,7 +165,7 @@ export class CodeMirrorElement extends LitElement {
                 e.stopPropagation();
               }
             },
-          })
+          }),
         ],
       }),
       parent: this.wrapper as Element,
