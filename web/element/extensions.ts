@@ -28,13 +28,14 @@ import {
   history,
   historyKeymap,
   indentWithTab,
-  insertTab
+  insertTab,
 } from '@codemirror/commands';
 import {searchKeymap, highlightSelectionMatches} from '@codemirror/search';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {rulerPlugin} from './ruler';
 import {language} from './language';
-import {EditPreferencesInfo} from './codemirror-element';
+import {EditPreferencesInfo, PreferencesInfo} from './codemirror-element';
+import {oneDark} from '@codemirror/theme-one-dark';
 
 const trailingspace = () =>
   EditorView.theme({
@@ -78,21 +79,29 @@ const fixedHeightEditor = (height: number) =>
     '.cm-scroller': {overflow: 'auto'},
   });
 
+const oneLight = () =>
+  EditorView.theme({
+    '&': {background: 'white'},
+    '.cm-lineNumbers': {'background-color': '#f1f3f4'},
+  });
+
 export const extensions = (
     height: number,
     prefs?: EditPreferencesInfo,
     fileType?: string,
-    fileContent?: string
+    fileContent?: string,
+    userPrefs?: PreferencesInfo
 ) => {
   // This uses the preference to detect whether
   // to use 'tabs' when you use the tab button
   // or to use 'spaces' when using the tab button.
-  const tab = prefs?.indent_with_tabs ?
-    {
+  const tab = prefs?.indent_with_tabs
+    ? {
       key: 'Tab',
       preventDefault: true,
       run: insertTab,
-    } : indentWithTab;
+    }
+    : indentWithTab;
 
   const codeExtensions: Array<Extension> = [
     lineNumbers(),
@@ -110,7 +119,7 @@ export const extensions = (
       ...searchKeymap,
       ...historyKeymap,
       ...foldKeymap,
-      tab
+      tab,
     ]),
     trailingspace(),
     tabsOrSpaces(),
@@ -160,6 +169,17 @@ export const extensions = (
 
   if (fileContent?.includes('\r\n')) {
     codeExtensions.push(EditorState.lineSeparator.of('\r\n'));
+  }
+
+  if (
+    userPrefs?.theme === 'DARK' ||
+    (userPrefs?.theme === 'AUTO' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    codeExtensions.push(oneDark);
+  } else {
+    // We set the background to white as it currently defaults to grey.
+    codeExtensions.push(oneLight());
   }
 
   return codeExtensions;
