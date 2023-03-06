@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd24371e_a051c635",
+        "filename": "web/element/language.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-03-06T06:38:43Z",
+      "side": 0,
+      "message": "The legacy-modes above will not be available internally. I think on these lang- imports we should work on.\n\nAlso, I think we should try to just have a separate internal version of `language.ts`. Then we don\u0027t have to block the community from using any of these modes of languages. Similar to how we were replacing the `codemirror-imports.ts` before.",
+      "revId": "13dcd3f4673c56e2b1001ef19eb54236943a35e6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
