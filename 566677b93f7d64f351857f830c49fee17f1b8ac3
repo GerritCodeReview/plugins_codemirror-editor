@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80f07e4e_0ef58baf",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 11
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-03-06T06:44:02Z",
+      "side": 1,
+      "message": "Maybe remove this comment.",
+      "revId": "566677b93f7d64f351857f830c49fee17f1b8ac3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cad5ebe5_95084415",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 11
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-03-06T06:44:02Z",
+      "side": 1,
+      "message": "Is it correct that you are using `oneDark` above, but `oneLight()` here (with parantheses)?",
+      "range": {
+        "startLine": 178,
+        "startChar": 24,
+        "endLine": 178,
+        "endChar": 32
+      },
+      "revId": "566677b93f7d64f351857f830c49fee17f1b8ac3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
