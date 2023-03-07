@@ -31,6 +31,7 @@ ts_project(
     tsc = "//tools/node_tools:tsc-bin",
     tsconfig = ":tsconfig",
     deps = [
+	":codemirror-element-ts".
         "@plugins_npm//@gerritcodereview/typescript-api",
         "@plugins_npm//lit",
     ],
