@@ -9,6 +9,7 @@ import {PluginApi} from '@gerritcodereview/typescript-api/plugin';
 import {html, LitElement} from 'lit';
 import {customElement, property, query} from 'lit/decorators.js';
 import {setScriptSrc} from './safe-script';
+import './element/codemirror-element';
 
 declare global {
   interface HTMLElementTagNameMap {

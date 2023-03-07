@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "../../../.ts-out/plugins/codemirror-editor", /* overridden by bazel */
   },
+  "rootDir": ".", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
   "include": [
     "**/*.ts"
-  ],
+  ]
 }
