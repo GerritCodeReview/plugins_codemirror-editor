@@ -1,12 +1,12 @@
 {
   "checks": {
     "zuul-check:plugins_codemirror-editor": {
-      "state": "SCHEDULED",
-      "message": "Change has been enqueued in check",
+      "state": "RUNNING",
+      "message": "Jobs have started running",
       "url": "https://ci.gerritcodereview.com/t/gerrit/status/change/362556,7",
       "started": "2023-03-07T19:16:54Z",
       "created": "2023-03-07T19:16:54Z",
-      "updated": "2023-03-07T19:16:54Z"
+      "updated": "2023-03-07T19:17:00Z"
     }
   }
 }
