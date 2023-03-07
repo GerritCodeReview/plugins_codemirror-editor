@@ -31,6 +31,7 @@ ts_project(
     tsc = "//tools/node_tools:tsc-bin",
     tsconfig = ":tsconfig",
     deps = [
+	":codemirror-element-ts",
         "@plugins_npm//@gerritcodereview/typescript-api",
         "@plugins_npm//lit",
     ],
@@ -38,7 +39,10 @@ ts_project(
 
 gerrit_js_bundle(
     name = "codemirror_editor",
-    srcs = [":codemirror-editor-ts"],
+    srcs = [
+      ":codemirror-editor-ts",
+      ":codemirror-element-ts"
+    ],
     entry_point = "_bazel_ts_out/plugin.js",
 )
 
