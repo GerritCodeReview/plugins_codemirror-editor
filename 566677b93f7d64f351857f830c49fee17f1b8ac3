@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10320642_ededa4fe",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 11
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-07T00:00:42Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "80f07e4e_0ef58baf",
+      "revId": "566677b93f7d64f351857f830c49fee17f1b8ac3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cad5ebe5_95084415",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-03-06T06:44:02Z",
       "side": 1,
       "message": "Is it correct that you are using `oneDark` above, but `oneLight()` here (with parantheses)?",
+      "range": {
+        "startLine": 178,
+        "startChar": 24,
+        "endLine": 178,
+        "endChar": 32
+      },
+      "revId": "566677b93f7d64f351857f830c49fee17f1b8ac3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6101409_e651863b",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 11
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-07T00:00:42Z",
+      "side": 1,
+      "message": "Yeh, i removed the arrow function type and made it just so i can use oneLight.",
+      "parentUuid": "cad5ebe5_95084415",
       "range": {
         "startLine": 178,
         "startChar": 24,
