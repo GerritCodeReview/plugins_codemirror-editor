@@ -38,7 +38,7 @@ ts_project(
 
 gerrit_js_bundle(
     name = "codemirror_editor",
-    srcs = [":codemirror-editor-ts"],
+    srcs = [ ":codemirror-editor-ts", ],
     entry_point = "_bazel_ts_out/plugin.js",
 )
 
