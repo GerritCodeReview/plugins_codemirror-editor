@@ -2,8 +2,13 @@
   "extends": "../../tsconfig-plugins-base.json",
   "compilerOptions": {
     "outDir": "../../../.ts-out/plugins/codemirror-editor", /* overridden by bazel */
+    "rootDirs": [
+      ".",
+      "bazel-out/k8-fastbuild/bin/plugins/codemirror-editor/web",
+      "bazel-out/darwin-fastbuild/bin/plugins/codemirror-editor/web"
+     ]
   },
   "include": [
     "**/*.ts"
-  ],
+  ]
 }
