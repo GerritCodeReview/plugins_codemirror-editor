@@ -35,13 +35,12 @@ import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {rulerPlugin} from './ruler';
 import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
-import {oneDark} from '@codemirror/theme-one-dark';
 
 const trailingspace = () =>
   EditorView.theme({
     '.cm-trailingspace': {
       'background-color': '#fce8e6',
-      "border": '1px solid #c5221f',
+      border: '1px solid #c5221f',
       'border-radius': '2px',
     },
   });
@@ -60,7 +59,7 @@ const tabsOrSpaces = () =>
       'background-size': 'none',
       'background-position': 'none',
       'background-repeat': 'none',
-      "display": 'inline-block',
+      display: 'inline-block',
       'text-decoration': 'inherit',
     },
     '.cm-highlightTab:before': {
@@ -79,27 +78,22 @@ const fixedHeightEditor = (height: number) =>
     '.cm-scroller': {overflow: 'auto'},
   });
 
-const oneLight = EditorView.theme({
-  '&': {background: 'white'},
-  '.cm-lineNumbers': {'background-color': '#f1f3f4'},
-});
-
 export const extensions = (
-    height: number,
-    prefs?: EditPreferencesInfo,
-    fileType?: string,
-    fileContent?: string,
-    darkMode?: boolean
+  height: number,
+  prefs?: EditPreferencesInfo,
+  fileType?: string,
+  fileContent?: string,
+  _darkMode?: boolean
 ) => {
   // This uses the preference to detect whether
   // to use 'tabs' when you use the tab button
   // or to use 'spaces' when using the tab button.
   const tab = prefs?.indent_with_tabs
     ? {
-      key: 'Tab',
-      preventDefault: true,
-      run: insertTab,
-    }
+        key: 'Tab',
+        preventDefault: true,
+        run: insertTab,
+      }
     : indentWithTab;
 
   const codeExtensions: Array<Extension> = [
@@ -168,12 +162,6 @@ export const extensions = (
 
   if (fileContent?.includes('\r\n')) {
     codeExtensions.push(EditorState.lineSeparator.of('\r\n'));
-  }
-
-  if (darkMode) {
-    codeExtensions.push(oneDark);
-  } else {
-    codeExtensions.push(oneLight);
   }
 
   return codeExtensions;
