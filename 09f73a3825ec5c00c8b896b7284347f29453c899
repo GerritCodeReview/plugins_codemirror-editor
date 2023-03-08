@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b44372ea_7a0b611a",
+        "filename": "web/BUILD",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-03-08T08:02:38Z",
+      "side": 1,
+      "message": "We want two separate js bundles, such that the large bundle with codemirror is only loaded when the user goes into editing mode.",
+      "revId": "09f73a3825ec5c00c8b896b7284347f29453c899",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e9f9bb8_fe6393b2",
+        "filename": "web/gr-editor.ts",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2023-03-08T08:02:38Z",
+      "side": 1,
+      "message": "```suggestion\n/**\n * \u003ccodemirror-element\u003e is defined in a separate javascript bundle, so let\u0027s\n * define its interface here.\n */\ninterface CodeMirrorElement extends HTMLElement {\n  lineNum?: number;\n  prefs: unknown;\n  fileContent?: string;\n  fileType?: string;\n}\n\ndeclare global {\n  interface HTMLElementTagNameMap {\n    \u0027gr-editor\u0027: GrEditor;\n    \u0027codemirror-element\u0027: CodeMirrorElement;\n  }\n}\n```",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "09f73a3825ec5c00c8b896b7284347f29453c899",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
