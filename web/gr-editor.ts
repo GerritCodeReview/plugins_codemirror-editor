@@ -10,12 +10,23 @@ import {html, LitElement} from 'lit';
 import {customElement, property, query} from 'lit/decorators.js';
 import {setScriptSrc} from './safe-script';
 
+/**
+ * <codemirror-element> is defined in a separate javascript bundle, so let's
+ * define its interface here.
+ */
+interface CodeMirrorElement extends HTMLElement {
+  lineNum?: number;
+  prefs: unknown;
+  fileContent?: string;
+  fileType?: string;
+}
+
 declare global {
   interface HTMLElementTagNameMap {
     'gr-editor': GrEditor;
+    'codemirror-element': CodeMirrorElement;
   }
 }
-
 /**
  * This component just loads the CodeMirror js bundle lazily and converts the
  * Gerrit preferences into CodeMirror params.
