@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad11a976_89057afb",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-03-08T13:45:01Z",
+      "side": 0,
+      "message": "Why was this removed? A gray background will be showed.",
+      "revId": "25301d7a9cd661122d3be0723a246be6bdcd74c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
