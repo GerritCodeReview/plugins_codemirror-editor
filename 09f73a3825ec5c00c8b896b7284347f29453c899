@@ -39,6 +39,30 @@
       },
       "revId": "09f73a3825ec5c00c8b896b7284347f29453c899",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbad6907_2ad178dc",
+        "filename": "web/gr-editor.ts",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-03-08T08:13:55Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "0e9f9bb8_fe6393b2",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "09f73a3825ec5c00c8b896b7284347f29453c899",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
