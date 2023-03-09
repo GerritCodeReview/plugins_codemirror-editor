@@ -36,6 +36,12 @@ import {rulerPlugin} from './ruler';
 import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
 
+const oneLight = () =>
+  EditorView.theme({
+    '&': {background: 'white'},
+    '.cm-lineNumbers': {'background-color': '#f1f3f4'},
+  });
+
 const trailingspace = () =>
   EditorView.theme({
     '.cm-trailingspace': {
@@ -117,6 +123,7 @@ export const extensions = (
     trailingspace(),
     tabsOrSpaces(),
     fixedHeightEditor(height),
+    oneLight(),
   ];
 
   if (!prefs) return codeExtensions;
