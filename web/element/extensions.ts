@@ -40,6 +40,9 @@ const oneLight = () =>
   EditorView.theme({
     '&': {background: 'white'},
     '.cm-lineNumbers': {'background-color': '#f1f3f4'},
+    ''&.cm-editor.cm-focused': {
+      outline: 'none'
+    },
   });
 
 const trailingspace = () =>
