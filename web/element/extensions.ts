@@ -36,6 +36,26 @@ import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
 import {tags as t} from '@lezer/highlight';
 
+<<<<<<< PATCH SET (4a1be7 Remove outline on textbox)
+const oneLight = () =>
+  EditorView.theme({
+    '&': {
+      background: 'white'
+    },
+    '.cm-lineNumbers': {
+      'background-color': '#f1f3f4'
+    },
+    '&.cm-editor.cm-focused': {
+      outline: 'none'
+    },
+  });
+||||||| BASE
+const oneLight = () =>
+  EditorView.theme({
+    '&': {background: 'white'},
+    '.cm-lineNumbers': {'background-color': '#f1f3f4'},
+  });
+=======
 const colorTheme = (dark: boolean) =>
   EditorView.theme(
     {
@@ -50,6 +70,7 @@ const colorTheme = (dark: boolean) =>
     },
     {dark}
   );
+>>>>>>> BASE      (dfbd5c Use Postgresql, PLSQL and Cassandra from sql package)
 
 const trailingspace = () =>
   EditorView.theme({
