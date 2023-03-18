@@ -47,6 +47,9 @@ const colorTheme = (dark: boolean) =>
         color: 'var(--deemphasized-text-color)',
         'background-color': 'var(--background-color-secondary)',
       },
+      '&.cm-editor.cm-focused': {
+        outline: 'none'
+      },
     },
     {dark}
   );
