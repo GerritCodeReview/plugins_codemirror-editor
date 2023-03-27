@@ -36,11 +36,20 @@ import {rulerPlugin} from './ruler';
 import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
 
-const oneLight = () =>
-  EditorView.theme({
-    '&': {background: 'white'},
-    '.cm-lineNumbers': {'background-color': '#f1f3f4'},
-  });
+const colorTheme = (dark: boolean) =>
+  EditorView.theme(
+    {
+      '&': {
+        color: 'var(--primary-text-color)',
+        'background-color': 'var(--background-color-primary)',
+      },
+      '.cm-gutters': {
+        color: 'var(--deemphasized-text-color)',
+        'background-color': 'var(--background-color-secondary)',
+      },
+    },
+    {dark}
+  );
 
 const trailingspace = () =>
   EditorView.theme({
@@ -89,7 +98,7 @@ export const extensions = (
   prefs?: EditPreferencesInfo,
   fileType?: string,
   fileContent?: string,
-  _darkMode?: boolean
+  darkMode?: boolean
 ) => {
   // This uses the preference to detect whether
   // to use 'tabs' when you use the tab button
@@ -123,7 +132,7 @@ export const extensions = (
     trailingspace(),
     tabsOrSpaces(),
     fixedHeightEditor(height),
-    oneLight(),
+    colorTheme(darkMode ?? false),
   ];
 
   if (!prefs) return codeExtensions;
