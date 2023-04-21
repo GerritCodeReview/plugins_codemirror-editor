@@ -20,7 +20,7 @@ import {cobol} from '@codemirror/legacy-modes/mode/cobol';
 import {coffeeScript} from '@codemirror/legacy-modes/mode/coffeescript';
 import {commonLisp} from '@codemirror/legacy-modes/mode/commonlisp';
 import {crystal} from '@codemirror/legacy-modes/mode/crystal';
-import {less, sCSS, gss} from '@codemirror/legacy-modes/mode/css';
+import {less, gss} from '@codemirror/legacy-modes/mode/css';
 import {cypher} from '@codemirror/legacy-modes/mode/cypher';
 import {d} from '@codemirror/legacy-modes/mode/d';
 import {dart} from '@codemirror/legacy-modes/mode/clike';
@@ -74,7 +74,6 @@ import {q} from '@codemirror/legacy-modes/mode/q';
 import {rpmChanges, rpmSpec} from '@codemirror/legacy-modes/mode/rpm';
 import {ruby} from '@codemirror/legacy-modes/mode/ruby';
 import {sas} from '@codemirror/legacy-modes/mode/sas';
-import {sass} from '@codemirror/legacy-modes/mode/sass';
 import {scala} from '@codemirror/legacy-modes/mode/clike';
 import {scheme} from '@codemirror/legacy-modes/mode/scheme';
 import {shader} from '@codemirror/legacy-modes/mode/clike';
@@ -117,6 +116,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import {php} from '@codemirror/lang-php';
 import {python} from '@codemirror/lang-python';
 import {rust} from '@codemirror/lang-rust';
+import {sass} from '@codemirror/lang-sass';
 import {sql} from '@codemirror/lang-sql';
 import {xml} from '@codemirror/lang-xml';
 
@@ -176,7 +176,7 @@ export const language = (fileType?: string) => {
     case 'text/x-less':
       return StreamLanguage.define(less);
     case 'text/x-scss':
-      return StreamLanguage.define(sCSS);
+      return sass();
     case 'text/x-gss':
       return StreamLanguage.define(gss);
     case 'text/x-cassandra':
@@ -313,7 +313,7 @@ export const language = (fileType?: string) => {
     case 'text/x-sas':
       return StreamLanguage.define(sas);
     case 'text/x-sass':
-      return StreamLanguage.define(sass);
+      return sass({indented: true});
     case 'text/x-scala':
       return StreamLanguage.define(scala);
     case 'text/x-scheme':
