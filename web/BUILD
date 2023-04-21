@@ -71,9 +71,11 @@ ts_project(
         "@plugins_npm//@codemirror/lang-xml",
         "@plugins_npm//@codemirror/language",
         "@plugins_npm//@codemirror/language-data",
+        "@plugins_npm//@codemirror/legacy-modes",
         "@plugins_npm//@codemirror/lint",
         "@plugins_npm//@codemirror/search",
         "@plugins_npm//@codemirror/state",
+        "@plugins_npm//@codemirror/theme-one-dark",
         "@plugins_npm//@codemirror/view",
     ],
 )

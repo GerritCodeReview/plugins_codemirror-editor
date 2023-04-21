@@ -12,6 +12,7 @@ import {
   highlightActiveLineGutter,
   highlightWhitespace,
   highlightTrailingWhitespace,
+  KeyBinding,
 } from '@codemirror/view';
 import {EditorState, Extension} from '@codemirror/state';
 import {
@@ -122,13 +123,15 @@ export const extensions = (
     indentOnInput(),
     highlightSelectionMatches(),
     keymap.of([
+      // Because some of the types use readonly KeyBinding[],
+      // we have to manually type the array as KeyBinding[].
       ...closeBracketsKeymap,
       ...defaultKeymap,
       ...searchKeymap,
       ...historyKeymap,
       ...foldKeymap,
       tab,
-    ]),
+    ] as KeyBinding[]),
     trailingspace(),
     tabsOrSpaces(),
     fixedHeightEditor(height),
