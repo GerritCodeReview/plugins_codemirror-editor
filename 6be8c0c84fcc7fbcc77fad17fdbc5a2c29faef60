@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc308ff8_417a4ae3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-04-23T18:47:15Z",
+      "side": 1,
+      "message": "This was the only way i could fix the issue. It worked in codemirror v5 but seems to have issues in codemirror v6. So this is a workaround.",
+      "revId": "6be8c0c84fcc7fbcc77fad17fdbc5a2c29faef60",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
