@@ -63,6 +63,7 @@ ts_project(
         "@plugins_npm//@codemirror/lang-java",
         "@plugins_npm//@codemirror/lang-javascript",
         "@plugins_npm//@codemirror/lang-json",
+        "@plugins_npm//@codemirror/lang-less",
         "@plugins_npm//@codemirror/lang-markdown",
         "@plugins_npm//@codemirror/lang-php",
         "@plugins_npm//@codemirror/lang-python",

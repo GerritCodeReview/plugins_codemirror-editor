@@ -20,7 +20,7 @@ import {cobol} from '@codemirror/legacy-modes/mode/cobol';
 import {coffeeScript} from '@codemirror/legacy-modes/mode/coffeescript';
 import {commonLisp} from '@codemirror/legacy-modes/mode/commonlisp';
 import {crystal} from '@codemirror/legacy-modes/mode/crystal';
-import {less, gss} from '@codemirror/legacy-modes/mode/css';
+import {gss} from '@codemirror/legacy-modes/mode/css';
 import {cypher} from '@codemirror/legacy-modes/mode/cypher';
 import {d} from '@codemirror/legacy-modes/mode/d';
 import {dart} from '@codemirror/legacy-modes/mode/clike';
@@ -107,11 +107,12 @@ import {yaml} from '@codemirror/legacy-modes/mode/yaml';
 import {z80} from '@codemirror/legacy-modes/mode/z80';
 
 import {cpp} from '@codemirror/lang-cpp';
-import {css as _css} from '@codemirror/lang-css';
+import {css} from '@codemirror/lang-css';
+import {html} from '@codemirror/lang-html';
 import {java} from '@codemirror/lang-java';
-import {html as _html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {json} from '@codemirror/lang-json';
+import {less} from '@codemirror/lang-less';
 import {markdown} from '@codemirror/lang-markdown';
 import {php} from '@codemirror/lang-php';
 import {python} from '@codemirror/lang-python';
@@ -172,9 +173,9 @@ export const language = (fileType?: string) => {
     case 'application/xml':
       return xml;
     case 'text/css':
-      return _css();
+      return css();
     case 'text/x-less':
-      return StreamLanguage.define(less);
+      return less();
     case 'text/x-scss':
       return sass();
     case 'text/x-gss':
@@ -206,7 +207,7 @@ export const language = (fileType?: string) => {
     case 'application/x-ejs':
     case 'text/html':
     case 'application/x-jsp':
-      return _html();
+      return html();
     case 'application/x-erb':
     case 'text/x-ruby':
       return StreamLanguage.define(ruby);
