@@ -15,8 +15,8 @@ suite('gr-editor tests', () => {
       html`<codemirror-element></codemirror-element>`
     );
     element.lineNum = 123;
-    element.params = {
-      matchBrackets: true,
+    element.prefs = {
+      match_brackets: true,
     };
     await element.updateComplete;
   });

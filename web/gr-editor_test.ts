@@ -51,6 +51,6 @@ suite('gr-editor tests', () => {
       'codemirror-element'
     );
     assert.equal(cmElement.lineNum, 123);
-    assert.isTrue(cmElement.params?.matchBrackets);
+    assert.isTrue(cmElement.prefs?.match_brackets);
   });
 });
