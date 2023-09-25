@@ -16,7 +16,7 @@ import {setScriptSrc} from './safe-script';
  */
 interface CodeMirrorElement extends HTMLElement {
   lineNum?: number;
-  prefs: unknown;
+  prefs?: unknown;
   fileContent?: string;
   fileType?: string;
 }
@@ -24,6 +24,8 @@ interface CodeMirrorElement extends HTMLElement {
 declare global {
   interface HTMLElementTagNameMap {
     'gr-editor': GrEditor;
+    // @ts-ignore TS2717: Subsequent property declarations must have the same
+    // type.
     'codemirror-element': CodeMirrorElement;
   }
 }

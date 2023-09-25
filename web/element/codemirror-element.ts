@@ -17,6 +17,8 @@ declare global {
     'content-change': ValueChangedEvent;
   }
   interface HTMLElementTagNameMap {
+    // @ts-ignore TS2717: Subsequent property declarations must have the same
+    // type.
     'codemirror-element': CodeMirrorElement;
   }
 }
