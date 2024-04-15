@@ -38,7 +38,6 @@ import {fcl} from '@codemirror/legacy-modes/mode/fcl';
 import {forth} from '@codemirror/legacy-modes/mode/forth';
 import {fortran} from '@codemirror/legacy-modes/mode/fortran';
 import {gas} from '@codemirror/legacy-modes/mode/gas';
-import {go} from '@codemirror/legacy-modes/mode/go';
 import {gherkin} from '@codemirror/legacy-modes/mode/gherkin';
 import {groovy} from '@codemirror/legacy-modes/mode/groovy';
 import {fSharp, oCaml} from '@codemirror/legacy-modes/mode/mllike';
@@ -103,11 +102,11 @@ import {vhdl} from '@codemirror/legacy-modes/mode/vhdl';
 import {webIDL} from '@codemirror/legacy-modes/mode/webidl';
 import {xQuery} from '@codemirror/legacy-modes/mode/xquery';
 import {yacas} from '@codemirror/legacy-modes/mode/yacas';
-import {yaml} from '@codemirror/legacy-modes/mode/yaml';
 import {z80} from '@codemirror/legacy-modes/mode/z80';
 
 import {cpp} from '@codemirror/lang-cpp';
 import {css} from '@codemirror/lang-css';
+import {go} from '@codemirror/lang-go';
 import {html} from '@codemirror/lang-html';
 import {java} from '@codemirror/lang-java';
 import {javascript} from '@codemirror/lang-javascript';
@@ -120,6 +119,7 @@ import {rust} from '@codemirror/lang-rust';
 import {sass} from '@codemirror/lang-sass';
 import {sql} from '@codemirror/lang-sql';
 import {xml} from '@codemirror/lang-xml';
+import {yaml} from '@codemirror/lang-yaml';
 
 export const language = (fileType?: string) => {
   switch (fileType) {
@@ -231,7 +231,7 @@ export const language = (fileType?: string) => {
     case 'text/x-fsharp':
       return StreamLanguage.define(fSharp);
     case 'text/x-go':
-      return StreamLanguage.define(go);
+      return go();
     case 'text/x-groovy':
       return StreamLanguage.define(groovy);
     case 'text/x-haskell':
@@ -359,7 +359,7 @@ export const language = (fileType?: string) => {
     case 'application/xquery':
       return StreamLanguage.define(xQuery);
     case 'text/x-yaml':
-      return StreamLanguage.define(yaml);
+      return yaml();
     case 'text/x-yacas':
       return StreamLanguage.define(yacas);
     case 'text/x-z80':
