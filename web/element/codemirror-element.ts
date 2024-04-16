@@ -101,6 +101,9 @@ export class CodeMirrorElement extends LitElement {
     // This ensures the height of the textarea doesn't push out of screen.
     const height = clientHeight - offsetTop - 80;
 
+    console.log(height);
+    console.log(height);
+
     const editor = new EditorView({
       state: EditorState.create({
         doc: this.fileContent ?? '',
