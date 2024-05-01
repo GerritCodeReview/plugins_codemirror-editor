@@ -171,7 +171,7 @@ export const language = (fileType?: string) => {
     case 'text/x-crystal':
       return StreamLanguage.define(crystal);
     case 'application/xml':
-      return xml;
+      return xml();
     case 'text/css':
       return css();
     case 'text/x-less':
