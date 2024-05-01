@@ -211,6 +211,8 @@ export const language = (fileType?: string) => {
     case 'application/x-erb':
     case 'text/x-ruby':
       return StreamLanguage.define(ruby);
+    case 'text/javascript':
+      return javascript();
     case 'text/x-erlang':
       return StreamLanguage.define(erlang);
     case 'text/jsx':
