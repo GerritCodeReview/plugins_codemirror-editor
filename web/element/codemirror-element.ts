@@ -113,13 +113,17 @@ export class CodeMirrorElement extends LitElement {
             this.darkMode
           ),
           EditorView.updateListener.of(update => {
-            if (this.prefs?.line_length) {
+            // Set ruler width to 72 for commit messages,
+            // as this is the recommended line length for git commit messages.
+            if (this.fileType?.includes('x-gerrit-commit-message')) {
+              updateRulerWidth(72, update.view.defaultCharacterWidth, true);
+            } else if (this.prefs?.line_length) {
               // This is required to be in the setTimeout() to ensure the
               // line is set as correctly as possible.
               updateRulerWidth(
-                  this.prefs.line_length,
-                  update.view.defaultCharacterWidth,
-                  true
+                this.prefs.line_length,
+                update.view.defaultCharacterWidth,
+                true
               );
             }
 
