@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eed17664_55225361",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-10-07T20:10:37Z",
+      "side": 1,
+      "message": "Oh i forgot you have to add the package here https://gerrit.googlesource.com/plugins/codemirror-editor/+/bf8ac0b8fa6385b0780dfa617db57b27109a1b0a/web/BUILD#55 as well.",
+      "revId": "bf8ac0b8fa6385b0780dfa617db57b27109a1b0a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
