@@ -118,6 +118,7 @@ import {python} from '@codemirror/lang-python';
 import {rust} from '@codemirror/lang-rust';
 import {sass} from '@codemirror/lang-sass';
 import {sql} from '@codemirror/lang-sql';
+import {vue} from '@codemirror/lang-vue';
 import {xml} from '@codemirror/lang-xml';
 import {yaml} from '@codemirror/lang-yaml';
 
@@ -356,6 +357,8 @@ export const language = (fileType?: string) => {
       return StreamLanguage.define(vhdl);
     case 'text/velocity':
       return StreamLanguage.define(velocity);
+    case 'text/vue':
+      return StreamLanguage.define(vue);
     case 'text/x-webidl':
       return StreamLanguage.define(webIDL);
     case 'application/xquery':
