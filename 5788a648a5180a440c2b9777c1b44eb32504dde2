@@ -16,6 +16,24 @@
       "message": "Since it is its own package you simply do vue();",
       "revId": "5788a648a5180a440c2b9777c1b44eb32504dde2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78fd28d8_b8ed142f",
+        "filename": "web/element/language.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 3668384
+      },
+      "writtenOn": "2024-10-07T14:22:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6027cee7_be62a75d",
+      "revId": "5788a648a5180a440c2b9777c1b44eb32504dde2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
