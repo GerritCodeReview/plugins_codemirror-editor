@@ -71,6 +71,7 @@ ts_project(
         "@plugins_npm//@codemirror/lang-rust",
         "@plugins_npm//@codemirror/lang-sass",
         "@plugins_npm//@codemirror/lang-sql",
+        "@plugins_npm//@codemirror/lang-vue",
         "@plugins_npm//@codemirror/lang-xml",
         "@plugins_npm//@codemirror/lang-yaml",
         "@plugins_npm//@codemirror/language",
