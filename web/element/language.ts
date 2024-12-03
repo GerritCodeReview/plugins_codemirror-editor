@@ -357,7 +357,7 @@ export const language = (fileType?: string) => {
       return StreamLanguage.define(vhdl);
     case 'text/velocity':
       return StreamLanguage.define(velocity);
-    case 'text/vue':
+    case 'text/x-vue':
       return vue();
     case 'text/x-webidl':
       return StreamLanguage.define(webIDL);
