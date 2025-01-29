@@ -1,12 +1,13 @@
 {
   "checks": {
     "zuul-check:plugins_codemirror-editor": {
-      "state": "SCHEDULED",
-      "message": "Change has been enqueued in check",
-      "url": "https://ci.gerritcodereview.com/t/gerrit/status/change/449461,1",
+      "state": "FAILED",
+      "message": "Change failed",
+      "url": "https://ci.gerritcodereview.com/t/gerrit/buildset/bb1099040c534d7ba4ad5ea73f38157a",
       "started": "2025-01-29T09:51:05Z",
+      "finished": "2025-01-29T09:52:10Z",
       "created": "2025-01-29T09:51:05Z",
-      "updated": "2025-01-29T09:51:05Z"
+      "updated": "2025-01-29T09:52:10Z"
     }
   }
 }
