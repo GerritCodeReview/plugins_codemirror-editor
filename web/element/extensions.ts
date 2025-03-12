@@ -82,8 +82,9 @@ const tabsOrSpaces = () =>
       content: "'\\2192'",
       position: 'absolute',
     },
-    '.cm-highlightSpace:before': {
-      content: "''",
+    ".cm-highlightSpace": {
+      'background-image': 'none',
+      'background-size': 'none'
     },
   });
 
