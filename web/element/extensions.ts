@@ -28,7 +28,6 @@ import {
   history,
   historyKeymap,
   indentWithTab,
-  insertTab,
 } from '@codemirror/commands';
 import {searchKeymap, highlightSelectionMatches} from '@codemirror/search';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
@@ -60,15 +59,16 @@ const trailingspace = () =>
     },
   });
 
-const tabsOrSpaces = () =>
+const fixedHeightEditor = (height: number) =>
   EditorView.theme({
-    '.cm-tab:before': {
-      color: '#5f6368',
-      content: "'\\2192'",
-      position: 'absolute',
-    },
+    '&': {height: `${height}px`},
+    '.cm-scroller': {overflow: 'auto'},
+  });
 
+const hideTabsAndSpaces = () =>
+  EditorView.theme({
     // Class is created and used by highlightWhitespace()
+    // This hides tabs unless show_tabs is enabled in prefs.
     '.cm-highlightTab': {
       'background-image': 'none',
       'background-size': 'none',
@@ -77,21 +77,25 @@ const tabsOrSpaces = () =>
       display: 'inline-block',
       'text-decoration': 'inherit',
     },
+    '.cm-highlightSpace': {
+      'background-image': 'none',
+      'background-size': 'none',
+    },
+  });
+
+const tabTheme = () =>
+  EditorView.theme({
+    '.cm-tab:before': {
+      color: '#5f6368',
+      content: "'\\2192'",
+      position: 'absolute',
+    },
+    // Class is created and used by highlightWhitespace()
     '.cm-highlightTab:before': {
       color: '#5f6368',
       content: "'\\2192'",
       position: 'absolute',
     },
-    ".cm-highlightSpace": {
-      'background-image': 'none',
-      'background-size': 'none'
-    },
-  });
-
-const fixedHeightEditor = (height: number) =>
-  EditorView.theme({
-    '&': {height: `${height}px`},
-    '.cm-scroller': {overflow: 'auto'},
   });
 
 export const extensions = (
@@ -101,17 +105,6 @@ export const extensions = (
   fileContent?: string,
   darkMode?: boolean
 ) => {
-  // This uses the preference to detect whether
-  // to use 'tabs' when you use the tab button
-  // or to use 'spaces' when using the tab button.
-  const tab = prefs?.indent_with_tabs
-    ? {
-        key: 'Tab',
-        preventDefault: true,
-        run: insertTab,
-      }
-    : indentWithTab;
-
   const codeExtensions: Array<Extension> = [
     lineNumbers(),
     highlightActiveLineGutter(),
@@ -128,28 +121,25 @@ export const extensions = (
       ...searchKeymap,
       ...historyKeymap,
       ...foldKeymap,
-      tab,
+      indentWithTab,
     ]),
     trailingspace(),
-    tabsOrSpaces(),
     fixedHeightEditor(height),
     colorTheme(darkMode ?? false),
+    EditorState.tabSize.of(prefs?.tab_size ?? 0),
+    highlightWhitespace(),
+    hideTabsAndSpaces(),
   ];
 
   if (!prefs) return codeExtensions;
 
-  if (prefs.line_length && prefs.line_length > 0) {
+  if (prefs.line_length) {
     codeExtensions.push(rulerPlugin);
   }
 
   if (prefs.auto_close_brackets) {
     codeExtensions.push(closeBrackets());
   }
-
-  if (prefs.indent_unit && prefs.indent_unit >= 0) {
-    codeExtensions.push(indentUnit.of(' '.repeat(prefs.indent_unit)));
-  }
-
   if (prefs.line_wrapping) {
     codeExtensions.push(EditorView.lineWrapping);
   }
@@ -166,15 +156,17 @@ export const extensions = (
   }
 
   if (prefs.show_tabs) {
-    codeExtensions.push(highlightWhitespace());
+    codeExtensions.push(tabTheme());
+  }
+
+  if (prefs.indent_with_tabs) {
+    codeExtensions.push(indentUnit.of('\t'.repeat(prefs.indent_unit ?? 0)));
+  } else {
+    codeExtensions.push(indentUnit.of(' '.repeat(prefs.indent_unit ?? 0)));
   }
 
   if (prefs.show_whitespace_errors) {
     codeExtensions.push(highlightTrailingWhitespace());
-  }
-
-  if (prefs.tab_size && prefs.tab_size >= 0) {
-    codeExtensions.push(EditorState.tabSize.of(prefs.tab_size));
   }
 
   if (fileContent?.includes('\r\n')) {
