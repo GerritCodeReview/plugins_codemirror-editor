@@ -145,7 +145,7 @@ export class CodeMirrorElement extends LitElement {
               // press ctrl+s/cmd+s after, it would trigger the
               // web browsers file browser rather then gr-editor-view
               // intercepting ctrl+s/cmd+s.
-              if ((e.metaKey || e.ctrlKey) && e.key == 'v') {
+              if ((e.metaKey || e.ctrlKey) && e.key === 'v') {
                 e.stopPropagation();
               }
             },
