@@ -37,7 +37,7 @@ function generateRulerPlugin() {
       `;
       // TODO: This should be equal to the amount of padding on a line.
       // This value should be extracted from CodeMirror rather than hardcoded.
-      rulerElement.style.width = `4px`;
+      rulerElement.style.width = '4px';
     }
 
     destroy() {
@@ -46,9 +46,9 @@ function generateRulerPlugin() {
   }
 
   function updateRulerWidth(
-      newWidth: number,
-      defaultWidth: number,
-      force = false
+    newWidth: number,
+    defaultWidth: number,
+    force = false
   ) {
     if ((newWidth !== width || force) && rulerElement) {
       width = newWidth;
