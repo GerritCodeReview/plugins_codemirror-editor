@@ -1,0 +1,116 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11c65175_a5fe92c4",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2025-03-25T17:44:10Z",
+      "side": 1,
+      "message": "Move to a const similar to other EditorView.theme() calls.",
+      "range": {
+        "startLine": 98,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 7
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "81eb70d4_a79d4486",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "web/element/extensions.ts",
+              "range": {
+                "startLine": 68,
+                "startChar": 0,
+                "endLine": 68,
+                "endChar": 0
+              },
+              "replacement": "const hideTabsAndSpaces \u003d () \u003d\u003e\n  EditorView.theme({\n    // Class is created and used by highlightWhitespace()\n    // This hides tabs unless show_tabs is enabled in prefs.\n    \u0027.cm-highlightTab\u0027: {\n      \u0027background-image\u0027: \u0027none\u0027,\n      \u0027background-size\u0027: \u0027none\u0027,\n      \u0027background-position\u0027: \u0027none\u0027,\n      \u0027background-repeat\u0027: \u0027none\u0027,\n      display: \u0027inline-block\u0027,\n      \u0027text-decoration\u0027: \u0027inherit\u0027,\n    },\n    \u0027.cm-highlightSpace\u0027: {\n      \u0027background-image\u0027: \u0027none\u0027,\n      \u0027background-size\u0027: \u0027none\u0027,\n    },\n  });\n\n"
+            },
+            {
+              "path": "web/element/extensions.ts",
+              "range": {
+                "startLine": 98,
+                "startChar": 0,
+                "endLine": 114,
+                "endChar": 0
+              },
+              "replacement": "    hideTabsAndSpaces(),\n"
+            }
+          ]
+        }
+      ],
+      "revId": "8bd9eb65cd25210e9db8f2e8974ab8c2092da25c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d5c1851_74b01442",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2025-03-25T17:44:10Z",
+      "side": 1,
+      "message": "Move to a const similar to other EditorView.theme() calls.",
+      "range": {
+        "startLine": 142,
+        "startChar": 6,
+        "endLine": 155,
+        "endChar": 8
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "4e50edce_3179eeed",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "web/element/extensions.ts",
+              "range": {
+                "startLine": 68,
+                "startChar": 0,
+                "endLine": 68,
+                "endChar": 0
+              },
+              "replacement": "const tabTheme \u003d () \u003d\u003e\n  EditorView.theme({\n    \u0027.cm-tab:before\u0027: {\n      color: \u0027#5f6368\u0027,\n      content: \"\u0027\\\\2192\u0027\",\n      position: \u0027absolute\u0027,\n    },\n\n    // Class is created and used by highlightWhitespace()\n    \u0027.cm-highlightTab:before\u0027: {\n      color: \u0027#5f6368\u0027,\n      content: \"\u0027\\\\2192\u0027\",\n      position: \u0027absolute\u0027,\n    },\n  });\n\n"
+            },
+            {
+              "path": "web/element/extensions.ts",
+              "range": {
+                "startLine": 98,
+                "startChar": 0,
+                "endLine": 98,
+                "endChar": 0
+              },
+              "replacement": "    tabTheme(),\n"
+            },
+            {
+              "path": "web/element/extensions.ts",
+              "range": {
+                "startLine": 141,
+                "startChar": 0,
+                "endLine": 157,
+                "endChar": 0
+              },
+              "replacement": "    codeExtensions.push(tabTheme());\n"
+            }
+          ]
+        }
+      ],
+      "revId": "8bd9eb65cd25210e9db8f2e8974ab8c2092da25c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
