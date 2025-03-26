@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e732a472_83dc2141",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2025-03-26T07:09:09Z",
+      "side": 1,
+      "message": "I would prefer to not review stable branches. I find it hard to decide what is important enough as a fix to be patched to stable branches.",
+      "revId": "0ac2e0d1272a5069b3709b0d2d718f735699ad70",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
