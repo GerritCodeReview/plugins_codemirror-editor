@@ -29,7 +29,7 @@ import {
   historyKeymap,
   indentWithTab,
 } from '@codemirror/commands';
-import {searchKeymap, highlightSelectionMatches} from '@codemirror/search';
+import {search, searchKeymap, highlightSelectionMatches} from '@codemirror/search';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {rulerPlugin} from './ruler';
 import {language} from './language';
@@ -115,6 +115,7 @@ export const extensions = (
     EditorState.allowMultipleSelections.of(true),
     indentOnInput(),
     highlightSelectionMatches(),
+    search({top: true}),
     keymap.of([
       ...closeBracketsKeymap,
       ...defaultKeymap,
