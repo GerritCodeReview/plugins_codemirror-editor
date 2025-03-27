@@ -46,7 +46,6 @@ import {haxe, hxml} from '@codemirror/legacy-modes/mode/haxe';
 import {http} from '@codemirror/legacy-modes/mode/http';
 import {idl} from '@codemirror/legacy-modes/mode/idl';
 import {jinja2} from '@codemirror/legacy-modes/mode/jinja2';
-import {json} from '@codemirror/legacy-modes/mode/javascript';
 import {jsonld} from '@codemirror/legacy-modes/mode/javascript';
 import {julia} from '@codemirror/legacy-modes/mode/julia';
 import {kotlin} from '@codemirror/legacy-modes/mode/clike';
@@ -111,6 +110,7 @@ import {go} from '@codemirror/lang-go';
 import {html} from '@codemirror/lang-html';
 import {java} from '@codemirror/lang-java';
 import {javascript} from '@codemirror/lang-javascript';
+import {json} from '@codemirror/lang-json';
 import {less} from '@codemirror/lang-less';
 import {markdown} from '@codemirror/lang-markdown';
 import {php} from '@codemirror/lang-php';
@@ -161,7 +161,7 @@ export const language = (fileType?: string) => {
     case 'text/x-cmake':
       return StreamLanguage.define(cmake);
     case 'application/json':
-      return StreamLanguage.define(json);
+      return json();
     case 'text/x-cobol':
       return StreamLanguage.define(cobol);
     case 'text/x-coffeescript':
