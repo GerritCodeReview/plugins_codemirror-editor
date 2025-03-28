@@ -15,13 +15,13 @@ import {
 } from '@codemirror/view';
 import {EditorState, Extension} from '@codemirror/state';
 import {
-  defaultHighlightStyle,
   indentOnInput,
   foldGutter,
   foldKeymap,
   bracketMatching,
   syntaxHighlighting,
   indentUnit,
+  HighlightStyle,
 } from '@codemirror/language';
 import {
   defaultKeymap,
@@ -34,6 +34,7 @@ import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {rulerPlugin} from './ruler';
 import {language} from './language';
 import {EditPreferencesInfo} from './codemirror-element';
+import {tags as t} from '@lezer/highlight'
 
 const colorTheme = (dark: boolean) =>
   EditorView.theme(
@@ -98,6 +99,35 @@ const tabTheme = () =>
     },
   });
 
+export const gerritTheme = HighlightStyle.define([
+  { tag: [t.standard(t.tagName), t.tagName], color: 'var(--syntax-tag-color)' },
+  { tag: [t.comment], color: 'var(--syntax-comment-color)' },
+  { tag: [t.className, t.propertyName], color: 'var(--syntax-attr-color)' },
+  { tag: t.variableName, color: 'var(--syntax-variable-color)' },
+  { tag: [t.attributeName, t.operator], color: 'var(--syntax-attr-color)' },
+  { tag: t.number, color: 'var(--syntax-number-color)' },
+  { tag: t.keyword, color: 'var(--syntax-keyword-color)' },
+  { tag: [t.typeName, t.typeOperator], color: 'var(--syntax-type-color)' },
+  { tag: t.string, color: 'var(--syntax-string-color)' },
+  { tag: t.regexp, color: 'var(--syntax-regexp-color)' },
+  { tag: t.meta, color: 'var(--syntax-meta-color)' },
+  { tag: [t.name, t.quote], color: 'var(--syntax-title-color)' },
+  { tag: t.definition(t.variableName), color: '#00f' },
+  { tag: t.local(t.variableName), color: '#30a' },
+  { tag: t.definition(t.propertyName), color: '#00c' },
+  { tag: [t.heading, t.strong], color: 'var(--syntax-strong-color)', fontWeight: 'bold' },
+  { tag: [t.emphasis], fontStyle: 'italic' },
+  { tag: [t.deleted], color: '#a11' },
+  { tag: t.inserted, color: '#164' },
+  { tag: t.literal, color: 'var(--syntax-literal-color)' },
+  { tag: [t.atom, t.bool, t.special(t.variableName)], color: 'var(--syntax-literal-color)' },
+  { tag: [t.url, t.escape, t.link], color: 'var(--syntax-string-color)' },
+  { tag: [t.special(t.string)], color: "#e40"},
+  { tag: t.link, textDecoration: 'underline' },
+  { tag: t.strikethrough, textDecoration: 'line-through' },
+  { tag: t.invalid, color: '#f00' },
+]);
+
 export const extensions = (
   height: number,
   prefs?: EditPreferencesInfo,
@@ -152,7 +182,7 @@ export const extensions = (
   if (prefs.syntax_highlighting && language(fileType)) {
     codeExtensions.push(
       language(fileType) as Extension,
-      syntaxHighlighting(defaultHighlightStyle, {fallback: true})
+      syntaxHighlighting(gerritTheme, {fallback: true})
     );
   }
 
