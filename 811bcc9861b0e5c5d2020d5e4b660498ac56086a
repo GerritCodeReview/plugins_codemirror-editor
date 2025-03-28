@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7dc29ed6_baddaede",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-03-28T00:38:15Z",
+      "side": 1,
+      "message": "I tested it locally and it does highlight more. Not sure if we should do colours differently or what not.",
+      "revId": "811bcc9861b0e5c5d2020d5e4b660498ac56086a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "38e19fa8_07b3ead0",
