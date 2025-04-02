@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0f386edd_2a06ba2d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-04-02T15:30:06Z",
+      "side": 1,
+      "message": "Old:\n\nhttps://imgur.com/a/wZ5846v\n\nNew:\n\nhttps://imgur.com/a/A5SGLhm\n\nNot sure if we should keep red for strings.",
+      "parentUuid": "97a85635_60728c27",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 0
+      },
+      "revId": "1dcd1e193513b9a11cbb7be59cacc60cd5e365c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f2fbcd97_e0282e41",
         "filename": "/COMMIT_MSG",
         "patchSetId": 7
