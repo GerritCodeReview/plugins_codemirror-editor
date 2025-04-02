@@ -1,6 +1,52 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "97a85635_60728c27",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-04-02T14:20:30Z",
+      "side": 1,
+      "message": "Do you have a screenshot how it looks like with new theme vs old?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 0
+      },
+      "revId": "1dcd1e193513b9a11cbb7be59cacc60cd5e365c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2fbcd97_e0282e41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-04-02T14:20:30Z",
+      "side": 1,
+      "message": "From parent change, it looks it highlights extra propertyName.",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 9,
+        "endChar": 18
+      },
+      "revId": "1dcd1e193513b9a11cbb7be59cacc60cd5e365c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e797088c_4bcc04bd",
@@ -50,6 +96,64 @@
       "side": 1,
       "message": "Thanks!!",
       "parentUuid": "e8db0047_6b33ca97",
+      "revId": "1dcd1e193513b9a11cbb7be59cacc60cd5e365c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b692a2c7_d034db01",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-04-02T14:20:30Z",
+      "side": 1,
+      "message": "Thank you, maybe to have same color syntax for editing and diffing is great idea. Without screenshot I have no clue how it looks 😊.",
+      "revId": "1dcd1e193513b9a11cbb7be59cacc60cd5e365c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44654d54_ff200dbe",
+        "filename": "web/element/extensions.ts",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-04-02T14:20:30Z",
+      "side": 1,
+      "message": "I checked that google3 supports lezer. \n\nBtw. missing semicolon",
+      "range": {
+        "startLine": 37,
+        "startChar": 26,
+        "endLine": 37,
+        "endChar": 41
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "0a3795ac_1df07040",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "web/element/extensions.ts",
+              "range": {
+                "startLine": 37,
+                "startChar": 0,
+                "endLine": 38,
+                "endChar": 0
+              },
+              "replacement": "import {tags as t} from \u0027@lezer/highlight\u0027;\n"
+            }
+          ]
+        }
+      ],
       "revId": "1dcd1e193513b9a11cbb7be59cacc60cd5e365c1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
