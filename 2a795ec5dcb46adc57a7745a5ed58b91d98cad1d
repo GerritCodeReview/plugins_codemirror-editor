@@ -34,6 +34,24 @@
       "parentUuid": "e449ff65_285d10bd",
       "revId": "2a795ec5dcb46adc57a7745a5ed58b91d98cad1d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15944e5d_afe67990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-04-02T14:12:08Z",
+      "side": 1,
+      "message": "I don\u0027t know how to find what people prefer. I would prefer default in Code mirror v6. \n\nIf there is a bug with some votes on putting it on top then sure let\u0027s do it. WDYT? \n\nIf you have strongly feel that it should be on top, I can approve.",
+      "parentUuid": "d1578923_a19cd309",
+      "revId": "2a795ec5dcb46adc57a7745a5ed58b91d98cad1d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
