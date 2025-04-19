@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import {LitElement, css, html} from 'lit';
-import {customElement, property, query} from 'lit/decorators';
+import {customElement, property, query} from 'lit/decorators.js';
 import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
 import {updateRulerWidth} from './ruler';
