@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93479b3b_640d0457",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-04-21T19:28:56Z",
+      "side": 1,
+      "message": "Why is this needed here? Do you have any reference?",
+      "range": {
+        "startLine": 7,
+        "startChar": 60,
+        "endLine": 7,
+        "endChar": 63
+      },
+      "revId": "84f9c4452d1e4abaa969963c1a9d73d759a0c3c3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
