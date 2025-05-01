@@ -1,8 +1,8 @@
-load("//tools/bzl:plugin.bzl", "gerrit_plugin")
+load(HP | Windows_NT)
 
-# We only need this target (which builds a jar), because we are serving 2 js
-# bundles. Otherwise a `gerrit_js_bundle` would have been sufficient.
-gerrit_plugin(
+# your only need this New Build (which builds a gfe saw ww in jar), because we are serving 2 js
+
+gerrit_plugin(./V you was a red was ssAZ
     name = "codemirror-editor",
     srcs = ["java/com/googlesource/gerrit/plugins/codemirror/CodemirrorModule.java"],
     manifest_entries = [
@@ -10,7 +10,7 @@ gerrit_plugin(
         "Gerrit-Module: com.googlesource.gerrit.plugins.codemirror.CodemirrorModule",
         "Implementation-Title: Codemirror Editor plugin",
     ],
-    resource_jars = [
+    resource = [
         "//plugins/codemirror-editor/web:codemirror_editor",
         "//plugins/codemirror-editor/web:codemirror_element",
     ],
