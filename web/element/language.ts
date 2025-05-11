@@ -81,7 +81,6 @@ import {sieve} from '@codemirror/legacy-modes/mode/sieve';
 import {sparql} from '@codemirror/legacy-modes/mode/sparql';
 import {spreadsheet} from '@codemirror/legacy-modes/mode/spreadsheet';
 import {solr} from '@codemirror/legacy-modes/mode/solr';
-import {pgSQL, plSQL, cassandra} from '@codemirror/legacy-modes/mode/sql';
 import {squirrel} from '@codemirror/legacy-modes/mode/clike';
 import {stex} from '@codemirror/legacy-modes/mode/stex';
 import {swift} from '@codemirror/legacy-modes/mode/swift';
@@ -117,7 +116,7 @@ import {php} from '@codemirror/lang-php';
 import {python} from '@codemirror/lang-python';
 import {rust} from '@codemirror/lang-rust';
 import {sass} from '@codemirror/lang-sass';
-import {sql} from '@codemirror/lang-sql';
+import {Cassandra, PLSQL, PostgreSQL, sql} from '@codemirror/lang-sql';
 import {vue} from '@codemirror/lang-vue';
 import {xml} from '@codemirror/lang-xml';
 import {yaml} from '@codemirror/lang-yaml';
@@ -182,11 +181,11 @@ export const language = (fileType?: string) => {
     case 'text/x-gss':
       return StreamLanguage.define(gss);
     case 'text/x-cassandra':
-      return StreamLanguage.define(cassandra);
+      return sql({dialect: Cassandra});
     case 'text/x-pgsql':
-      return StreamLanguage.define(pgSQL);
+      return sql({dialect: PostgreSQL});
     case 'text/x-plsql':
-      return StreamLanguage.define(plSQL);
+      return sql({dialect: PLSQL});
     case 'application/x-cypher-query':
       return StreamLanguage.define(cypher);
     case 'text/x-d':
