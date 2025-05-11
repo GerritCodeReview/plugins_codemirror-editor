@@ -345,6 +345,8 @@ export const language = (fileType?: string) => {
       return StreamLanguage.define(toml);
     case 'application/typescript':
       return javascript({typescript: true});
+    case 'text/tsx':
+      return javascript({jsx: true, typescript: true});
     case 'text/x-ttcn':
       return StreamLanguage.define(ttcn);
     case 'text/turtle':
