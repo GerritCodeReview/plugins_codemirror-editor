@@ -213,11 +213,10 @@ export const language = (fileType?: string) => {
     case 'text/x-ruby':
       return StreamLanguage.define(ruby);
     case 'text/javascript':
-      return javascript();
-    case 'text/x-erlang':
-      return StreamLanguage.define(erlang);
     case 'text/jsx':
       return javascript({jsx: true});
+    case 'text/x-erlang':
+      return StreamLanguage.define(erlang);
     case 'text/x-spreadsheet':
       return StreamLanguage.define(spreadsheet);
     case 'text/x-fortran':
