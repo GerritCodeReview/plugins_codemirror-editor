@@ -75,6 +75,23 @@ export class CodeMirrorElement extends LitElement {
           font-family: 'Roboto Mono', 'SF Mono', 'Lucida Console', Monaco,
             monospace;
         }
+        #statusLine {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: #f7f7f7;
+          border-top: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+        }
+        #statusLine div {
+          height: inherit;
+        }
+        .cursorPosition {
+          display: inline-block;
+          margin: 0 5px 0 35px;
+          white-space: nowrap;
+        }
       `,
     ];
   }
@@ -154,6 +171,11 @@ export class CodeMirrorElement extends LitElement {
               }
             },
           }),
+          EditorView.updateListener.of(update => {
+            if (update.selectionSet) {
+              this.updateCursorPosition(update.view);
+            }
+          }),
         ],
       }),
       parent: this.wrapper as Element,
@@ -164,6 +186,10 @@ export class CodeMirrorElement extends LitElement {
     if (this.lineNum) {
       this.setCursorToLine(editor, this.lineNum);
     }
+
+    // Makes sure to show line number and column number on initial
+    // load.
+    this.updateCursorPosition(editor);
   }
 
   setCursorToLine(view: EditorView, lineNum: number) {
@@ -182,5 +208,13 @@ export class CodeMirrorElement extends LitElement {
       scrollIntoView: true
     });
     view.focus();
+  }
+
+  private updateCursorPosition(view: EditorView) {
+    const cursor = view.state.selection.main.head;
+    const line = view.state.doc.lineAt(cursor);
+    if (this.result) {
+      this.result.textContent = `Line: ${line.number}, Column: ${cursor - line.from + 1}`;
+    }
   }
 }
