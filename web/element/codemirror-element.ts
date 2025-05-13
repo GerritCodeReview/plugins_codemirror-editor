@@ -162,9 +162,25 @@ export class CodeMirrorElement extends LitElement {
     editor.focus();
 
     if (this.lineNum) {
-      // We have to take away one from the line number,
-      // ... because CodeMirror's line count is zero-based.
-      editor.dispatch({selection: {anchor: this.lineNum - 1}});
+      this.setCursorToLine(editor, this.lineNum);
     }
+  }
+
+  setCursorToLine(view: EditorView, lineNum: number) {
+    const totalLines = view.state.doc.lines;
+    // If you try going to a line that does not exist
+    // codemirror will error out. Instead lets just log.
+    // Line 1 will be selected automatically.
+    if (lineNum < 1 || lineNum > totalLines) {
+      console.warn(`Line number ${lineNum} is out of bounds (valid range: 1 - ${totalLines}).`);
+      return;
+    }
+
+    const line = view.state.doc.line(lineNum);
+    view.dispatch({
+      selection: { anchor: line.from },
+      scrollIntoView: true
+    });
+    view.focus();
   }
 }
