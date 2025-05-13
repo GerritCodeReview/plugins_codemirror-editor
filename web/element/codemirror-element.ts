@@ -62,6 +62,8 @@ export class CodeMirrorElement extends LitElement {
 
   private initialized = false;
 
+  private onResize: (() => void) | null = null;
+
   static override get styles() {
     return [
       css`
@@ -120,20 +122,12 @@ export class CodeMirrorElement extends LitElement {
     if (this.initialized) return;
     this.initialized = true;
 
-    const offsetTop = this.getBoundingClientRect().top;
-    const clientHeight = window.innerHeight ?? document.body.clientHeight;
-    // We are setting a fixed height, because for large files we want to
-    // benefit from CodeMirror's virtual scrolling.
-    // 80px is roughly the size of the bottom margins plus the footer height.
-    // This ensures the height of the textarea doesn't push out of screen.
-    const height = clientHeight - offsetTop - 80;
-
     const editor = new EditorView({
       state: EditorState.create({
         doc: this.fileContent ?? '',
         extensions: [
           ...extensions(
-            height,
+            this.calculateHeight(),
             this.prefs,
             this.fileType,
             this.fileContent ?? '',
@@ -200,6 +194,17 @@ export class CodeMirrorElement extends LitElement {
     // Makes sure to show line number and column number on initial
     // load.
     this.updateCursorPosition(editor);
+
+    this.onResize = () => this.updateEditorHeight(editor);
+    window.addEventListener('resize', this.onResize);
+  }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback();
+    if (this.onResize) {
+      window.removeEventListener('resize', this.onResize);
+      this.onResize = null;
+    }
   }
 
   setCursorToLine(view: EditorView, lineNum: number) {
@@ -225,6 +230,24 @@ export class CodeMirrorElement extends LitElement {
     const line = view.state.doc.lineAt(cursor);
     if (this.result) {
       this.result.textContent = `Line: ${line.number}, Column: ${cursor - line.from + 1}`;
+    }
+  }
+
+  private calculateHeight() {
+    const offsetTop = this.getBoundingClientRect().top;
+    const clientHeight = window.innerHeight ?? document.body.clientHeight;
+    // We are setting a fixed height, because for large files we want to
+    // benefit from CodeMirror's virtual scrolling.
+    // 110px is roughly the size of the bottom margins plus the footer height.
+    // This ensures the height of the textarea doesn't push out of screen.
+    return clientHeight - offsetTop - 110;
+  }
+
+  private updateEditorHeight(editor: EditorView) {
+    const height = this.calculateHeight();
+    const editorElement = editor.dom;
+    if (editorElement) {
+      editorElement.style.height = `${height}px`;
     }
   }
 }
