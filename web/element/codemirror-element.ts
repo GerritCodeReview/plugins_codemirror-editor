@@ -162,9 +162,18 @@ export class CodeMirrorElement extends LitElement {
     editor.focus();
 
     if (this.lineNum) {
-      // We have to take away one from the line number,
-      // ... because CodeMirror's line count is zero-based.
-      editor.dispatch({selection: {anchor: this.lineNum - 1}});
+      this.setCursorToLine(editor, this.lineNum);
     }
+  }
+
+  setCursorToLine(view: EditorView, lineNum: number) {
+    const line = view.state.doc.line(lineNum);
+
+    view.dispatch({
+      selection: { anchor: line.from },
+      scrollIntoView: true
+    });
+
+    view.focus();
   }
 }
