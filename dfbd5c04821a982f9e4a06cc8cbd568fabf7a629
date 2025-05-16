@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a027e41a_7326b027",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-05-16T20:31:18Z",
+      "side": 0,
+      "message": "I guess this was needed for older code mirror version?",
+      "range": {
+        "startLine": 167,
+        "startChar": 43,
+        "endLine": 167,
+        "endChar": 59
+      },
+      "revId": "dfbd5c04821a982f9e4a06cc8cbd568fabf7a629",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
