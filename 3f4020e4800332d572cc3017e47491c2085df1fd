@@ -1,0 +1,86 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37da0f28_c319b020",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-05-16T20:46:38Z",
+      "side": 1,
+      "message": "ensure",
+      "range": {
+        "startLine": 239,
+        "startChar": 34,
+        "endLine": 239,
+        "endChar": 41
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "d49b6520_76269bcd",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "web/element/codemirror-element.ts",
+              "range": {
+                "startLine": 239,
+                "startChar": 0,
+                "endLine": 240,
+                "endChar": 0
+              },
+              "replacement": "    // We take offsetTop twice to ensure the height of the texarea doesn\u0027t push\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3f4020e4800332d572cc3017e47491c2085df1fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "360ad236_026789da",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2025-05-16T20:46:38Z",
+      "side": 1,
+      "message": "Should we make sure that we don\u0027t get negative value with Math.max?",
+      "range": {
+        "startLine": 242,
+        "startChar": 11,
+        "endLine": 242,
+        "endChar": 48
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "9a3d1cdf_5cb2fd2a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "web/element/codemirror-element.ts",
+              "range": {
+                "startLine": 242,
+                "startChar": 0,
+                "endLine": 243,
+                "endChar": 0
+              },
+              "replacement": "    return Math.max(0, clientHeight - offsetTop - offsetTop);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3f4020e4800332d572cc3017e47491c2085df1fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
