@@ -42,6 +42,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44c3647e_94922be2",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-05-16T20:47:37Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "37da0f28_c319b020",
+      "range": {
+        "startLine": 239,
+        "startChar": 34,
+        "endLine": 239,
+        "endChar": 41
+      },
+      "revId": "3f4020e4800332d572cc3017e47491c2085df1fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "360ad236_026789da",
@@ -79,6 +103,30 @@
           ]
         }
       ],
+      "revId": "3f4020e4800332d572cc3017e47491c2085df1fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "590cdd75_702c6cdd",
+        "filename": "web/element/codemirror-element.ts",
+        "patchSetId": 4
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-05-16T20:47:37Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "360ad236_026789da",
+      "range": {
+        "startLine": 242,
+        "startChar": 11,
+        "endLine": 242,
+        "endChar": 48
+      },
       "revId": "3f4020e4800332d572cc3017e47491c2085df1fd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
