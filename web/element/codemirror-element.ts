@@ -57,7 +57,12 @@ export class CodeMirrorElement extends LitElement {
   @query('#wrapper')
   wrapper!: HTMLElement;
 
+  @query('#result')
+  result!: HTMLElement;
+
   private initialized = false;
+
+  private onResize: (() => void) | null = null;
 
   static override get styles() {
     return [
@@ -75,12 +80,36 @@ export class CodeMirrorElement extends LitElement {
           font-family: 'Roboto Mono', 'SF Mono', 'Lucida Console', Monaco,
             monospace;
         }
+        #statusLine {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: #f7f7f7;
+          border-top: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+        }
+        #statusLine div {
+          height: inherit;
+        }
+        .cursorPosition {
+          display: inline-block;
+          margin: 0 5px 0 35px;
+          white-space: nowrap;
+        }
       `,
     ];
   }
 
   override render() {
-    return html`<div id="wrapper"></div>`;
+    return html`
+      <div id="wrapper"></div>
+      <div class="statusLine">
+        <div class="cursorPosition">
+          <span id="result"></span>
+        </div>
+      </div>
+    `;
   }
 
   override updated() {
@@ -93,20 +122,12 @@ export class CodeMirrorElement extends LitElement {
     if (this.initialized) return;
     this.initialized = true;
 
-    const offsetTop = this.getBoundingClientRect().top;
-    const clientHeight = window.innerHeight ?? document.body.clientHeight;
-    // We are setting a fixed height, because for large files we want to
-    // benefit from CodeMirror's virtual scrolling.
-    // 80px is roughly the size of the bottom margins plus the footer height.
-    // This ensures the height of the textarea doesn't push out of screen.
-    const height = clientHeight - offsetTop - 80;
-
     const editor = new EditorView({
       state: EditorState.create({
         doc: this.fileContent ?? '',
         extensions: [
           ...extensions(
-            height,
+            this.calculateHeight(),
             this.prefs,
             this.fileType,
             this.fileContent ?? '',
@@ -154,6 +175,11 @@ export class CodeMirrorElement extends LitElement {
               }
             },
           }),
+          EditorView.updateListener.of(update => {
+            if (update.selectionSet) {
+              this.updateCursorPosition(update.view);
+            }
+          }),
         ],
       }),
       parent: this.wrapper as Element,
@@ -162,9 +188,65 @@ export class CodeMirrorElement extends LitElement {
     editor.focus();
 
     if (this.lineNum) {
-      // We have to take away one from the line number,
-      // ... because CodeMirror's line count is zero-based.
-      editor.dispatch({selection: {anchor: this.lineNum - 1}});
+      this.setCursorToLine(editor, this.lineNum);
+    }
+
+    // Makes sure to show line number and column number on initial
+    // load.
+    this.updateCursorPosition(editor);
+
+    this.onResize = () => this.updateEditorHeight(editor);
+    window.addEventListener('resize', this.onResize);
+  }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback();
+    if (this.onResize) {
+      window.removeEventListener('resize', this.onResize);
+      this.onResize = null;
+    }
+  }
+
+  setCursorToLine(view: EditorView, lineNum: number) {
+    const totalLines = view.state.doc.lines;
+    // If you try going to a line that does not exist
+    // codemirror will error out. Instead lets just log.
+    // Line 1 will be selected automatically.
+    if (lineNum < 1 || lineNum > totalLines) {
+      console.warn(`Line number ${lineNum} is out of bounds (valid range: 1 - ${totalLines}).`);
+      return;
+    }
+
+    const line = view.state.doc.line(lineNum);
+    view.dispatch({
+      selection: { anchor: line.from },
+      scrollIntoView: true
+    });
+    view.focus();
+  }
+
+  private updateCursorPosition(view: EditorView) {
+    const cursor = view.state.selection.main.head;
+    const line = view.state.doc.lineAt(cursor);
+    if (this.result) {
+      this.result.textContent = `Line: ${line.number}, Column: ${cursor - line.from + 1}`;
+    }
+  }
+
+  private calculateHeight() {
+    const offsetTop = this.getBoundingClientRect().top;
+    const clientHeight = window.innerHeight ?? document.body.clientHeight;
+    // We take offsetTop twice to ensure the height of the texarea doesn't push
+    // out of screen. We no longer do a hardcore value which was 80 before.
+    // offsetTop seems to be what we've been looking for to do it dynamically.
+    return Math.max(0, clientHeight - offsetTop - offsetTop);
+  }
+
+  private updateEditorHeight(editor: EditorView) {
+    const height = this.calculateHeight();
+    const editorElement = editor.dom;
+    if (editorElement) {
+      editorElement.style.height = `${height}px`;
     }
   }
 }
