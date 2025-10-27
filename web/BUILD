@@ -1,4 +1,4 @@
-load("@npm//@bazel/typescript:index.bzl", "ts_config", "ts_project")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config", "ts_project")
 load("//tools/bzl:js.bzl", "gerrit_js_bundle")
 load("//tools/js:eslint.bzl", "plugin_eslint")
 
@@ -16,7 +16,7 @@ ts_config(
     name = "tsconfig",
     src = "tsconfig.json",
     deps = [
-        "//plugins:tsconfig-plugins-base.json",
+        "//plugins:tsconfig-plugins-base",
     ],
 )
 
@@ -28,11 +28,9 @@ ts_project(
     ),
     incremental = True,
     out_dir = "_bazel_ts_out",
-    tsc = "//tools/node_tools:tsc-bin",
     tsconfig = ":tsconfig",
     deps = [
-        "@plugins_npm//@gerritcodereview/typescript-api",
-        "@plugins_npm//lit",
+        "//plugins:node_modules",
     ],
 )
 
@@ -50,37 +48,9 @@ ts_project(
     ),
     incremental = True,
     out_dir = "_bazel_ts_out",
-    tsc = "//tools/node_tools:tsc-bin",
     tsconfig = ":tsconfig",
     deps = [
-        "@plugins_npm//@gerritcodereview/typescript-api",
-        "@plugins_npm//lit",
-        "@plugins_npm//@codemirror/autocomplete",
-        "@plugins_npm//@codemirror/commands",
-        "@plugins_npm//@codemirror/lang-css",
-        "@plugins_npm//@codemirror/lang-cpp",
-        "@plugins_npm//@codemirror/lang-go",
-        "@plugins_npm//@codemirror/lang-html",
-        "@plugins_npm//@codemirror/lang-java",
-        "@plugins_npm//@codemirror/lang-javascript",
-        "@plugins_npm//@codemirror/lang-json",
-        "@plugins_npm//@codemirror/lang-less",
-        "@plugins_npm//@codemirror/lang-markdown",
-        "@plugins_npm//@codemirror/lang-php",
-        "@plugins_npm//@codemirror/lang-python",
-        "@plugins_npm//@codemirror/lang-rust",
-        "@plugins_npm//@codemirror/lang-sass",
-        "@plugins_npm//@codemirror/lang-sql",
-        "@plugins_npm//@codemirror/lang-vue",
-        "@plugins_npm//@codemirror/lang-xml",
-        "@plugins_npm//@codemirror/lang-yaml",
-        "@plugins_npm//@codemirror/language",
-        "@plugins_npm//@codemirror/language-data",
-        "@plugins_npm//@codemirror/legacy-modes",
-        "@plugins_npm//@codemirror/lint",
-        "@plugins_npm//@codemirror/search",
-        "@plugins_npm//@codemirror/state",
-        "@plugins_npm//@codemirror/view",
+        "//plugins:node_modules",
     ],
 )
 
