@@ -1,4 +1,4 @@
-load("//tools/bzl:plugin.bzl", "gerrit_plugin")
+load("@com_googlesource_gerrit_bazlets//:gerrit_plugin.bzl", "gerrit_plugin")
 
 # We only need this target (which builds a jar), because we are serving 2 js
 # bundles. Otherwise a `gerrit_js_bundle` would have been sufficient.
