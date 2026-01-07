@@ -3,11 +3,11 @@
     "zuul-check:plugins_codemirror-editor": {
       "state": "FAILED",
       "message": "Change failed",
-      "url": "https://ci.gerritcodereview.com/t/gerrit/buildset/4542a40d894e40dcaa0cca3ecd27f64f",
-      "started": "2026-01-07T23:09:28Z",
-      "finished": "2026-01-07T23:09:28Z",
+      "url": "https://ci.gerritcodereview.com/t/gerrit/buildset/bc871c379ba945c6853847804c5e6389",
+      "started": "2026-01-07T23:09:59Z",
+      "finished": "2026-01-07T23:09:59Z",
       "created": "2025-12-19T08:15:56Z",
-      "updated": "2026-01-07T23:09:29Z"
+      "updated": "2026-01-07T23:09:59Z"
     }
   }
 }
