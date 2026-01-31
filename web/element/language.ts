@@ -45,7 +45,6 @@ import {haskell} from '@codemirror/legacy-modes/mode/haskell';
 import {haxe, hxml} from '@codemirror/legacy-modes/mode/haxe';
 import {http} from '@codemirror/legacy-modes/mode/http';
 import {idl} from '@codemirror/legacy-modes/mode/idl';
-import {jinja2} from '@codemirror/legacy-modes/mode/jinja2';
 import {jsonld} from '@codemirror/legacy-modes/mode/javascript';
 import {julia} from '@codemirror/legacy-modes/mode/julia';
 import {kotlin} from '@codemirror/legacy-modes/mode/clike';
@@ -109,6 +108,7 @@ import {go} from '@codemirror/lang-go';
 import {html} from '@codemirror/lang-html';
 import {java} from '@codemirror/lang-java';
 import {javascript} from '@codemirror/lang-javascript';
+import {jinja} from '@codemirror/lang-jinja';
 import {json} from '@codemirror/lang-json';
 import {less} from '@codemirror/lang-less';
 import {markdown} from '@codemirror/lang-markdown';
@@ -245,7 +245,7 @@ export const language = (fileType?: string) => {
     case 'text/x-hxml':
       return StreamLanguage.define(hxml);
     case 'text/x-jinja2':
-      return StreamLanguage.define(jinja2);
+      return jinja();
     case 'text/x-java':
       return java();
     case 'text/x-julia':
