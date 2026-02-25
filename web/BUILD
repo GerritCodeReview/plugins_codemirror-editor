@@ -53,12 +53,10 @@ ts_project(
     tsc = "//tools/node_tools:tsc-bin",
     tsconfig = ":tsconfig",
     deps = [
-        "@plugins_npm//@gerritcodereview/typescript-api",
-        "@plugins_npm//lit",
         "@plugins_npm//@codemirror/autocomplete",
         "@plugins_npm//@codemirror/commands",
-        "@plugins_npm//@codemirror/lang-css",
         "@plugins_npm//@codemirror/lang-cpp",
+        "@plugins_npm//@codemirror/lang-css",
         "@plugins_npm//@codemirror/lang-go",
         "@plugins_npm//@codemirror/lang-html",
         "@plugins_npm//@codemirror/lang-java",
@@ -81,6 +79,8 @@ ts_project(
         "@plugins_npm//@codemirror/search",
         "@plugins_npm//@codemirror/state",
         "@plugins_npm//@codemirror/view",
+        "@plugins_npm//@gerritcodereview/typescript-api",
+        "@plugins_npm//lit",
     ],
 )
 
